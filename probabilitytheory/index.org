@@ -1,0 +1,4 @@
+Probability Theory - The Logic of Science
+概率论 - 科学化的逻辑
+
+[[preface.org][Preface]]
