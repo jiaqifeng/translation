@@ -6,8 +6,13 @@ Probability Theory - The Logic of Science
 群主翻译的版本
 
 [[qun-preface.org][序]]
-[[qun-chapter01.org][第一章]]
-[[qun-chapter02.org][第二章]]
-[[qun-chapter03.org][第三章]]
-[[qun-chapter04.org][第四章]]
-[[qun-chapter05.org][第五章]]
+
+[[qun-chapter01.org][第一章]] 合情推理
+
+[[qun-chapter02.org][第二章]] 定量准则
+
+[[qun-chapter03.org][第三章]] 基本的抽样理论
+
+[[qun-chapter04.org][第四章]] 基本的假设检验(部分翻译)
+
+[[qun-chapter05.org][第五章]] 概率论的怪用
