@@ -3,4 +3,4 @@
 ** 中文
 *** cool
 * bac
-[[some][[[file:level1.org]]]]
+[some](level1.org)
