@@ -4,3 +4,5 @@
 *** cool
 * bac
 [some](level1.org)
+
+[[level1.org][some]]
