@@ -3,4 +3,4 @@
 ** 中文
 *** cool
 * bac
-[[[[file:level1.org]]]]
+[[file:level1.org]]
