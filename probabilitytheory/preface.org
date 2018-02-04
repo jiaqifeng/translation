@@ -136,26 +136,49 @@ Old data, when seen in the light of new ideas, can give us an entirely new insig
 
 
 当我们从新的思想来看旧数据时,我们会得到耳目一新的洞察:我有一个令人印象深刻的最近的例子,在核磁共振数据的贝叶斯谱分析中,我们得到了对一些现象的精确度量,而之前用傅立叶变换的方法是完全无法得到的.当数据通过错误的假设被肢解处理(或者委婉的说,过滤)后,包含的重要信息可能被不可逆的破坏了.正如一些人所认识到的,这经常发生在正统的计量经济学的去趋势和季节调整方法中.然而,如果旧假设没有过滤掉旧数据中,随着先验信息的发现会出现新的生机.
-** Style of presentation
+
+** Style of presentation 表达风格
+
 In Part 1, expounding principles and elementary applications, most chapters start with several pages of verbal discussion of the nature of the problem. Here we try to explain the constructive ways of looking at it, and the logical pitfalls responsible for past errors. Only then do we turn to the mathematics, solving a few of the problems of the genre to the point where the reader may carry it on by straightforward mathematical generalization. In Part 2, expounding more advanced applications, we can concentrate from the start on the mathematics.
+
+在本书第一部分,论述原理和基础应用,大部分章节从讨论问题的本质开始.我们会试图以构造性的方式来看待问题,以及导致过去错误的逻辑陷阱.然后转向数学,研究一些读者可以直接用普通数学解决的特定类型的问题.在第二部分,将论述那些直接从数学开始的高级应用.
 
 The writer has learned from much experience that this primary emphasis on the logic of the problem, rather than the mathematics, is necessary in the early stages. For modern students, the mathematics is the easy part; once a problem has been reduced to a definite mathematical exercise, most students can solve it effortlessly and extend it endlessly, without further help from any book or teacher. It is in the conceptual matters (how to make the initial connection between the real-world problem and the abstract mathematics) that they are perplexed and unsure how to proceed.
 
+作者从自身的经验中得知,在早期阶段强调问题的逻辑性比强调数学更重要.对于现在的学生来说,数学是相对简单的部分,一旦问题被归结为明确的数学练习,大部分学生能够轻而易举的解决并无限的将问题拓展下去,而且不需要老师或教科书的帮助.而问题中与概念相关的部分(如何正确的将现实问题和抽象数学关联起来),才会让学生感到迷惑,导致无法确定该如何处理.
+
 Recent history demonstrates that anyone foolhardy enough to describe his own work as ‘rigorous’ is headed for a fall. Therefore, we shall claim only that we do not knowingly give erroneous arguments. We are conscious also of writing for a large and varied audience, for most of whom clarity of meaning is more important than ‘rigor’ in the narrow mathematical sense.
+
+近代历史展现了,当一个足够鲁莽的人说自己的工作是'严格'的,则他将一路向下.因此,我们会声明我们并不是故意给出错误的争辩.我们有心写给大多数的各种读者,对于他们而言,意义清晰明确要比'严谨'的狭隘的数学更加重要.
 
 There are two more, even stronger, reasons for placing our primary emphasis on logic and clarity. Firstly, no argument is stronger than the premises that go into it, and, as Harold Jeffreys noted, those who lay the greatest stress on mathematical rigor are just the ones who, lacking a sure sense of the real world, tie their arguments to unrealistic premises and thus destroy their relevance. Jeffreys likened this to trying to strengthen a building by anchoring steel beams into plaster. An argument which makes it clear intuitively why a result is correct is actually more trustworthy, and more likely of a permanent place in science, than is one that makes a great overt show of mathematical rigor unaccompanied by understanding. 
 
+把强调逻辑和清晰放在第一位还有两个重要原因.首先,没有任何争辩比争辩的前提更重要.正如Harold Jeffreys所指出,那些把重心放在强调数学的严格性上的人,恰恰是那些缺乏对真实世界的确实把握的人,他们把争辩维系在不真实的前提之上并因此失去了它们的关联.Jeffreys将此比作,通过将钢筋固定在塑料上来加固建筑.一个能清楚的说明一个结果是正确的论点,比一个更强调数学的严格性但却难以理解的论点更加可信,而且更可能在科学中占据一个长久的位置.
+
 Secondly, we have to recognize that there are no really trustworthy standards of rigor in a mathematics that has embraced the theory of infinite sets. Morris Kline (1980, p. 351) came close to the Jeffreys simile: ‘Should one design a bridge using theory involving infinite sets or the axiom of choice? Might not the bridge collapse?’ The only real rigor we have today is in the operations of elementary arithmetic on finite sets of finite integers, and our own bridge will be safest from collapse if we keep this in mind.
+
+其次,我们必须认识到,一个拥抱了无穷集合理论的数学中,尚未存在一个让人信服的严格标准.Morris Kline(1980, 351页)更接近Jeffreys的比喻:可以用无穷集合和选择公理来设计一座大桥吗?确定大桥绝不会坍塌吗?我们今天唯一拥有的严格性,仅在对有限整数集的初等算数运算之中,唯有如此我们的大桥才是最安全的.
 
 Of course, it is essential that we follow this ‘finite sets’ policy whenever it matters for our results; but we do not propose to become fanatical about it. In particular, the arts of computation and approximation are on a different level than that of basic principle; and so once a result is derived from strict application of the rules, we allow ourselves to use any convenient analytical methods for evaluation or approximation (such as replacing a sum by an integral) without feeling obliged to show how to generate an uncountable set as the limit of a finite one. 
 
+当然，重要的是我们遵循这个“有限集合”的策略，只要结果受此影响之时; 但我们并不打算狂热坚持必须如此。 特别，计算和近似的艺术与基本原理是两个不同的层次， 所以一旦得到严格的规则应用的结果，我们就允许我们自己使用任何方便的分析手段来求值或近似值（比如求和换成积分），而没有必要生成一个不可数集然后求极限来处理一个有限集合。
+
 We impose on ourselves a far stricter adherence to the mathematical rules of probability theory than was ever exhibited in the ‘orthodox’ statistical literature, in which authors repeatedly invoke the aforementioned intuitive ad hoc devices to do, arbitrarily and imperfectly, what the rules of probability theory would have done for them uniquely and optimally. It is just this strict adherence that enables us to avoid the artificial paradoxes and contradictions of orthodox statistics, as described in Chapters 15 and 17. 
+
+“正统的”统计学文献里常常使用前面提到的基于直觉的特殊手法，而且是随意和不完美的使用，但其实使用概率论规则就足以得到更优更独特的结果，所以在本书中我们将严格的遵守概率论的数学规则。 正是这种严格的遵守才使我们避免了正统统计的人为矛盾和矛盾，正如第15章和第17章所描述的那样。
 
 Equally important, this policy often simplifies the computations in two ways: (i) the problem of determining the sampling distribution of a ‘statistic’ is eliminated, and the evidence of the data is displayed fully in the likelihood function, which can be written down immediately; and (ii) one can eliminate nuisance parameters at the beginning of a calculation, thus reducing the dimensionality of a search algorithm. If there are several parameters in a problem, this can mean orders of magnitude reduction in computation over what would be needed with a least squares or maximum likelihood algorithm. The Bayesian computer programs of Bretthorst (1988) demonstrate these advantages impressively, leading in some cases to major improvements in the ability to extract information from data, over previously used methods. But this has barely scratched the surface of what can be done with sophisticated Bayesian models. We expect a great proliferation of this field in the near future. 
 
+同样重要的是，这个策略通常以两种方式简化计算：（i）不需要确定“统计量”的抽样分布的问题了，数据的特征完全在似然函数中被表达，并可以立即写出这个该函数; （ii）可以在计算开始时消除多余参数，从而降低搜索算法的维数。 如果在一个问题中有多个参数，那么对于最小二乘法或最大似然算法而言计算量会有数量级的减小。 Bretthorst（1988）的贝叶斯计算机程序显示出了这些优点，在某些情况下导致从数据中提取信息的能力比以前使用的方法有了很大的提高。 但是类似的改进尚未涉及到复杂的贝叶斯模型，我们预计在不久的将来这个领域将会大大增加。
+
 A scientist who has learned how to use probability theory directly as extended logic has a great advantage in power and versatility over one who has learned only a collection of unrelated ad hoc devices. As the complexity of our problems increases, so does this relative advantage. Therefore we think that, in the future, workers in all the quantitative sciences will be obliged, as a matter of practical necessity, to use probability theory in the manner expounded here. This trend is already well under way in several fields, ranging from econometrics to astronomy to magnetic resonance spectroscopy; but, to make progress in a new area, it is necessary to develop a healthy disrespect for tradition and authority, which have retarded progress throughout the 20th century. 
 
+一个学会了如何直接使用概率论作为扩展逻辑的科学家，与只学习了一些不相关的特殊处理方法的人相比，解决问题的能力和多样性方面有很大的优势。 随着我们问题的复杂性增加，这个相对优势也会增加。 因此，我们认为，将来所有定量科学的工作者都必须按照实际需要以这里所阐述的方式使用概率论。 从计量经济学到天文学到磁共振波谱学等领域，这一趋势已经在进行中， 但要在新的领域取得进展，就必须对传统和权威有所取舍，这在整个20世纪一直是滞后的。
+
 Finally, some readers should be warned not to look for hidden subtleties of meaning which are not present. We shall, of course, explain and use all the standard technical jargon of probability and statistics – because that is our topic. But, although our concern with the nature of logical inference leads us to discuss many of the same issues, our language differs greatly from the stilted jargon of logicians and philosophers. There are no linguistic tricks, and there is no ‘meta-language’ gobbledygook; only plain English. We think that this will convey our message clearly enough to anyone who seriously wants to understand it. In any event, we feel sure that no further clarity would be achieved by taking the first few steps down that infinite regress that starts with: ‘What do you mean by “exists”?’
+
+最后，应该警告一些读者不要去寻找那些不存在的隐含的意义细微之处。 当然，我们将解释和使用概率和统计的所有标准技术术语 - 因为那是我们的话题。 但是，尽管我们对逻辑推理本质的关注导致我们讨论了许多相同的问题，但是我们的语言与逻辑学家和哲学家的那些拙劣的术语差别很大。 没有语言技巧，也没有“元语言”的噱头; 只有简单的英语。 我们认为这将把我们的信息清楚地传达给任何想要了解它的人。 在任何情况下，我们都确信，从’“存在”是什么概念‘开始，无限的深入解析下去，并不会让问题变得更明确。
+
 ** Acknowledgments
 In addition to the inspiration received from the writings of Jeffreys, Cox, Pólya, and Shannon, I have profited by interaction with some 300 former students, who have diligently caught my errors and forced me to think more carefully about many issues. Also, over the years, my thinking has been influenced by discussions with many colleagues; to list a few (in the reverse alphabetical order preferred by some): Arnold Zellner, Eugene Wigner, George Uhlenbeck, John Tukey, William Sudderth, Stephen Stigler, Ray Smith, John Skilling, Jimmie Savage, Carlos Rodriguez, Lincoln Moses, Elliott Montroll, Paul Meier, Dennis Lindley, David Lane, Mark Kac, Harold Jeffreys, Bruce Hill, Mike Hardy, Stephen Gull, Tom Grandy, Jack Good, Seymour Geisser, Anthony Garrett, Fritz Fröhner, Willy Feller, Anthony Edwards, Morrie de Groot, Phil Dawid, Jerome Cornfield, John Parker Burg, David Blackwell, and George Barnard. While I have not agreed with all of the great variety of things they told me, it has all been taken into account in one way or another in the following pages. Even when we ended in disagreement on some issue, I believe that our frank private discussions have enabled me to avoid misrepresenting their positions, while clarifying my own thinking; I thank them for their patience.
 
