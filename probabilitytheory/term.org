@@ -2,7 +2,7 @@
 
 
 | major premise       | （三段论法的）大前提                                                                          |
-| plausible           | 合情 似真 似乎有理 能言善辩 可信性 合理性                                                     |
+| plausible           | 合情 合理程度 可信度 似真 似乎有理 能言善辩 可信性 合理性                                            |
 | minor premise       | 三段论法的）小前题                                                                            |
 | argument            | 争论 争吵 论据 论点 辩解 理由 论据 讨论 辩论 异议 质疑 [数]幅角； 主题，情节                  |
 | deductive           | 推论的 演绎的                                                                                 |
@@ -24,7 +24,12 @@
 | analogy             | 类似 相似 比拟 类比 类推 比作                                                                 |
 | conjecture          | 推测 猜测 猜想 设想 揣度 想象 计划 估量                                                         |
 | proposition         | 命题 建议 主张 提议                                                                                   |
+| reduce              | 减少 缩小 使还原 使变弱 节食 蒸发 (液体)浓缩变稠                                                      |
+|                     |                                                                                                       |
+|                     |                                                                                                       |
 
+广义逻辑 extended logic
+基本假设 desiderata
 
  principle, theorem, fundamental, law 这些名词均有"原理，原则"之意。
 

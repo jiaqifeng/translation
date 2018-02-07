@@ -194,7 +194,7 @@ To emphasize this, instead of asking, ‘How can we build a mathematical model o
 显然，真正的人类大脑的运作是如此复杂，以至于我们不能解释它的奥秘。在任何情况下，我们都不想解释，更不用说重现人类大脑的所有偏差和不一致。这是一个有趣而重要的课题,但这不是我们在这里研究的课题。我们的话题是正规化的逻辑原理，而不是心理学或神经生理学的原理。
 
 为了强调这一点，我们不要问“如何建立一个人类常识的数学模型？”,而是要问"如何构建一个机器,它遵循具有明确定义的能表述理想化常识的原理,又能进行有意义的合情推理？"
-* donehere
+
 ** 1.4 Introducing the robot 机器人
 
 In order to direct attention to constructive things and away from controversial irrelevancies, we shall invent an imaginary being. Its brain is to be designed by us, so that it reasons according to certain definite rules. These rules will be deduced from simple desiderata which, it appears to us, would be desirable in human brains; i.e. we think that a rational person, on discovering that they were violating one of these desiderata, would wish to revise their thinking. 
@@ -208,44 +208,53 @@ B ≡ Beethoven’s music has a better sustained quality than that of Berlioz, a
 
 Proposition B is not a permissible one for our robot to think about at present, whereas proposition A is, although it is unlikely that its truth or falsity could be definitely established today. 2 After our theory is developed, it will be of interest to see whether the present restriction to Aristotelian propositions such as A can be relaxed, so that the robot might help us also with more vague propositions such as B (see Chapter 18 on the A p -distribution). 3 
 
-为了摆脱有争议的不相干的东西,把注意力转向建设性的东西，我们要发明一个虚构的存在。它的大脑是由我们设计的，所以它会按照一组确定的规则来进行推理。这些规则将从简单的,在我们认识是大脑中是必不可少的那部分演绎而来。而这部分是对一个理性的人而言,如果他发现正在违反这些事物时，会愿意改正他们的思路。
+让我们抛开那些充满争议的无关的事情,把注意力转向建设性的事情,让我构建一个想象出来的东西。我们来设计它的大脑,让它能按照一组确定的规则来进行推理。这组规则是从人脑中简单的必要的本质属性演绎而来。这些属性是如此不可或缺,以至于对一个理性人而言,如果他发觉自己的思路偏离了这些属性时，就会主动自我调整。
 
-原则上，我们可以自由地采纳我们喜欢的任何规则,以及用何种方式来定义我们要研究的机器人。只要你发现它的推理方式于你不同,你就可以把它设计成与你更相像的样子。但是，如果你发现已经非常相似了，并决定你想要,并且相信这个机器人能够帮助你解决推理问题，那么这将是一个理论的成功，而不是一个前提。
+原则上,对于这个作为研究对象的机器人，我们想把它设计成什么样就可以设计成什么样子。把我们设计出来的机器人的推理方式和人进行比较,如果你认为两者并不相像的话,你可以重新设计一个,让它更符合你的想法。如果最终，你发现它和人足够相像，相信它能够解决你的推理问题并且愿意让它来帮你解决这些问题，那么这将是我们理论的成功，而不仅仅是我们继续研究的一个前提。
 
-我们的机器人已经准备好进行命题推理了。正如之前那样，我们用斜体大写字母{A，B，C等}来表示各种命题，而且我们现在必须要求所使用的任何命题必须对机器人有明确的意义，并且必须是简单的，明确的逻辑上的真或假。也就是说，除非另有说明，否则我们只关心二值逻辑或亚里士多德式逻辑。我们并不要求通过任何额外的调查来确定这些“亚里士多德式命题”是真还是假,事实上正是因为我们并不确定真或假正是我们需要机器人的原因。例如，我个人认为以下两个命题是真的：
+现在我们的机器人已经可以进行命题推理了。如前所述，我们用斜体大写字母{A，B，C等}来表示各种命题，而且我们现在要求所使用的所有命题必须对机器人而言具有明确的意义，简单的意义,即只能是逻辑上的真或假。也就是说，除非另有说明，否则我们只关心二值逻辑或亚里士多德式逻辑。我们并不要求进行任何额外的调查来确定这些“亚里士多德式命题”是真还是假,事实上我们需要机器人的原因正是因为我们并不知道一个命题到底是真还是假。例如，我个人认为以下两个命题是真的：
 
 A≡贝多芬和柏辽兹从未见过面。
-B≡贝多芬的音乐比贝利奥兹的音乐有更好的持续性，尽管柏辽兹的音乐比任何人都不逊色。
+B≡贝多芬的音乐比柏辽兹的音乐更耐听，尽管柏辽兹的音乐比任何人都不逊色。
 
-目前,命题B对于我们的机器人目前来说不是不可接受的命题，而命题A是可接受的，虽然今天没人知道他们是不是真的从未见过面(注2)。有趣的是,随着我们的理论的展开，看看是否可以放松对A命题的限制，以至于机器人能帮助我们处理像B这样的模糊命题（参见第18章A p分布）(注3)。 
+目前,命题B对于我们的机器人目前来说不是不可接受的命题，而命题A是可接受的，虽然今天没人知道他们是不是真的从未见过面(注2)。有趣的是,随着理论的展开，我们可以看看如果对A这种亚里士多德式命题放松一些限制，机器人是不是就能处理像B这样的模糊的命题（参见第18章关于Ap分布）(注3)。 
 
 注2  Their meeting is a chronological possibility, since their lives overlapped by 24 years; my reason for doubting it is the failure of Berlioz to mention any such meeting in his memoirs – on the other hand, neither does he come out and say definitely that they did not meet.
 
 注3 The question of how one is to make a machine in some sense ‘cognizant’ of the conceptual meaning that a proposition like A has to humans, might seem very difficult, and much of the subject of artificial intelligence is devoted to inventing ad hoc devices to deal with this problem. However, we shall find in Chapter 4 that for us the problem is almost nonexistent; our rules for plausible reasoning automatically provide the means to do the mathematical equivalent of this.
 
-注2 从年代上看,他们的会面是可能的，因为他们的有生之年相交了24年;我怀疑的原因是柏辽兹在回忆录中从没有提到这样的见面 - 反过来说，他也从未说过他们没有见面。
+注2 从年代上看,他们的会面是可能的，因为他们的有生之年交叠了24年;我怀疑的原因是柏辽兹在回忆录中从没有提到过他们见过面 - 反过来说，他也从未提到他们从未见过面。
 
-注3 我们难以证明机器确实"理解"了一个概念的含义,就像人类理解了命题A一样.人工智能的许多主题都在致力于发明各种奇技淫巧来解决这个问题。但是在第四章会我们会发现这个问题对我们而言几乎是不存在的,合情推理的规则自然而然的对应了数学上的等价性。
+注3 从某种意义上说,机器是不是真的能像人理解命题A那样,真正"理解"一个概念的含义?试图证明这个问题是极端困难的,人工智能的许多研究都致力于发明各种奇技淫巧来解决它。但是在第四章我们会看到,合情推理几乎不存在这个问题,合情推理的规则自然而然的具有对此的数学等价性。
 
 ** 1.5 Boolean algebra
-To state these ideas more formally, we introduce some notation of the usual symbolic logic, or Boolean algebra, so called because George Boole (1854) introduced a notation similar to the following. Of course, the principles of deductive logic itself were well understood centuries before Boole, and, as we shall see, all the results that follow from Boolean al- gebra were contained already as special cases in the rules of plausible inference given 
-为了更正式地陈述这些观点，我们引入一些通常的符号逻辑或布尔代数的符号，因为乔治·布尔（GeorgeBoole，1854）引入了类似于以下的符号。当然，演绎逻辑本身的原理在布尔之前几个世纪就已经被很好的理解了，而且我们将会看到，布尔代数的所有结果都被包含在给定的推理规则的特例中
 
-by (1812). The symbol
-AB,
-(1.6)
+To state these ideas more formally, we introduce some notation of the usual symbolic logic, or Boolean algebra, so called because George Boole (1854) introduced a notation similar to the following. Of course, the principles of deductive logic itself were well understood centuries before Boole, and, as we shall see, all the results that follow from Boolean al- gebra were contained already as special cases in the rules of plausible inference given by (1812). The symbol
+
+AB,                           (1.6)
 
 called the logical product or the conjunction, denotes the proposition ‘both A and B are true’. Obviously, the order in which we state them does not matter; AB and B A say the same thing. The expression 
 
-A + B,
-(1.7)
+A + B,                        (1.7)
+
 called the logical sum or disjunction, stands for ‘at least one of the propositions, A, B is true’ and has the same meaning as B + A. These symbols are only a shorthand way of writing propositions, and do not stand for numerical values. 
+
+为了更正式地陈述这些观点，我们引入常用的符号逻辑或布尔代数，因为乔治·布尔（GeorgeBoole，1854）引入了类似于如下的符号。当然，演绎逻辑本身的原理在布尔之前几个世纪就已经被很好的理解了，而且我们将会看到，布尔代数的所有结果都是都可看成是合情推理规则(1812)一个特例.符号:
+
+AB,                           (1.6)
+
+称为逻辑的积或相交,表示命题"A和B都为真".显然两个命题的顺序无关紧要,AB和BA说的是同一件事.下面的表达式:
+
+A + B,                        (1.7)
+
+称为逻辑的和或并集,表达了"至少有一个命题,A,B为真",其意义和B+A一样.这些符号只是为了方便书写命题的缩写形式,并不表示具体的数值.
 
 Given two propositions A, B, it may happen that one is true if and only if the other is true; we then say that they have the same truth value. This may be only a simple tautology (i.e. A and B are verbal statements which obviously say the same thing), or it may be that only after immense mathematical labor is it finally proved that A is the necessary and sufficient condition for B. From the standpoint of logic it does not matter; once it is established, by any means, that A and B have the same truth value, then they are logically equivalent propositions, in the sense that any evidence concerning the truth of one pertains equally well to the truth of the other, and they have the same implications for any further reasoning. 
 
 Evidently, then, it must be the most primitive axiom of plausible reasoning that two propositions with the same truth value are equally plausible. This might appear almost too trivial to mention, were it not for the fact that Boole himself (Boole, 1854, p. 286) fell into error on this point, by mistakenly identifying two propositions which were in fact different – and then failing to see any contradiction in their different plausibilities. Three years later, Boole (1857) gave a revised theory which supersedes that in his earlier book; for further comments on this incident, see Keynes (1921, pp. 167–168); Jaynes (1976, pp. 240–242). 
 
 In Boolean algebra, the equal sign is used to denote not equal numerical value, but equal truth value: A = B, and the ‘equations’ of Boolean algebra thus consist of assertions that the proposition on the left-hand side has the same truth value as the one on the right-hand side. The symbol ‘≡’ means, as usual, ‘equals by definition’. In denoting complicated propositions we use parentheses in the same way as in ordinary algebra, i.e. to indicate the order in which propositions are to be combined (at times we shall use them also merely for clarity of expression although they are not strictly necessary). In their absence we observe the rules of algebraic hierarchy, familiar to those who use hand calculators: thus AB + C denotes (AB) + C; and not A(B + C). 
+* donehere
 给定两个命题A，B，当且仅当另一个为真时，可能发生一个是真的;然后我们说他们有相同的真值。这可能只是一个简单的同义反复（即A和B是口头陈述，显然是说同样的事情），也可能是只有经过大量的数学劳动后才能证明A是B的必要和充分的条件。逻辑的立场不重要;一旦以任何方式确定了A和B具有相同的真值，那么它们在逻辑上就是等价的命题，就任何有关一个真理的证据而言，都与另一个的真理同样好，对于任何进一步的推理都有同样的含义。
 
 很明显，那么两个具有相同真值的命题是同样合理的，这一定是最合理的推理原则。这可能显得太琐碎了，如果不是因为布尔本人（布尔，1854年，第286页）在这一点上犯了错误，因为错误地确定了两个事实上是不同的命题，然后看不到任何矛盾在他们不同的可信度。三年后，布尔（1857）提出了一个修正的理论，在他早期的书中取代了这个理论。对这一事件的进一步评论见凯恩斯（1921年，第167-168页）; Jaynes（1976，第240-242页）。

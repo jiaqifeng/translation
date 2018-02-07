@@ -1,0 +1,102 @@
+* 2 The quantitative rules 量化规则
+
+Probability theory is nothing but common sense reduced to calculation.
+
+Laplace, 1819
+
+We have now formulated our problem, and it is a matter of straightforward mathematics to work out the consequences of our desiderata, which may be stated broadly as follows: 
+
+(I) Representation of degrees of plausibility by real numbers; 
+
+(II) Qualitative correspondence with common sense; 
+
+(III) Consistency. 
+
+The present chapter is devoted entirely to deduction of the quantitative rules for inference which follow from these desiderata. The resulting rules have a long, complicated, and astonishing history, full of lessons for scientific methodology in general (see the Comments sections at the end of several chapters).
+
+概率论只不过是将常识还原为计算罢了。
+
+--拉普拉斯，1819年
+
+现在我们已经将我们的问题形式化了，然后就是直接了当的从基本原则计算后果，基本原则可以宽泛地说明如下：
+
+（I）用实数表示可信性程度;
+
+（II）定性分析要和常识对应;
+
+（III）一致性。
+
+本章完全致力于从这几个基本人原则演绎出推理的量化规则。 由此产生的规则有一个漫长而复杂到令人惊讶的历史，充满了人类学到的广义上的科学方法论的各种教训（见几章末尾的评论部分）。
+
+* 2.1 The product rule 积的规则
+
+* 2.2 The sum rule 和的规则
+
+* 2.3 Qualitative properteis 定性属性
+
+* 2.4 Numeraical values 数值
+
+* 2.5 Notation and finite-sets policy 符号和有限集原则
+
+Now we can introduce the notation to be used in the remainder of this work (discussed more fully in Appendix B). Henceforth, our formal probability Symbols, will use the capital P: 
+
+P(A|B),                       (2.100)
+
+which signifies that the arguments are propositions. Probabilities whose arguments are numerical values are generally denoted by other functional symbols, such as
+
+f(r|np),                      (2.101)
+
+which denote ordinary mathematical functions. The reason for making this distinction is to avoid ambiguity in the meaning of our symbols, which has been a recent problem in this field. However, in agreement with the customary loose notation in the existing literature, we sometimes relax our standards enough to allow the probability symbols with small p: p(x|y) or p(A|B) or p(x|B) to have arguments which can be either propositions or numerical values, in any mix. Thus the meaning of expressions with small p can be judged only from the surrounding context. 
+
+It is very important to note that our consistency theorems have been established only for probabilities assigned on finite sets of propositions. In principle, every problem must start with such finite-set probabilities; extension to infinite sets is permitted only when this is the result of a well-defined and well-behaved limiting process from a finite set. More generally, in any mathematical operations involving infinite sets, the safe procedure is the finite-sets policy: 
+
+Apply the ordinary processes of arithmetic and analysis only to expressions with a finite number of terms. Then, after the calculation is done, observe how the resulting finite expressions behave as the number of terms increases indefinitely. 
+
+In laying down this rule of conduct, we are only following the policy that mathematicians from Archimedes to Gauss have considered clearly necessary for nonsense avoidance in all of mathematics. But, more recently, the popularity of infinite-set theory and measure theory have led some to disregard it and seek shortcuts which purport to use measure theory directly. Note, however, that this rule of conduct is consistent with the original Lebesgue definition of measure, and when a well-behaved limit exists it leads us automatically to correct ‘measure theoretic’ results. Indeed, this is how Lebesgue found his first results. 
+
+The danger is that the present measure theory notation presupposes the infinite limit already accomplished, but contains no symbol indicating which limiting process was used. Yet, as noted in our Preface, different limiting Processes – equally well-behaved – lead in general to different results. When there is no well-behaved limit, any attempt to go directly to the limit can result in nonsense, the cause of which cannot be seen as long as one looks only at the limit, and not at the limiting process. 
+
+This little ‘sermon’ is an introduction to Chapter 15 on infinite-set paradoxes, where we shall see some of the results that have been produced by those who ignored this rule of conduct, and tried to calculate probabilities directly on an infinite set without considering any limit from a finite set. The results are at best ambiguous, at worst nonsensical.
+
+现在我们可以引入在本书其余部分使用的符号（在附录B中有更详细地讨论）。今后，正式的概率符号将使用大写的P：
+
+P(A|B),                       (2.100)
+
+这表明自变量是一个命题。当自变量是数值时,概率通常由其他函数符号表示，例如
+
+f(r|np),                      (2.101)
+
+这里的f表示普通的数学函数。作出这种区分的原因是为了避免符号的二意性，这曾在本领域中导致了一个问题。然而为了兼容现有文献中的对符号使用的随意性，有时候不得不放松了我们的标准，允许p的用法如：p(x|y)或p(A|B)或p(x|B),这里的自变量既可以是命题,也可以是数值,或者混合使用。因此要根据上下文来判断p的意义。
+
+需要注意的是，我们的一致性定理只是为有限个命题的集合中各元素的概率而建立的。原则上，每个问题都必须以处理有限集的概率开始;只有存在一个定义良好且具有良好行为的极限过程,才允许将初始的有限集拓展为无限集。更一般地说，在涉及无限集合的任何数学运算中，正确的做法是遵守有限集原则：
+
+将常规的算术和分析过程仅应用于有限个项的表达式。然后，在完成计算之后，观察得出的有限项表达式随着项的数目无限增加而表现出的行为。
+
+在制定这一行为规则时，我们只是遵循从阿基米德到高斯的数学家认为的,在所有数学中都是无合适理由则必须遵守的原则。但是，最近无限集合理论和测度论的广泛应用导致一些人抛弃了这个原则，转而寻求直接使用度量理论的捷径。但是请注意，最早的勒贝格测度的定义是符合这个指导原则的，当存在一个有良好行为的求极限过程时，就自然会得出和使用“测度论”一样的结果。实际上，这就是勒贝格如何发现他的第一个结果的。
+
+危险在于，现在测度论的符号体系已经预先假设极限是存在的，却无法表示出使用了哪种求极限过程。然而，正如我们的序言所指出的，不同的求极限过程-都是良好的-通常可能导向不同的结果。当没有良好的求极限过程时，任何直接使用极限的做法都可能导向无意义的结果，谬误的原因就是只看极限不看过程。
+
+本节是第15章中关于无限集悖论的简介.在第15章中,我们将看到忽略这个原则的人所得出的结果，他们试图直接在无限集上计算概率，而不是对有限集求极限。其结果在最好的情况下会是含混不清的，最坏的时候就谬论。
+
+** 2.6 Comments 评论
+
+It has taken us two chapters of close reasoning to get back to the point (2.99) from which Laplace started some 180 years ago. We shall try to understand the intervening period, as a weird episode of history, throughout the rest of the present work. The story is so complicated that we can unfold it only gradually, over the next ten chapters. To make a start on this, let us consider some of the questions often raised about the use of probability theory as an extension of logic.
+
+我们已经用了两章来讨论推理,从180年前拉普拉斯的观点(2.99)开始.在本书的余下部分,我们将试图了解在从此之后的,充满着不可思议之插曲的历史,我们将在接下来的十章中逐步展开这错综复杂的整个故事.作为开始，让我们先看看把概率论用于广义逻辑时常常被提出的问题。
+
+*** ‘Subjective’ vs. ‘objective’ “主观”与“客观”
+
+These words are abused so much in probability theory that we try to clarify our use of them. In the theory we are developing, any probability assignment is necessarily ‘subjective’ in the sense that it describes only a state of knowledge, and not anything that could be measured in a physical experiment. Inevitably, someone will demand to know: ‘Whose state of knowledge?’ The answer is always: ‘That of the robot – or of anyone else who is given the same information and reasons according to the desiderata used in our derivations in this chapter.’
+
+Anyone who has the same information, but comes to a different conclusion than our robot, is necessarily violating one of those desiderata. While nobody has the authority to forbid such violations, it appears to us that a rational person, should he discover that he was violating one of them, would wish to revise his thinking (in any event, he would surely have difficulty in persuading anyone else, who was aware of that violation, to accept his conclusions).
+
+Now, it was just the function of our interface desiderata (IIIb), (IIIc) to make these probability assignments completely ‘objective’ in the sense that they are independent of the personality of the user. They are a means of describing (or, what is the same thing, of encoding) the information given in the statement of a problem, independently of whatever personal feelings (hopes, fears, value judgments, etc.) you or I might have about the propositions involved. It is ‘objectivity’ in this sense that is needed for a scientifically respectable theory of inference.
+
+这两个词在概率论中被用滥了，下面我澄清我的用法。在我们正在发展的理论中，任何概率一定是“主观”的，因为它只描述了一种知识的状态，而不是物理实验中可以测量的任何东西。不可避免的是，有人会要求知道：“是哪个人具有的知识的状态？”答案总是：“机器人的-或者基于同样的给定信息和同样的基本假设(本章中派生出来的),进行推理的任何人。 “
+
+无论是谁拥有同样的信息，但得出了和机器人不一样的结论，那么它一定违反了某个基本假设.虽然没有一个权威规定任何违反不得存在,但在我们看来，如果一个理性的人发现自己违反了基本假设，肯定愿意做出改正(因为如果别人意识到了他违反了基本假设,他无论如何都难以说服别人接受他的结论）.
+
+现在，正我们的基本假设的接口(IIIb)(IIIc)使得概率完全“客观”,即独立于使用者的个性。它是一种对问题陈述中所提供的信息进行的描述手段（或者可以说是一种编码），不管你或我对相关命题可能拥的个人感受（希望，恐惧，价值判断等）。从这个意义上讲，这是一个科学上可接受的推论理论所需要的“客观性”。
+
+*** 2.6.2 Gödel’s theorem
+
