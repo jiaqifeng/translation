@@ -1,47 +1,36 @@
 * status: 人译到donehere
 
-* 1 Plausible reasoning 合情推理
-
-The actual science of logic is conversant at present only with things either certain, impossible, or entirely doubtful, none of which (fortunately) we have to reason on. Therefore the true logic for this world is the calculus of Probabilities, which takes account of the magnitude of the probability which is, or ought to be, in a reasonable man’s mind. 
-
-James Clerk Maxwell (1850) 
+* 1 合情推理
 
 逻辑学只熟知那些确定的/不可能的/完全可疑的事情，幸运的是我们并不在此之上进行推理。 因此这个世界的逻辑其实是计算可能性，即在理性人的思维中是如何考量可能性的大小的。
 
-James Clerk Maxwell (1850) 
-
-Suppose some dark night a policeman walks down a street, apparently deserted. Suddenly he hears a burglar alarm, looks across the street, and sees a jewelry store with a broken window. Then a gentleman wearing a mask comes crawling out through the broken window, carrying a bag which turns out to be full of expensive jewelry. The policeman doesn’t hesitate at all in deciding that this gentleman is dishonest. But by what reasoning process does he arrive at this conclusion? Let us first take a leisurely look at the general nature of such problems. 
+詹姆斯·克拉克·麦克斯韦 (1850) 
 
 设想在一个漆黑的夜晚,一名警察走在空无一人的街道上。 突然，他听到了警铃大作，在街对面，看到一珠宝店的窗户碎了。 然后看见一个戴着面具的男士从破碎的窗户里爬出来，背着一个装满昂贵珠宝的包。 警察毫不迟疑地断定这个男人是个小偷。 但是他通过什么推理过程得出这个结论呢？ 让我们首先从容的看看这种问题的一般本质。
 
-** 1.1 Deductive and plausible reasoning 演绎推理和合情推理
+** 1.1 演绎推理和合情推理
 
-A moment’s thought makes it clear that our policeman’s conclusion was not a logical deduction from the evidence; for there may have been a perfectly innocent explanation for everything. It might be, for example, that this gentleman was the owner of the jewelry store and he was coming home from a masquerade party, and didn’t have the key with him. However, just as he walked by his store, a passing truck threw a stone through the window, and he was only protecting his own property. 
 花几秒钟想一下,我们就能知道警察得出结论不是基于对证据的演绎推理, 因为对于任何事情都可以找到一个完美无暇的开脱。 例如，这位先生可能就是这家珠宝店的老板，他刚从一个化妆舞会派对回家并且忘了带钥匙。 当他恰好走过他的珠宝店时，一辆路过的卡车丢出一块石头打破了窗户，于是他不得不保护自己的财产。
 
-Now, while the policeman’s reasoning process was not logical deduction, we will grant that it had a certain degree of validity. The evidence did not make the gentleman’s dishonesty certain, but it did make it extremely plausible. This is an example of a kind of reasoning in which we have all become more or less proficient, necessarily, long before studying mathematical theories. We are hardly able to get through one waking hour without facing some situation (e.g. will it rain or won’t it?) where we do not have enough information to permit deductive reasoning; but still we must decide immediately what to do. 
 现在，虽然警察的推理过程并不合乎逻辑演绎，但我们仍然相信这很是合情合理。 证据并不能证明这位先生一定是个小偷,但看起来这是合情合理的推论。 这种推理的例子,在我们学会数学理论之前,就已经或多或少的熟练运用了。 在我们散步看风景的时候,对有些突发问题(是不是要下雨了),我们没有充分的信息来进行演绎推理，但我们仍然必须快速的做出决定。
 
-In spite of its familiarity, the formation of plausible conclusions is a very subtle process. Although history records discussions of it extending over 24 centuries, probably nobody has ever produced an analysis of the process which anyone else finds completely satisfactory. In this work we will be able to report some useful and encouraging new progress, in which conflicting intuitive judgments are replaced by definite theorems, and ad hoc procedures are replaced by rules that are determined uniquely by some very elementary – and nearly inescapable – criteria of rationality. 
 尽管这听起来很熟悉，但得出合情结论是一个非常微妙的过程。 尽管对此过程的讨论记载已经延续了24个世纪，看起来还没人能把这个过程分析的让所有人都完全满意。 在本书中，我们将给出一些有用的和令人鼓舞的新进展，其中用明确的定理取代矛盾的直觉，特别是用一些基本的--几乎不可避免的--理性标准来取代特殊解决手法.
 
-All discussions of these questions start by giving examples of the contrast between deductive reasoning and plausible reasoning. As is generally credited to the Organon of Aristotle (fourth century bc) deductive reasoning (apodeixis) can be analyzed ultimately into the repeated application of two strong syllogisms: 
 所有关于这些问题的讨论都以演绎推理和合理推理之间的对比开始。 一般认为是亚里士多德（约公元前四世纪）([[file:chapter01.org::#footnote1][注1]])最先系统的规范了演绎推理（apodeixis）,将其归结为对两种强三段论的反复运用：
 
 如果A为真,则B为真
-A为真            (1.1)
-----------------------------------------
-所以B为真
 
-and its inverse:
+A为真            (1.1)
+
+所以B为真
 
 及其逆用:
 
 如果A为真,则B为真
-B为假                (1.2)
-所以A为假
 
-This is the kind of reasoning we would like to use all the time; but, as noted, in almost all the situations confronting us we do not have the right kind of information to allow this kind of reasoning. We fall back on weaker syllogisms (epagoge):
+B为假                (1.2)
+
+所以A为假
 
 这种推理方式是我们最想使用的; 但是，在几乎所有我们遇到的情况中，我们都找不到合适的信息来进行这种推理。 我们只好求助于弱三段论（epagoge）：
 
@@ -49,85 +38,49 @@ This is the kind of reasoning we would like to use all the time; but, as noted, 
 B为真                (1.3)
 所以,A为真变得更加合情理
 
-The evidence does not prove that A is true, but verification of one of its consequences does give us more confidence in A. For example, let 
-
 证据不足以证明A为是，但A的一个后果为真确实让我们对A有更多的信心。例如:
 
-A ≡ it will start to rain by 10 am at the latest;
-B ≡ the sky will become cloudy before 10 am.
-
 A = 最迟在上午10点开始下雨
-B = 上午10点之前天空会变得多云
 
-Observing clouds at 9:45 am does not give us a logical certainty that the rain will follow; nevertheless our common sense, obeying the weak syllogism, may induce us to change our plans and behave as if we believed that it will, if those clouds are sufficiently dark. 
+B = 上午10点之前天空会变得多云
 
 如果上午9:45观察到天空多云,并不能让我们从逻辑上相信一定会下雨。 然而服从弱三段论的常识，会促使我们改变计划仿佛相信雨一定会下的，只要这些云是足够黑暗。
 
-This example shows also that the major premise, ‘if A then B’ expresses B only as a logical consequence of A; and not necessarily a causal physical consequence, which could be effective only at a later time. The rain at 10 am is not the physical cause of the clouds at 9:45 am. Nevertheless, the proper logical connection is not in the uncertain causal direction (clouds =⇒ rain), but rather (rain =⇒ clouds), which is certain, although noncausal. 
-
 这个例子还表明“如果A然后B”这个主要前提,只表示B作为A的逻辑结果,而不一定是一种物理意义上的因果关系,B只有在过一段时间后才会生效。 上午十点下雨不是9点45多云的物理意义上的原因.然而正确的逻辑关系应该是确定的非因果顺序的（雨=>云）,而不是不确定的因果顺序的（云=>雨）。
 
-We emphasize at the outset that we are concerned here with logical connections, because some discussions and applications of inference have fallen into serious error through failure to see the distinction between logical implication and physical causation. The distinction is analyzed in some depth by Simon and Rescher (1966), who note that all attempts to interpret implication as expressing physical causation founder on the lack of contraposition expressed by the second syllogism (1.2). That is, if we tried to interpret the major premise as ‘A is the physical cause of B’, then we would hardly be able to accept that ‘not-B is the physical cause of not-A’. In Chapter 3 we shall see that attempts to interpret plausible inferences in terms of physical causation fare no better. 
-
 我们首先强调的是，我们在这里关心的只是逻辑关系而不是物理因果.由于没有看出逻辑上的蕴涵关系和物理因果之间的区别,导致一些推理发生了严重的错误。 Simon和Rescher（1966）对这一区别进行了深入的分析，他们指出，所有将蕴含解释为是在表达物理因果的努力,都由于缺少强三段论的逆否形式（1.2）而翻了车。 也就是说，如果我们试图把“A是B的物理上的因”解释为大前提，那么我们就无法同时承认“否B也是否A的物理上的因”。 在第三章中我们将看到，试图从物理因果的角度来解释合情推理同样并不灵光。
-
-Another weak syllogism, still using the same major premise, is 
-
-If A is true, then B is true
-A is false
-(1.4)
-therefore, B becomes less plausible.
 
 同样的大前提,另一种弱三段论是
 
 如果A为真,则B为真
-A为假       (1.4)
-所以,B为看起来更不合情理一些.
 
-In this case, the evidence does not prove that B is false; but one of the possible reasons for its being true has been eliminated, and so we feel less confident about B. The reasoning of a scientist, by which he accepts or rejects his theories, consists almost entirely of syllogisms of the second and third kind. 
+A为假       (1.4)
+
+所以,B为看起来更不合情理一些.
 
 在这种情况下，无法证明B是假的;但是B为真的一个前提条件被排除了,因此我们对于B为真的信心就变弱了一些。一个科学家在思考是接受还是拒绝自己的理论时，几乎全部应用的是弱三段论的第二和第三种形式。
 
-Now, the reasoning of our policeman was not even of the above types. It is best described by a still weaker syllogism: 
 现在看警察的推理过程并不符合上面的任何一个形式,而是更符合下面的更弱一些的三段论形式:
 
-If A is true, then B becomes more plausible
-B is true
-(1.5)
-therefore, A becomes more plausible.
-
 如果A为真,则B为真的可能性更大
+
 B为真       (1.5)
+
 所以A为真的可能性变的更大了
 
-But in spite of the apparent weakness of this argument, when stated abstractly in terms of A and B, we recognize that the policeman’s conclusion has a very strong convincing power. There is something which makes us believe that, in this particular case, his argument had almost the power of deductive reasoning. 
 尽管在用抽象的A和B来表达论证过程时,这种方式的证明力看起来太过薄弱，但我们认识到警察的结论具有很强的说服力。 似乎有什么东西让我们相信，在这个特殊情况下警察的论证几乎具同演绎推理的有同样的可信度。
 
-These examples show that the brain, in doing plausible reasoning, not only decides whether something becomes more plausible or less plausible, but that it evaluates the degree of plausibility in some way. The plausibility for rain by 10 am depends very much on the darkness of those clouds at 9:45. And the brain also makes use of old information as well as the specific new data of the problem; in deciding what to do we try to recall our past experience with clouds and rain, and what the weatherman predicted last night. 
 这些例子说明大脑在进行合情推理时，不仅试图判定某事是变得更合情理还是更不合情理，而且以某种方式评估合理的程度。 上午十点有多大可能会下雨很大程度上取决于九点四十五分云层有多黑暗。 在做决定的时候,大脑既使用旧信息也利用新信息,我们试着回忆起我们过去关于云雨相关的经验，还有昨晚的天气预报。
-
-To illustrate that the policeman was also making use of the past experience of policemen in general, we have only to change that experience. Suppose that events like these happened several times every night to every policeman – and that in every case the gentleman turned out to be completely innocent. Very soon, policemen would learn to ignore such trivial things. 
 
 为了说明警察也会利用之前的一般经验，我们只需要改变之前的经历。 假设对于每个警察,这样的事件每晚都发生过几次，而且每次的嫌疑人都是清白无辜的。 那么警察很快就会学会忽略这些微不足道的情况。
 
-Thus, in our reasoning we depend very much on prior information to help us in evaluating the degree of plausibility in a new problem. This reasoning process goes on unconsciously, almost instantaneously, and we conceal how complicated it really is by calling it common sense. 
-
 因此在面对一个新问题时，我们的推理非常依赖于先验信息来帮助我们评估可信度。 这种推理过程在无意识中几乎是瞬间进行，我们通过称之为常识来隐藏其真正的复杂性。
 
-The mathematician George P ́olya (1945, 1954) wrote three books about plausible reasoning, pointing out a wealth of interesting examples and showing that there are definite rules by which we do plausible reasoning (although in his work they remain in qualitative form). The above weak syllogisms appear in his third volume. The reader is strongly urged to consult P ́olya’s exposition, which was the original source of many of the ideas underlying the present work. We show below how P ́olya’s principles may be made quantitative, with resulting useful applications. 
-
 数学家George Polya（1945，1954）写了三本关于合情推理的书，提出了很多有趣的例子，表明我们在做合情推理时应用了确定的一些规则（虽然他的工作仍然是定性的分析）。 上面的弱三段论出现在他的第三卷。 强烈建议读者阅读Polya的阐述，因为它是这本书中许多思想的最初来源。 我们在下面展示了如何将Polya的原理定量化，从而得到有用的应用。
-
-Evidently, the deductive reasoning described above has the property that we can go through long chains of reasoning of the type (1.1) and (1.2) and the conclusions have just as much certainty as the premises. With the other kinds of reasoning, (1.3)–(1.5), the reliability of the conclusion changes as we go through several stages. But in their quantitative form we shall find that in many cases our conclusions can still approach the certainty of deductive reasoning (as the example of the policeman leads us to expect). P ́olya showed that even a pure mathematician actually uses these weaker forms of reasoning most of the time. Of course, on publishing a new theorem, the mathematician will try very hard to invent an argument which uses only the first kind; but the reasoning process which led to the theorem in the first place almost always involves one of the weaker forms (based, for example, on following up conjectures suggested by analogies). The same idea is expressed in a remark of S. Banach (quoted by S. Ulam, 1957): 
-
-Good mathematicians see analogies between theorems; great mathematicians see analogies between analogies. 
-
 
 显然，在上述的演绎推理中,我们可以把（1.1）和（1.2）串起来形成一个链式的推理过程，并且保证结论和前提具有同样的可靠性。对于(1.3)-(1.5)的推理形式，结论的可靠性随着每一次的应用而发生变化。但是在数量上我们会发现，在许多情况下，我们的结论仍然可以接近演绎推理的可靠性（就像警察的例子中我们预期的那样）。Polya表明，即使是一个纯粹的数学家，大部分时间里实际上也在使用这些较弱的推理形式。当然，在发表一个新发现的定理的时候，数学家会努力去找到一个只用强三段论的论证，但在发现新定理的过程中总是会用到弱三段论来进行推理（例如，用类比的方式来猜测结论）。 S. Banach的评论（S. Ulam，1957）引用了同样的观点：
 
 优秀的数学家看到了理论的相似性;伟大的数学家看到了相似性的相似性.
-
-As a first orientation, then, let us note some very suggestive analogies to another field – which is itself based, in the last analysis, on plausible reasoning.
 
 接下来，让我们观察一下这种相似性,在另一个也是基于合情推理的领域。
 
@@ -135,57 +88,29 @@ As a first orientation, then, let us note some very suggestive analogies to anot
 
 <<footnote1>> 今天，关于亚里士多德贡献的确切性质，有几种不同的观点。但和我们目前的目的无关，有兴趣的读者可以参阅Lukasiewicz（1957）的讨论。
 
-** 1.2 Analogies with physical theories 在物理理论中
-
-In physics, we learn quickly that the world is too complicated for us to analyze it all at once. We can make progress only if we dissect it into little pieces and study them separately. Sometimes, we can invent a mathematical model which reproduces several features of one of these pieces, and whenever this happens we feel that progress has been made. These models are called physical theories. As knowledge advances, we are able to invent better and better models, which reproduce more and more features of the real world, more and more accurately. Nobody knows whether there is some natural end to this process, or whether it will go on indefinitely.
+** 1.2 和物理理论的相似性
 
 在物理领域中，我们很快就认识到现实世界实在是太复杂了，无法一次就解析一切。只有把它分解成小块，再分别研究，才能取得进展。我们先创建一个数学模型，使得它可以体现一部分物理世界的几个特征.这种情况每发生一次，我们就会觉得又取得了一些进展。 我们把这些模型称为物理理论。 随着知识的前进，我们逐步创造出更好的模型，准确地体现现实世界更多的特征。没有人知道这个过程是否会有自然的终点，亦或永无止境的继续下去。
 
-In trying to understand common sense, we shall take a similar course. We won’t try to understand it all at once, but we shall feel that progress has been made if we are able to construct idealized mathematical models which reproduce a few of its features. We expect that any model we are now able to construct will be replaced by more complete ones in the future, and we do not know whether there is any natural end to this process. 
-
 我们以相似的历程来了解常识。 我们不指望一下子理解一切，只要我们能够构建出能够再现其一部分特征的理想数学模型，我们就认为取得了进展。 我们预期,现在任何模型都将在未来被更好的模型所取代，同样我们也不知道这个过程是否会有一个自然的终点。
-
-The analogy with physical theories is deeper than a mere analogy of method. Often, the things which are most familiar to us turn out to be the hardest to understand. Phenomena whose very existence is unknown to the vast majority of the human race (such as the difference in ultraviolet spectra of iron and nickel) can be explained in exhaustive mathematical detail – but all of modern science is practically helpless when faced with the complications of such a commonplace fact as growth of a blade of grass. Accordingly, we must not expect too much of our models; we must be prepared to find that some of the most familiar features of mental activity may be ones for which we have the greatest difficulty in constructing any adequate model. 
 
 比起解决具体问题的方法的相似性,这两者见相似性更加深刻。 常常我们最熟悉的事情是最难理解的。尽管大部分人都未听说过的现象（如铁和镍的紫外光谱的差别）都可以用数学详尽的解释清楚,但是在面对于一片草叶是如何生长的,这个看似常识实则复杂务无比的问题时,所有现代科学都感觉到无能为力。所以不能对目前的模型期望太多,我们必须承认:对人类心理活动的一些特征进行建模竟是极其的困难。
 
-There are many more analogies. In physics we are accustomed to finding that any advance in knowledge leads to consequences of great practical value, but of an unpredictable nature. R ̈ontgen’s discovery of X-rays led to important new possibilities of medical diagnosis; Maxwell’s discovery of one more term in the equation for curl H led to practically instantaneous communication all over the earth.
-
 这种相似性还可以找到很多。 在物理领域中，我们认识到任何新发现都会带来巨大的实际价值，但发现本身却具不可预测。 Rontgen发现了X射线导致了新医学诊断手段的出现; 麦克斯韦在曲线H的等式中的新发现，最终让我们实现了全球范围内的即时通信。
-
-Our mathematical models for common sense also exhibit this feature of practical usefulness. Any successful model, even though it may reproduce only a few features of common sense, will prove to be a powerful extension of common sense in some field of application. Within this field, it enables us to solve problems of inference which are so involved in complicated detail that we would never attempt to solve them without its help. 
 
 我们对常识建立的数学模型也表现出实用性的这一特点。 任何成功的模型，即使只能再现一部分的常识的特征，也将被证明是在某些应用领域中对常识的有力延伸。 在这个领域内，它使我们能够解决推理过程的复杂细节，如果没有这个模型的帮助我们可能都对如何解决这些问题心生畏惧。
 
-** 1.3 The thinking computer 会思考的计算机
-
-Models have practical uses of a quite different type. Many people are fond of saying, ‘They will never make a machine to replace the human mind – it does many things which no machine could ever do.’ A beautiful answer to this was given by J. von Neumann in a talk on computers given in Princeton in 1948, which the writer was privileged to attend. In reply to the canonical question from the audience (‘But of course, a mere machine can’t really think, can it?’), he said: 
+** 1.3 思考的机器
 
 不同的模型可能有完全不同的实际用途。 很多人都喜欢说：“他们永远无法用一台机器来替代人的思考,人做的很多事情是机器无法做到的”。冯·诺依曼（J. von Neumann）在一个关于计算机的讨论会(1948年,普林斯顿，作者有幸参加)中给出了一个完美的回答。 在听众提出这个经典问题（显然机器不可能会思考，难道不是吗？”）时,他说：
 
-You insist that there is something a machine cannot do. If you will tell me precisely what it is that a machine cannot do, then I can always make a machine which will do just that! 
-
 你坚持认为有些事情是机器做不到的。但只要你能精确地告诉我机器什么不能做，那我就可以制造一台机器做到它！
-
-In principle, the only operations which a machine cannot perform for us are those which we cannot describe in detail, or which could not be completed in a finite number of steps. Of course, some will conjure up images of G ̈odel incompleteness, undecidability, Turing machines which never stop, etc. But to answer all such doubts we need only point to the existence of the human brain, which does it. Just as von Neumann indicated, the only real limitations on making ‘machines which think’ are our own limitations in not knowing exactly what ‘thinking’ consists of. 
 
 原理上，机器不能为我们执行的唯一操作就是我们无法详细描述所有细节的操作，或者无法在有限次的步骤中完成的操作。 当然，有些人会想到哥德尔不完备定理，图灵机的停机问题等等。但是要回答所有这些怀疑，我们只需要指出能"做到"这些的现实存在--人脑! 就像冯·诺伊曼所指出的那样，制造“思考机器”的唯一限制是我们自己的局限性:我们不知道到底是什么构成了“思维”。
 
-But in our study of common sense we shall be led to some very explicit ideas about the mechanism of thinking. Every time we can construct a mathematical model which reproduces a part of common sense by prescribing a definite set of operations, this shows us how to ‘build a machine’, (i.e. write a computer program) which operates on incomplete information and, by applying quantitative versions of the above weak syllogisms, does plausible reasoning instead of deductive reasoning. 
-
 但是，在我们对常识的研究中，我们可以看出一些关于思考机制的非常显而易见的观点。 每一次我们通过定义一组操作来构建一个数学模型，一个可以再现常识的一个部分的模型.参照这个过程,我们就能“建造一台机器”（例如编写一个计算机程序），它基于不完整的信息上并应用上述弱三段论的量化过程来运行，使用合情推理并不是演绎推理而得出结果。
 
-Indeed, the development of such computer software for certain specialized problems of inference is one of the most active and useful current trends in this field. One kind of problem thus dealt with might be: given a mass of data, comprising 10 000 separate observations, determine in the light of these data and whatever prior information is at hand, the relative plausibilities of 100 different possible hypotheses about the causes at work. 
-
 事实上，针对某些特定的推理问题,开发解决此问题的计算机软件是当前这一领域最活跃和最有用的趋势之一。 这种问题的一个例子可能是：给定大量(包括10 000个独立的观测的)数据，从这些数据和现有的先验信息,来估算可能影响了结果的100种不同原因的相对可信度。
-
-Our unaided common sense might be adequate for deciding between two hypotheses whose consequences are very different; but, in dealing with 100 hypotheses which are not very different, we would be helpless without a computer and a well-developed mathematical theory that shows us how to program it. That is, what determines, in the policeman’s syllogism (1.5), whether the plausibility for A increases by a large amount, raising it almost to certainty; or only a negligibly small amount, making the data B almost irrelevant? The object of the present work is to develop the mathematical theory which answers such questions, in the greatest depth and generality now possible. 
-
-While we expect a mathematical theory to be useful in programming computers, the idea of a thinking computer is also helpful psychologically in developing the mathematical theory. The question of the reasoning process used by actual human brains is charged with emotion and grotesque misunderstandings. It is hardly possible to say anything about this without becoming involved in debates over issues that are not only undecidable in our present state of knowledge, but are irrelevant to our purpose here. 
-
-Obviously, the operation of real human brains is so complicated that we can make no pretense of explaining its mysteries; and in any event we are not trying to explain, much less reproduce, all the aberrations and inconsistencies of human brains. That is an interesting and important subject; but it is not the subject we are studying here. Our topic is the normative principles of logic, and not the principles of psychology or neurophysiology. 
-
-To emphasize this, instead of asking, ‘How can we build a mathematical model of human common sense?’, let us ask, ‘How could we build a machine which would carry out useful plausible reasoning, following clearly defined principles expressing an idealized common sense?’
 
 应用独立的常识我们就足以决定导致不同后果的两个假设之中该如何抉择;但是在面对100个有细微区别的假设时，如果不借助于计算机和指导如何编程的数学理论，我们几乎就是束手无策了。也就是说，在警察的三段论（1.5）中，究竟是A的合理性增加足够多以至于接近于100%肯定,还是由于B的合理性减少的足够小使得B可以忽略不计？本书的目的就是要发展一个数学理论来回答这样的问题，尽可能的使其具有足够的深度和通用性。
 
@@ -195,18 +120,7 @@ To emphasize this, instead of asking, ‘How can we build a mathematical model o
 
 为了强调这一点，我们不要问“如何建立一个人类常识的数学模型？”,而是要问"如何构建一个机器,它遵循具有明确定义的能表述理想化常识的原理,又能进行有意义的合情推理？"
 
-** 1.4 Introducing the robot 机器人
-
-In order to direct attention to constructive things and away from controversial irrelevancies, we shall invent an imaginary being. Its brain is to be designed by us, so that it reasons according to certain definite rules. These rules will be deduced from simple desiderata which, it appears to us, would be desirable in human brains; i.e. we think that a rational person, on discovering that they were violating one of these desiderata, would wish to revise their thinking. 
-
-In principle, we are free to adopt any rules we please; that is our way of defining which robot we shall study. Comparing its reasoning with yours, if you find no resemblance you are in turn free to reject our robot and design a different one more to your liking. But if you find a very strong resemblance, and decide that you want and trust this robot to help you in your own problems of inference, then that will be an accomplishment of the theory, not a premise. 
-
-Our robot is going to reason about propositions. As already indicated above, we shall denote various propositions by italicized capital letters, {A, B, C, etc.}, and for the time being we must require that any proposition used must have, to the robot, an unambiguous meaning and must be of the simple, definite logical type that must be either true or false. That is, until otherwise stated, we shall be concerned only with two-valued logic, or Aristotelian logic. We do not require that the truth or falsity of such an ‘Aristotelian proposition’ be ascertainable by any feasible investigation; indeed, our inability to do this is usually just the reason why we need the robot’s help. For example, the writer personally considers both of the following propositions to be true: 
-
-A ≡ Beethoven and Berlioz never met.
-B ≡ Beethoven’s music has a better sustained quality than that of Berlioz, although Berlioz at his best is the equal of anybody.
-
-Proposition B is not a permissible one for our robot to think about at present, whereas proposition A is, although it is unlikely that its truth or falsity could be definitely established today. 2 After our theory is developed, it will be of interest to see whether the present restriction to Aristotelian propositions such as A can be relaxed, so that the robot might help us also with more vague propositions such as B (see Chapter 18 on the A p -distribution). 3 
+** 1.4 机器人
 
 让我们抛开那些充满争议的无关的事情,把注意力转向建设性的事情,让我构建一个想象出来的东西。我们来设计它的大脑,让它能按照一组确定的规则来进行推理。这组规则是从人脑中简单的必要的本质属性演绎而来。这些属性是如此不可或缺,以至于对一个理性人而言,如果他发觉自己的思路偏离了这些属性时，就会主动自我调整。
 
@@ -215,29 +129,16 @@ Proposition B is not a permissible one for our robot to think about at present, 
 现在我们的机器人已经可以进行命题推理了。如前所述，我们用斜体大写字母{A，B，C等}来表示各种命题，而且我们现在要求所使用的所有命题必须对机器人而言具有明确的意义，简单的意义,即只能是逻辑上的真或假。也就是说，除非另有说明，否则我们只关心二值逻辑或亚里士多德式逻辑。我们并不要求进行任何额外的调查来确定这些“亚里士多德式命题”是真还是假,事实上我们需要机器人的原因正是因为我们并不知道一个命题到底是真还是假。例如，我个人认为以下两个命题是真的：
 
 A≡贝多芬和柏辽兹从未见过面。
+
 B≡贝多芬的音乐比柏辽兹的音乐更耐听，尽管柏辽兹的音乐比任何人都不逊色。
 
-目前,命题B对于我们的机器人目前来说不是不可接受的命题，而命题A是可接受的，虽然今天没人知道他们是不是真的从未见过面[fn:1]。有趣的是,随着理论的展开，我们可以看看如果对A这种亚里士多德式命题放松一些限制，机器人是不是就能处理像B这样的模糊的命题（参见第18章关于Ap分布）(注3)。 
-
-注2  Their meeting is a chronological possibility, since their lives overlapped by 24 years; my reason for doubting it is the failure of Berlioz to mention any such meeting in his memoirs – on the other hand, neither does he come out and say definitely that they did not meet.
-
-注3 The question of how one is to make a machine in some sense ‘cognizant’ of the conceptual meaning that a proposition like A has to humans, might seem very difficult, and much of the subject of artificial intelligence is devoted to inventing ad hoc devices to deal with this problem. However, we shall find in Chapter 4 that for us the problem is almost nonexistent; our rules for plausible reasoning automatically provide the means to do the mathematical equivalent of this.
+目前,命题B对于我们的机器人目前来说不是不可接受的命题，而命题A是可接受的，虽然今天没人知道他们是不是真的从未见过面(注1)。有趣的是,随着理论的展开，我们可以看看如果对A这种亚里士多德式命题放松一些限制，机器人是不是就能处理像B这样的模糊的命题（参见第18章关于Ap分布）(注3)。 
 
 注2 从年代上看,他们的会面是可能的，因为他们的有生之年交叠了24年;我怀疑的原因是柏辽兹在回忆录中从没有提到过他们见过面 - 反过来说，他也从未提到他们从未见过面。
 
 注3 从某种意义上说,机器是不是真的能像人理解命题A那样,真正"理解"一个概念的含义?试图证明这个问题是极端困难的,人工智能的许多研究都致力于发明各种奇技淫巧来解决它。但是在第四章我们会看到,合情推理几乎不存在这个问题,合情推理的规则自然而然的具有对此的数学等价性。
 
-** 1.5 Boolean algebra
-
-To state these ideas more formally, we introduce some notation of the usual symbolic logic, or Boolean algebra, so called because George Boole (1854) introduced a notation similar to the following. Of course, the principles of deductive logic itself were well understood centuries before Boole, and, as we shall see, all the results that follow from Boolean al- gebra were contained already as special cases in the rules of plausible inference given by (1812). The symbol
-
-AB,                           (1.6)
-
-called the logical product or the conjunction, denotes the proposition ‘both A and B are true’. Obviously, the order in which we state them does not matter; AB and B A say the same thing. The expression 
-
-A + B,                        (1.7)
-
-called the logical sum or disjunction, stands for ‘at least one of the propositions, A, B is true’ and has the same meaning as B + A. These symbols are only a shorthand way of writing propositions, and do not stand for numerical values. 
+** 1.5 逻辑代数
 
 为了更正式地陈述这些观点，我们引入常用的符号逻辑或布尔代数，因为乔治·布尔（GeorgeBoole，1854）引入了类似于如下的符号。当然，演绎逻辑本身的原理在布尔之前几个世纪就已经被很好的理解了，而且我们将会看到，布尔代数的所有结果都是都可看成是合情推理规则(1812)一个特例.符号:
 
@@ -249,11 +150,6 @@ A + B,                        (1.7)
 
 称为逻辑的和或并集,表达了"至少有一个命题,A,B为真",其意义和B+A一样.这些符号只是为了方便书写命题的缩写形式,并不表示具体的数值.
 
-Given two propositions A, B, it may happen that one is true if and only if the other is true; we then say that they have the same truth value. This may be only a simple tautology (i.e. A and B are verbal statements which obviously say the same thing), or it may be that only after immense mathematical labor is it finally proved that A is the necessary and sufficient condition for B. From the standpoint of logic it does not matter; once it is established, by any means, that A and B have the same truth value, then they are logically equivalent propositions, in the sense that any evidence concerning the truth of one pertains equally well to the truth of the other, and they have the same implications for any further reasoning. 
-
-Evidently, then, it must be the most primitive axiom of plausible reasoning that two propositions with the same truth value are equally plausible. This might appear almost too trivial to mention, were it not for the fact that Boole himself (Boole, 1854, p. 286) fell into error on this point, by mistakenly identifying two propositions which were in fact different – and then failing to see any contradiction in their different plausibilities. Three years later, Boole (1857) gave a revised theory which supersedes that in his earlier book; for further comments on this incident, see Keynes (1921, pp. 167–168); Jaynes (1976, pp. 240–242). 
-
-In Boolean algebra, the equal sign is used to denote not equal numerical value, but equal truth value: A = B, and the ‘equations’ of Boolean algebra thus consist of assertions that the proposition on the left-hand side has the same truth value as the one on the right-hand side. The symbol ‘≡’ means, as usual, ‘equals by definition’. In denoting complicated propositions we use parentheses in the same way as in ordinary algebra, i.e. to indicate the order in which propositions are to be combined (at times we shall use them also merely for clarity of expression although they are not strictly necessary). In their absence we observe the rules of algebraic hierarchy, familiar to those who use hand calculators: thus AB + C denotes (AB) + C; and not A(B + C). 
 * donehere
 给定两个命题A，B，当且仅当另一个为真时，可能发生一个是真的;然后我们说他们有相同的真值。这可能只是一个简单的同义反复（即A和B是口头陈述，显然是说同样的事情），也可能是只有经过大量的数学劳动后才能证明A是B的必要和充分的条件。逻辑的立场不重要;一旦以任何方式确定了A和B具有相同的真值，那么它们在逻辑上就是等价的命题，就任何有关一个真理的证据而言，都与另一个的真理同样好，对于任何进一步的推理都有同样的含义。
 
