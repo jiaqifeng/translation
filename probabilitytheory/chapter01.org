@@ -133,7 +133,7 @@ As a first orientation, then, let us note some very suggestive analogies to anot
 
 注1 Today, several different views are held about the exact nature of Aristotle’s contribution. Such issues are irrelevant to our present purpose, but the interested reader may find an extensive discussion of them in Lukasiewicz (1957).
 
-注1: 今天，关于亚里士多德贡献的确切性质，有几种不同的观点。但和我们目前的目的无关，有兴趣的读者可以参阅Lukasiewicz（1957）的讨论。
+[fn:1] 今天，关于亚里士多德贡献的确切性质，有几种不同的观点。但和我们目前的目的无关，有兴趣的读者可以参阅Lukasiewicz（1957）的讨论。
 
 ** 1.2 Analogies with physical theories 在物理理论中
 
@@ -217,7 +217,7 @@ Proposition B is not a permissible one for our robot to think about at present, 
 A≡贝多芬和柏辽兹从未见过面。
 B≡贝多芬的音乐比柏辽兹的音乐更耐听，尽管柏辽兹的音乐比任何人都不逊色。
 
-目前,命题B对于我们的机器人目前来说不是不可接受的命题，而命题A是可接受的，虽然今天没人知道他们是不是真的从未见过面(注2)。有趣的是,随着理论的展开，我们可以看看如果对A这种亚里士多德式命题放松一些限制，机器人是不是就能处理像B这样的模糊的命题（参见第18章关于Ap分布）(注3)。 
+目前,命题B对于我们的机器人目前来说不是不可接受的命题，而命题A是可接受的，虽然今天没人知道他们是不是真的从未见过面[fn:1]。有趣的是,随着理论的展开，我们可以看看如果对A这种亚里士多德式命题放松一些限制，机器人是不是就能处理像B这样的模糊的命题（参见第18章关于Ap分布）(注3)。 
 
 注2  Their meeting is a chronological possibility, since their lives overlapped by 24 years; my reason for doubting it is the failure of Berlioz to mention any such meeting in his memoirs – on the other hand, neither does he come out and say definitely that they did not meet.
 

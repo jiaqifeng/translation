@@ -5,7 +5,7 @@ Probability Theory - The Logic of Science
 
 [[term.org][术语对照表]]
 
-[[preface.org][Preface]] 50%
+[[preface.org][序言]] 50%
 
 [[chapter01.org][第一章]] 10%
 
@@ -32,3 +32,6 @@ Probability Theory - The Logic of Science
 
 [[qun-chapter05.org][第五章]] 概率论的怪用
 
+英文整理
+
+[[preface_en.org][preface]]
