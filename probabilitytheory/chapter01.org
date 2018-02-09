@@ -26,23 +26,25 @@ A为真            (1.1)
 
 及其逆用:
 
+#+BEGIN_SRC 
 如果A为真,则B为真
-
 B为假                (1.2)
-
 所以A为假
+#+END_SRC
 
 这种推理方式是我们最想使用的; 但是，在几乎所有我们遇到的情况中，我们都找不到合适的信息来进行这种推理。 我们只好求助于弱三段论（epagoge）：
 
+#+BEGIN_SRC 
 如果A为真,则B为为真
 B为真                (1.3)
 所以,A为真变得更加合情理
+#+END_SRC
 
 证据不足以证明A为是，但A的一个后果为真确实让我们对A有更多的信心。例如:
-
+#+BEGIN_SRC 
 A = 最迟在上午10点开始下雨
-
 B = 上午10点之前天空会变得多云
+#+END_SRC
 
 如果上午9:45观察到天空多云,并不能让我们从逻辑上相信一定会下雨。 然而服从弱三段论的常识，会促使我们改变计划仿佛相信雨一定会下的，只要这些云是足够黑暗。
 
@@ -52,21 +54,21 @@ B = 上午10点之前天空会变得多云
 
 同样的大前提,另一种弱三段论是
 
+#+BEGIN_SRC 
 如果A为真,则B为真
-
 A为假       (1.4)
-
 所以,B为看起来更不合情理一些.
+#+END_SRC
 
 在这种情况下，无法证明B是假的;但是B为真的一个前提条件被排除了,因此我们对于B为真的信心就变弱了一些。一个科学家在思考是接受还是拒绝自己的理论时，几乎全部应用的是弱三段论的第二和第三种形式。
 
 现在看警察的推理过程并不符合上面的任何一个形式,而是更符合下面的更弱一些的三段论形式:
 
+#+BEGIN_SRC 
 如果A为真,则B为真的可能性更大
-
 B为真       (1.5)
-
 所以A为真的可能性变的更大了
+#+END_SRC
 
 尽管在用抽象的A和B来表达论证过程时,这种方式的证明力看起来太过薄弱，但我们认识到警察的结论具有很强的说服力。 似乎有什么东西让我们相信，在这个特殊情况下警察的论证几乎具同演绎推理的有同样的可信度。
 
@@ -141,106 +143,76 @@ B≡贝多芬的音乐比柏辽兹的音乐更耐听，尽管柏辽兹的音乐�
 ** 1.5 逻辑代数
 
 为了更正式地陈述这些观点，我们引入常用的符号逻辑或布尔代数，因为乔治·布尔（GeorgeBoole，1854）引入了类似于如下的符号。当然，演绎逻辑本身的原理在布尔之前几个世纪就已经被很好的理解了，而且我们将会看到，布尔代数的所有结果都是都可看成是合情推理规则(1812)一个特例.符号:
-
+#+BEGIN_SRC 
 AB,                           (1.6)
-
+#+END_SRC
 称为逻辑的积或相交,表示命题"A和B都为真".显然两个命题的顺序无关紧要,AB和BA说的是同一件事.下面的表达式:
-
+#+BEGIN_SRC 
 A + B,                        (1.7)
-
+#+END_SRC
 称为逻辑的和或并集,表达了"至少有一个命题,A,B为真",其意义和B+A一样.这些符号只是为了方便书写命题的缩写形式,并不表示具体的数值.
 
-* donehere
-给定两个命题A，B，当且仅当另一个为真时，可能发生一个是真的;然后我们说他们有相同的真值。这可能只是一个简单的同义反复（即A和B是口头陈述，显然是说同样的事情），也可能是只有经过大量的数学劳动后才能证明A是B的必要和充分的条件。逻辑的立场不重要;一旦以任何方式确定了A和B具有相同的真值，那么它们在逻辑上就是等价的命题，就任何有关一个真理的证据而言，都与另一个的真理同样好，对于任何进一步的推理都有同样的含义。
+给定两个命题A和B，当且仅当另一个为真时另一个也为真,我们说它们有相同的真值。这可能是一个简单的循环逻辑（即A和B是一件事情的两种语言表达），也可能在经过复杂的数学证明A是B的必要和充分的条件。从逻辑的角度看是哪一种并不重要,一旦以任何方式确定了A和B具有相同的真值，那么它们在逻辑上就是等价的命题，对任何与一个命题相关的证据也与另一个相关，对于任何进一步的推理都蕴含同样的含义。
 
-很明显，那么两个具有相同真值的命题是同样合理的，这一定是最合理的推理原则。这可能显得太琐碎了，如果不是因为布尔本人（布尔，1854年，第286页）在这一点上犯了错误，因为错误地确定了两个事实上是不同的命题，然后看不到任何矛盾在他们不同的可信度。三年后，布尔（1857）提出了一个修正的理论，在他早期的书中取代了这个理论。对这一事件的进一步评论见凯恩斯（1921年，第167-168页）; Jaynes（1976，第240-242页）。
+显而易见的，在合情推理中,具有相同真值的两个命题有相等的可信度是最基本的公理。这可能太过显然而不值一提，但是布尔本人（布尔，1854年，第286页）却在这一点上犯过错误，他错误地认为两个事实上是不同的命题是相同的，但在两个命题有不相等的可信度时却没看出其中的矛盾。三年后，布尔（1857）才在他早期的书中修正了这个问题。对这一事件的进一步评论见凯恩斯（1921年，第167-168页),Jaynes（1976，第240-242页）。
 
-在布尔代数中，等号被用来表示不等于数值，但是等于真值：A = B，因此布尔代数的“等式”由这样的断言组成，即左边的命题具有相同的真值作为右侧的值。像往常一样，符号“≡”的意思是“等于定义”。在表示复杂的命题时，我们使用与普通代数相同的括号，即表示命题合并的顺序（有时候我们也将它们用于表达的清晰度，虽然它们不是绝对必要的）。在他们缺席的情况下，我们观察代数层次的规则，熟悉那些使用手计算器的人：因此AB + C表示（AB）+ C;而不是A（B + C）。
+在布尔代数中，等号不是表示数值相等，而是真值相同：A = B，此布尔代数中的等式表示的是,断言等式左侧的命题与右侧的命题有相同的真值。符号“≡”和通常一样表示“定义上等价”。
 
-The denial of a proposition is indicated by a bar:
-A ≡ A is false.
-(1.8)
+在表示复杂的命题时，和普通代数一样的方式使用括号，即表示命题结合的顺序（有时候我们也将它们用于表达的清晰度，虽然它们不是绝对必要的）。在没有括号时，和代数运算有优先级一样,AB+C表示(AB)+C而不是A(B+C)。
 
-The relation between A, A is a reciprocal one:
-A = A is false,
-(1.9)
+命题的否定用一个在上面的横线表示:
+#+BEGIN_SRC 
+A ≡ A 为假.              (1.8)
+#+END_SRC
+A和A之间是相关关系:
+#+BEGIN_SRC 
+A = A 为假,               (1.9)
+#+END_SRC
+带横线和不带横线的A在等式那边都是一样的.注意横线的可能引起歧义的情况,按照上面的有, 
+#+BEGIN_SRC 
+AB = AB 为假 (1.10)
+A B = A和B都为假. (1.11)
+#+END_SRC
+这是两个完全不同的命题,AB不是逻辑乘法AB,而是逻辑加法AB = A + B. 
 
-and it does not matter which proposition we denote by the barred and which by the unbarred letter. Note that some care is needed in the unambiguous use of the bar. For example, according to the above conventions, 
+在上述规定下, 布尔代数的性质由一些基本的显而易见的等式组成:
 
-AB = AB is false; (1.10)
-A B = both A and B are false. (1.11)
-
-These are quite different propositions; in fact, AB is not the logical product A B, but the logical sum: AB = A + B. 
-
-With these understandings, Boolean algebra is characterized by some rather trivial and obvious basic identities, which express the properties of: 
-
-Idempotence: AA = A
-A + A = A
-Commutativity: AB = B A
-A + B = B + A
-Associativity: A(BC) = (AB)C = ABC
-A + (B + C) = (A + B) + C = A + B + C
-Distributivity: A(B + C) = AB + AC
-A + (BC) = (A + B)(A + C)
-Duality: If C = AB, then C = A + B
-If D = A + B, then D = A B
-(1.12)
-
-but by their application one can prove any number of further relations, some highly nontrivial. For example, we shall presently have use for the rather elementary theorem: 
-
-if B = AD then A B = B and B A = A.
-(1.13)
-Implication
-
-The proposition
-A ⇒ B
-(1.14)
-
-to be read as ‘A implies B’, does not assert that either A or B is true; it means only that A B is false, or, what is the same thing, (A + B) is true. This can be written also as the logical equation A = AB. That is, given (1.14), if A is true then B must be true; or, if B is false then A must be false. This is just what is stated in the strong syllogisms (1.1) and (1.2).
+[[images/formula-1.12.png]]
+应用这些等式,我们就可以证明更多的逻辑关系,包括那些十分复杂的.例如,下面就使用了基本原理:
+#+BEGIN_SRC 
+如果 B = AD 那么 A B = B 且 B A = A.    (1.13)
+#+END_SRC
+蕴含着命题
+#+BEGIN_SRC 
+A ⇒ B                         (1.14)
+#+END_SRC
+读作A蕴涵B,这不是在断言A或B为真,仅仅是说AB为假,等价于(A+B)为真.这也可以写成逻辑等式A=AB.即给定(1.14),如果A为真那么B必为真,或者如果B为假那么A必为假.这正是强三段论 (1.1)和(1.2)所表述的.
 
 On the other hand, if A is false, (1.14) says nothing about B: and if B is true, (1.14) says nothing about A. But these are just the cases in which our weak syllogisms (1.3), (1.4) do say something. In one respect, then, the term ‘weak syllogism’ is misleading. The theory of plausible reasoning based on weak syllogisms is not a ‘weakened’ form of logic; it is an extension of logic with new content not present at all in conventional deductive logic. It will become clear in the next chapter (see (2.69) and (2.70)) that our rules include deductive logic as a special case. 
-被解读为“A意味着B”，并不认为A或B是真的; 这意味着只有A B是假的，或者说同样的事情（A + B）是真的。 这也可以写成逻辑方程A = AB。 也就是说，如果（1.14），如果A是真的，那么B必须是真的; 或者，如果B是假的，那么A必须是假的。 这就是强三段论（1.1）和（1.2）中所说的。
+另一方面，如果A是假的(1.14)没有指出B该如何,如果B是真的(1.14)则没有指出A该如何。但弱三段论（1.3）和（1.4）却对此有所表述.从某个角度看,“弱三段论”这说法是有一定误导性的。 基于弱三段论的合理推理理论并不是一种“弱化”的逻辑形式,它是逻辑的一种扩展，增加了在传统的演绎逻辑中根本不存在的新内容。 在下一章（见（2.69）和（2.70））中将会更清楚，演绎逻辑是合情推理的一个特殊情况。
 
-另一方面，如果A是假的，（1.14）对B没有提及，如果B是真的，（1.14）对A没有提到。但是这些只是我们弱三段论（1.3），（1.4） 不要说点什么 那么，在一个方面，“弱三段论”这个词是误导性的。 基于弱三段论的合理推理理论并不是一种“弱化”的逻辑形式; 它是逻辑的延伸，新的内容在传统的演绎逻辑中根本不存在。 在下一章（见（2.69）和（2.70））中将会清楚，我们的规则包括演绎逻辑作为特例。
+*** 微妙的一点
 
-A tricky point
+要注意，在日常语言中，“A蕴涵B”会被理解为在逻辑上可以从A演绎推理出B。但是正式逻辑中，“A蕴涵B”只意味着命题A和AB具有相同的真值。一般而言，B从逻辑上是否可以从A演绎推理得到，不仅仅取决于命题A和B,它取决于我们接受为真的并在演绎推理中可用的命题（A，A，A，...）。 Devinatz（1968，p。3）和Hamilton（1988，p。5）给出了蕴含作为二元运算的真值表，说明A⇒B只有在A为真且B为假时才为假;在所有其他情况下A⇒B都为真！
 
-Note carefully that in ordinary language one would take ‘A implies B’ to mean that B is logically deducible from A. But, in formal logic, ‘A implies B’ means only that the propositions A and AB have the same truth value. In general, whether B is logically deducible from A does not depend only on the propositions A and B; it depends on the totality of propositions (A, A , A , . . .) that we accept as true and which are therefore available to use in the deduction. Devinatz (1968, p. 3) and Hamilton (1988, p. 5) give the truth table for the implication as a binary operation, illustrating that A ⇒ B is false only if A is true and B is false; in all other cases A ⇒ B is true! 
+乍一看，这似乎令人吃惊;然而，请注意，如果A和B都是真的，那么A = AB，所以A⇒B是真的;在形式逻辑中，每为真实的陈述蕴涵着其他所有为真的陈述.反过来,如果A是假的，对于所有Q有AQ为假，因此A = AB和A = AB都是真的，所以A⇒B和A⇒B都是真的;一个错误的命题蕴涵了所有命题。如果我们试图把这个解释为逻辑演绎（即B和B都可以从A演绎推理得出），那么可以得出每个假命题在逻辑上都是互相矛盾的。然而命题“贝多芬比柏辽兹去世的晚”为假，但在逻辑上并不矛盾（因为贝多芬比柏辽兹的年龄还要长很多）。
 
-This may seem startling at first glance; however, note that, indeed, if A and B are both true, then A = AB and so A ⇒ B is true; in formal logic every true statement implies every other true statement. On the other hand, if A is false, then AQ is also false for all Q, thus A = AB and A = AB are both true, so A ⇒ B and A ⇒ B are both true; a false proposition implies all propositions. If we tried to interpret this as logical deducibility (i.e. both B and B are deducible from A), it would follow that every false proposition is logically contradictory. Yet the proposition: ‘Beethoven outlived Berlioz’ is false but hardly logically contradictory (for Beethoven did outlive many people who were the same age as Berlioz). 
+显然，即使知道命题A和B都为真，不意味着有足够的信息来决定一个命题可以演绎推理出另一个命题，即使再增加更多的额外命题。在第二章的末尾,我们会讨论一下能否从一组命题从演绎出另一个命题,以哥德尔定理中的一种重要的方式。如果没有正确理解"蕴涵"这个词在日常语言和和形式逻辑中的不同，就会导致严重的错误;在我们看来，选择用“蕴涵”这个词真是一个不幸的选择，而且在传统的逻辑阐述中没能对此做出足够的强调。
 
-Obviously, merely knowing that propositions A and B are both true does not provide enough information to decide whether either is logically deducible from the other, plus some unspecified ‘toolbox’ of other propositions. The question of logical deducibility of one proposition from a set of others arises in a crucial way in the G ̈odel theorem discussed at the end of Chapter 2. This great difference in the meaning of the word ‘implies’ in ordinary language and in formal logic is a tricky point that can lead to serious error if it is not properly understood; it appears to us that ‘implication’ is an unfortunate choice of word, and that this is not sufficiently emphasized in conventional expositions of logic.
-请注意，在普通语言中，“A意味着B”意味着B在逻辑上可以从A推导出来。但是，在形式逻辑中，“A意味着B”只意味着命题A和AB具有相同的真值。一般而言，B从逻辑上是否可以从A推导出来，不仅仅取决于命题A和B;它取决于我们所接受的命题（A，A，A，...）的全部，因此可用于扣除。 Devinatz（1968，p。3）和Hamilton（1988，p。5）给出了蕴含作为二元运算的真值表，说明A⇒B只有在A为真且B为假时才为假;在所有其他情况下A⇒B是真实的！
+** 1.6 一组恰当的操作
 
-乍一看，这似乎令人吃惊;然而，请注意，如果A和B都是真的，那么A = AB，所以A⇒B是真的;在形式逻辑中，每一个真实的陈述都意味着其他的真实陈述另一方面，如果A是假的，那么AQ对于所有Q也是假的，因此A = AB和A = AB都是真的，所以A⇒B和A⇒B都是真的;一个错误的命题意味着所有的命题。如果我们试图把这个解释为逻辑推导（即B和B都可以从A推导出来），那么每个假命题在逻辑上都是矛盾的。然而，“贝多芬比贝卢奥兹更有活力”这个主张是错误的，但在逻辑上并不矛盾（因为贝多芬比柏辽兹的年龄还要长很多）。
+我们注意在设计我们机器人时需要的演绎逻辑的一些特性。 我们定义了四个操作，即“连接词”，可以从命题A和B开始出发定义其他命题：逻辑积或交接AB，逻辑和或并接A+B，蕴涵A→B， 和取反.通过以各种可能的方式反复地组合这些操作，可以生成任意数量的新命题，例如
+#+BEGIN_SRC 
+C ≡ (A + !B)(!A + A !B) + !A B(A + B).     (1.15)
+#+END_SRC
+那么我们就会有很多问题了：这样产生的新命题有多少个？它是无限的，还是一个有限集合？从A和B所延伸出来命题都可以用这四个操作定义?还是需要更多的操作？甚或四个太多了,可以去掉一些？足以产生A和B的所有这些“逻辑函数”的最小的一组操作是什么？如果起始命题不止A和B而是任意个{A 1，...，A}，这些操作是否仍然可以生成{A 1，...，A}的所有可能的逻辑函数？
 
-显然，只要知道命题A和B都是真实的，就不能提供足够的信息来决定是否可以从逻辑上推导出另外一个命题，还有一些未指定的其他命题的“工具箱”。一套命题的逻辑推导性问题，在第二章结尾讨论的格罗姆定理中起着至关重要的作用。在普通语言和形式逻辑中，“蕴涵”这个词的意义有很大的不同是一个棘手的问题，如果没有正确理解，会导致严重的错误;在我们看来，“暗示”是一个不幸的词选择，这在传统的逻辑阐述中是不够强调的。
-
-** 1.6 Adequate sets of operations
-
-We note some features of deductive logic which will be needed in the design of our robot. We have defined four operations, or ‘connectives’, by which, starting from two propositions A, B, other propositions may be defined: the logical product or conjunction AB, the logical sum or disjunction A + B, the implication A ⇒ B, and the negation A. By combining these operations repeatedly in every possible way, one can generate any number of new propositions, such as 
-我们注意到我们机器人设计中需要的演绎逻辑的一些特征。 我们定义了四个操作，即“连接词”，从两个命题A，B开始，可以定义其他命题：逻辑积或连词AB，逻辑和或分离A + B，蕴涵A→B， 和否定答：通过以各种可能的方式反复地组合这些操作，可以生成任意数量的新命题，例如
-
-C ≡ (A + B)(A + A B) + A B(A + B).
-(1.15)
-
-Many questions then occur to us: How large is the class of new propositions thus generated? Is it infinite, or is there a finite set that is closed under these operations? Can every proposition defined from A, B be thus represented, or does this require further connectives beyond the above four? Or are these four already overcomplete so that some might be dispensed with? What is the smallest set of operations that is adequate to generate all such ‘logic functions’ of A and B? If instead of two starting propositions A, B we have an arbitrary number {A 1 , . . . , A n }, is this set of operations still adequate to generate all possible logic functions of {A 1 , . . . , A n }? 
-
-All these questions are answered easily, with results useful for logic, probability theory, and computer design. Broadly speaking, we are asking whether, starting from our present vantage point, we can (1) increase the number of functions, (2) decrease the number of operations. The first query is simplified by noting that two propositions, although they may appear entirely different when written out in the manner (1.15), are not different propositions from the standpoint of logic if they have the same truth value. For example, it is left for the reader to verify that C in (1.15) is logically the same statement as the implication C = (B ⇒ A). 
-
-Since we are, at this stage, restricting our attention to Aristotelian propositions, any logic function C = f (A, B) such as (1.15) has only two possible ‘values’, true and false; and likewise the ‘independent variables’ A and B can take on only those two values. 
-
-At this point, a logician might object to our notation, saying that the symbol A has been defined as standing for some fixed proposition, whose truth cannot change; so if we wish to consider logic functions, then instead of writing C = f (A, B) we should introduce new symbols and write z = f (x, y), where x, y, z, are ‘statement variables’ for which various specific statements A, B, C may be substituted. But if A stands for some fixed but unspecified proposition, then it can still be either true or false. We achieve the same flexibility merely by the understanding that equations like (1.15) which define logic functions are to be true for all ways of defining A, B ; i.e. instead of a statement variable we use a variable statement. 
-
-In relations of the form C = f (A, B), we are concerned with logic functions defined on a discrete ‘space’ S consisting of only 2 2 = 4 points; namely those at which A and B take on the ‘values’ {TT, TF, FT, FF}, respectively; and, at each point, the function f (A, B) can take on independently either of two values {T, F}. There are, therefore, exactly 2 4 = 16 different logic functions f (A, B), and no more. An expression B = f (A 1 , . . . , A n ) involving n propositions is a logic function on a space S of M = 2 n points; and there are exactly 2 M such functions.
-那么我们就会有很多问题了：这样产生的新命题有多大？它是无限的，还是在这些操作下有一个有限的集合？ A，B所定义的每一个命题是否都可以这样表示，还是需要进一步的联系？还是这四个已经过度完成了，有些可能会被忽略？什么是足以产生A和B的所有这些“逻辑功能”的最小的一组操作？如果不是两个起始命题A，B，我们有一个任意数{A 1，...，A}。 。 。 ，A n}，这组操作仍然足以生成{A 1，...，A}的所有可能的逻辑函数。 。 。 ，A n}？
-
-所有这些问题都很容易回答，其结果对于逻辑，概率论和计算机设计有用。一般而言，我们正在问，从目前的高度来看，我们可以（1）增加功能的数量，（2）减少操作的数量。第一个查询是简化的，注意到两个命题虽然在以（1.15）的方式写出时可能完全不同，但如果它们具有相同的真值，则从逻辑的角度来看并不是不同的命题。例如，读者可以确认（1.15）中的C在逻辑上与蕴含C =（B⇒A）的语句相同。
+所有这些问题都很容易回答，而且其结果对于逻辑学，概率论和计算机设计都有用处。一般而言，我们正在问，从目前的高度来看，我们可以（1）增加函数的数量，（2）减少操作的数量。第一个问题可以被简化，因为注意到两个命题虽然在以（1.15）的方式写出时可能完全不同，但如果它们具有相同的真值，则从逻辑的角度来看并不是不同的命题。例如，读者可以确认（1.15）中的C在逻辑上与蕴含C =（B⇒!A）的语句相同。
 
 因为在这个阶段，我们把注意力集中在亚里士多德命题上，所以任何逻辑函数C = f（A，B）（如（1.15））都只有两个可能的“值”，即真和假;同样，“自变量”A和B也只能取这两个值。
 
-在这一点上，一个逻辑学家可能反对我们的符号，说符号A被定义为一个固定的命题，其真理不能改变;所以如果我们想考虑逻辑函数，那么我们不应该写C = f（A，B），而应该引入新的符号，并写成z = f（x，y），其中x，y，z是'语句变量'各种具体的陈述A，B，C可以被替代。但是，如果A代表一些固定但未明确的命题，那么它仍然可以是真或假。我们仅仅通过这样的理解就可以达到同样的灵活性：定义逻辑函数的方程（1.15）对于定义A，B的所有方法都是真实的;即我们使用一个变量语句而不是一个语句变量。
-
+在这一点上，一个逻辑学家可能反对我们的符号表示方法，说符号A已经被定义为一个固定的命题，其真值不能改变;所以如果我们想考虑逻辑函数，那么我们不应该写C = f（A，B），而应该引入新的符号，并写成z = f（x，y），其中x，y，z是'陈述变量',即可替换成任何具体的陈述A，B，C。但是，如果A代表一些固定但未明确指定的命题，那么它仍然可以是真或假。对于(1.15)这样的等式,我们仅仅将其理解为对所有指定的A和B可以为真,就可以达到上述的灵活性,即我们使用一个可变的语句而不是一个语句变量。
+* donehere
 在C = f（A，B）形式的关系中，我们关注的是在离散的“空间”S上定义的逻辑函数，它由只有2 2 = 4个点组成;即A和B分别取“价值”{TT，TF，FT，FF}并且在每个点上，函数f（A，B）可以独立地取两个值{T，F}中的任一个。因此，正好有2 4 = 16个不同的逻辑函数f（A，B），而不再有。涉及n个命题的表达式B = f（A 1，...，A n）是M = 2 n个点的空间S上的逻辑函数;而且正好有2 M这样的功能。
 
 In the case n = 1, there are four logic functions { f 1 (A), . . . , f 4 (A)}, which we can define by enumeration, listing all their possible values in a truth table:
