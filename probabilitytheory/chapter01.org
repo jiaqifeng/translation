@@ -26,7 +26,7 @@ In spite of its familiarity, the formation of plausible conclusions is a very su
 尽管这听起来很熟悉，但得出合情结论是一个非常微妙的过程。 尽管对此过程的讨论记载已经延续了24个世纪，看起来还没人能把这个过程分析的让所有人都完全满意。 在本书中，我们将给出一些有用的和令人鼓舞的新进展，其中用明确的定理取代矛盾的直觉，特别是用一些基本的--几乎不可避免的--理性标准来取代特殊解决手法.
 
 All discussions of these questions start by giving examples of the contrast between deductive reasoning and plausible reasoning. As is generally credited to the Organon of Aristotle (fourth century bc) deductive reasoning (apodeixis) can be analyzed ultimately into the repeated application of two strong syllogisms: 
-所有关于这些问题的讨论都以演绎推理和合理推理之间的对比开始。 一般认为是亚里士多德（约公元前四世纪）(注1)最先系统的规范了演绎推理（apodeixis）,将其归结为对两种强三段论的反复运用：
+所有关于这些问题的讨论都以演绎推理和合理推理之间的对比开始。 一般认为是亚里士多德（约公元前四世纪）([[注1]])最先系统的规范了演绎推理（apodeixis）,将其归结为对两种强三段论的反复运用：
 
 如果A为真,则B为真
 A为真            (1.1)
@@ -133,7 +133,7 @@ As a first orientation, then, let us note some very suggestive analogies to anot
 
 注1 Today, several different views are held about the exact nature of Aristotle’s contribution. Such issues are irrelevant to our present purpose, but the interested reader may find an extensive discussion of them in Lukasiewicz (1957).
 
-[fn:1] 今天，关于亚里士多德贡献的确切性质，有几种不同的观点。但和我们目前的目的无关，有兴趣的读者可以参阅Lukasiewicz（1957）的讨论。
+<<注1>> 今天，关于亚里士多德贡献的确切性质，有几种不同的观点。但和我们目前的目的无关，有兴趣的读者可以参阅Lukasiewicz（1957）的讨论。
 
 ** 1.2 Analogies with physical theories 在物理理论中
 
