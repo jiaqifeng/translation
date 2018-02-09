@@ -30,6 +30,14 @@
 
 广义逻辑 extended logic
 基本假设 desiderata
+演绎推理 Deductive reasoning: 从一组前提开始,反复应用逻辑规则,得到结论,结论和前提有相同的真值.
+inductive reasoning: 归纳推理? 从下到上,从特殊到一般,支持结论的正确性,但可能结论会是假.
+argument: 逻辑学, 论证,证据? 一系列的声明?来说服别人接受一个结论. 自然语言中,是一组前提(命题/声明/语句)以支持一个结论.
+    In logic and philosophy, an argument is a series of statements typically used to persuade someone of something or to present reasons for accepting a conclusion.
+statement: 逻辑上,一个或真或假的语句.    
+inference: 可以有两种意思:reasoning的一系列步骤,是从前提到结论得移动过程,译成推理过程更准确,
+           或者指基于证据和推理而得到的结果.
+    ,大部分情况下译成推理也可接受. Charles Sanders Peirce将其分为演绎推理过程,归纳推理过程,abduction(不明推论?假设性推论?溯因推论?合情推理?)
 
  principle, theorem, fundamental, law 这些名词均有"原理，原则"之意。
 

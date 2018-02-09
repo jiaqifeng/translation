@@ -1,0 +1,59 @@
+* 10
+
+** 10.7 But what about quantum theory? 那么量子论是怎么回事?
+
+Those who cling to a belief in the existence of ‘physical probabilities’ may react to the above arguments by pointing to quantum theory, in which physical probabilities appear to express the most fundamental laws of physics. Therefore let us explain why this is another case of circular reasoning. We need to understand that present quantum theory uses entirely different standards of logic than does the rest of science. 
+
+In biology or medicine, if we note that an effect E (for example, muscle contraction, phototropism, digestion of protein) does not occur unless a condition C (nerve impulse, light, pepsin) is present, it seems natural to infer that C is a necessary causative agent for E. Most of what is known in all fields of science has resulted from following up this kind of reasoning. But suppose that condition C does not always lead to effect E; what further inferences should a scientist draw? At this point, the reasoning formats of biology and quantum theory diverge sharply.
+
+In the biological sciences, one takes it for granted that in addition to C there must be some other causative factor F, not yet identified. One searches for it, tracking down the assumed cause by a process of elimination of possibilities that is sometimes extremely tedious. But persistence pays off; over and over again, medically important and intellectually impressive success has been achieved, the conjectured unknown causative factor being finally identified as a definite chemical compound. Most enzymes, vitamins, viruses, and other biologically active substances owe their discovery to this reasoning process. 
+
+In quantum theory, one does not reason in this way. Consider, for example, the photoelectric effect (we shine light on a metal surface and find that electrons are ejected from it). The experimental fact is that the electrons do not appear unless light is present. So light must be a causative factor. But light does not always produce ejected electrons; even though the light from a unimode laser is present with absolutely steady amplitude, the electrons appear only at particular times that are not determined by any known parameters of the light. Why then do we not draw the obvious inference, that in addition to the light there must be a second causative factor, still unidentified, and the physicist’s job is to search for it?
+
+What is done in quantum theory today is just the opposite; when no cause is apparent one simply postulates that no cause exists – ergo, the laws of physics are indeterministic and can be expressed only in probability form. The central dogma is that the light determines not whether a photoelectron will appear, but only the probability that it will appear. The mathematical formalism of present quantum theory – incomplete in the same way that our present knowledge is incomplete – does not even provide the vocabulary in which one could ask a question about the real cause of an event.
+
+Biologists have a mechanistic picture of the world because, being trained to believe in causes, they continue to use the full power of their brains to search for them – and so they find them. Quantum physicists have only probability laws because for two generations we have been indoctrinated not to believe in causes – and so we have stopped looking for them. Indeed, any attempt to search for the causes of microphenomena is met with scorn and a charge of professional incompetence and ‘obsolete mechanistic materialism’. Therefore, to explain the indeterminacy in current quantum theory we need not suppose there is any indeterminacy in Nature; the mental attitude of quantum physicists is already sufficient to guarantee it. {2}
+
+This point also needs to be stressed, because most people who have not studied quantum theory on the full technical level are incredulous when told that it does not concern itself with causes; and, indeed, it does not even recognize the notion of ‘physical reality’. The currently taught interpretation of the mathematics is due to Niels Bohr, who directed the Institute for Theoretical Physics in Copenhagen; therefore it has come to be called ‘The Copenhagen interpretation’.
+
+As Bohr stressed repeatedly in his writings and lectures, present quantum theory can answer only questions of the form: ‘If this experiment is performed, what are the possible results and their probabilities?’ It cannot, as a matter of principle, answer any question of the form: ‘What is really happening when . . .?’ Again, the mathematical formalism of present quantum theory, like Orwellian newspeak, does not even provide the vocabulary in which one could ask such a question. These points have been explained in some detail by Jaynes (1986d, 1989, 1990a, 1992a).
+
+We suggest, then, that those who try to justify the concept of ‘physical probability’ by pointing to quantum theory are entrapped in circular reasoning, not basically different from that noted above with coins and bridge hands. Probabilities in present quantum theory express the incompleteness of human knowledge just as truly as did those in classical statistical mechanics; only its origin is different.
+
+In classical statistical mechanics, probability distributions represented our ignorance of the true microscopic coordinates – ignorance that was avoidable in principle but unavoidable in practice, but which did not prevent us from predicting reproducible phenomena, just because those phenomena are independent of the microscopic details. 
+
+In current quantum theory, probabilities express our own ignorance due to our failure to search for the real causes of physical phenomena; and, worse, our failure even to think seriously about the problem. This ignorance may be unavoidable in practice, but in our present state of knowledge we do not know whether it is unavoidable in principle; the ‘central dogma’ simply asserts this, and draws the conclusion that belief in causes, and searching for them, is philosophically naı̈ve. If everybody accepted this and abided by it, no further advances in understanding of physical law would ever be made; indeed, no such advance has been made since the 1927 Solvay Congress in which this mentality became solidified into physics. 3 But it seems to us that this attitude places a premium on stupidity; to lack the ingenuity to think of a rational physical explanation is to support the supernatural view. 
+
+To many people, these ideas are almost impossible to comprehend because they are so radically different from what we have all been taught from childhood. Therefore, let us show how just the same situation could have happened in coin tossing, had classical physicists used the same standards of logic that are now used in quantum theory. 
+
+{2} Here, there is a striking similarity to the position of the parapsychologists Soal and Bateman (1954), discussed in Chapter 5. They suggest that to seek a physical explanation of parapsychological phenomena is a regression to the quaint and reprehensible materialism of Thomas Huxley. Our impression is that by 1954 the views of Huxley in biology were in a position of complete triumph over vitalism, supernaturalism, or any other anti-materialistic teachings; for example, the long mysterious immune mechanism was at last understood, and the mechanism of DNA replication had just been discovered. In both cases the phenomena could be described in ‘mechanistic’ terms so simple and straightforward – templates, geometrical fit, etc. – that they would be understood immediately in a machine shop.
+
+{3}: Of course, physicists continued discovering new particles and calculation techniques – just as an astronomer can discover a new planet and a new algorithm to calculate its orbit, without any advance in his basic understanding of celestial mechanics. 
+
+对于以上论证,那些坚信“物理概率”是真实存在的人可能会说在量子论中，物理概率被视为最基本的物理原则。因此让我们来解释为什么这是循环推理的另一个例子。我们需要明白，现在的量子理论使用的逻辑标准完全不同于其他的科学。
+
+在生物学或医学中，如果我们注意到，除非存在条件C(神经冲动，光，胃蛋白酶)，否则不会出现效应E（例如，肌肉收缩，向光性，蛋白质消化），我们很自然的会推断C是E的一个必要原因。所有科学领域中绝大部分的知识都是用这种推理得到的。但是如果条件C并不总是导致效应E,作为科学家应该如何推断?从这一点开始，生物学和量子理论的推理形式就分道扬镳了.
+
+在生物科学中，人们理所当然地认为，除了C之外，还有可能导致E的其他因素F尚未确定。就会有人试图追查出这隐含因素，通过可能极其乏味的消除各种可能性的过程。但是这种坚持总会有回报,在医学上一次又一次地取得了重要的和令人印象深刻的成功，猜测存在的未知的因素最终被确定为一个明确的化合物。大多数酶，维生素，病毒和其他生物活性物质的发现都归功于这一推理过程。
+
+在量子理论中，人们并不是这样推理的。例如，考虑光电效应（我们将光照射在金属表面上，并发现电子从中射出）。实验事实是电子不出现，除非光线存在。所以光照是一个必要因素。但是光照并不总是产生喷射的电子;即使来自单模激光器的光以绝对稳定的幅度出现，电子出现的时间也不能由任何已知的光的属性所决定。那么为什么我们不能显而易见的推断，除了光之外，还存在第二个没有发现的因素呢?而物理学家的工作不就是找到它吗?
+
+恰恰相反,在量子理论中当找不到明显的原因时，物理学家们简单地假定没有其他原因-所以，物理定律是非决定的，只能以概率形式表达。教条的核心是，光不能决定光电子是否会出现，光只是决定了电子出现的可能性。当前量子理论的数学形式主义 - 其不完全性与我们目前的知识的不完全性如出一辙 - 甚至没有提供可以让人追问真正原因的词汇。
+
+生物学家有一个机械的世界图景，因为他们被训练要相信因果，他们用大脑的全部力量去寻找原因--所以他们找到了。量子物理学家的世界里只有概率规律，因为在两代人的时间里我们已经被灌输了不要相信因果 - 所以我们不必再去寻找所谓的原因。事实上，任何试图寻找微观现象的原因都会遭到蔑视和不专业的“陈旧的机械唯物主义”的指责。因此，为了解释当前量子理论中的不确定性，我们不需要假设自然界中有任何不确定性;量子物理学家的理智态度已经足以保证它。 {2}
+
+有一点也需要强调，因为大多数人没有在技术层面上全面的研究量子理论的能力,他们在被告量子论并不关心因果的时候是充满怀疑的;事实上，它甚至不承认“物质现实”的概念。目前教授的量子论的数学解释归功于哥本哈根理论物理研究所的尼尔斯·玻尔（Niels Bohr）因此它被称为“哥本哈根解释”。
+
+正如玻尔在他的着作和演讲中一再强调的那样，现在的量子理论只能回答这样一个问题：“如果进行这个实验，可能有什么结果?其概率是多少？”不能回答任何原理性的问题如：“到底发生了什么?当......“现在的量子理论的数学形式主义，就像奥威尔式的新闻，甚至没有提供可以提出这个问题的词汇。 Jaynes（1986d，1989，1990a，1992a）详细解释了这些观点。
+
+所以我们认为，那些试图通过量子理论来说明“物理概率”真实存在的人是陷入了循环推理之中，这与掷硬币和打桥牌没什么不同。当前量子理论中的概率性说明了我们知识的不完整性,恰如经典统计力学中的概率一样,只有来源不同。
+
+在经典的统计力学中，概率分布代表了我们对真实微观坐标的不了解 - 理论上可以了解但是在实践中做不到，但是这并不妨碍我们预测可重复现象，因为这些现象与微观细节无关。
+
+在当前的量子论中，使用概率说明了我们没能找到物理现象的真正原因，更糟糕的是，我们甚至没有认真思考这个问题。虽然在实践中可能是无法避免，但在我们目前的知识状态下，我们不知道原则上是否也是不可避免的.“核心教条”只是如此断言，并得出结论相信因果的存在并努力寻找在哲学上是天真的。如果每个人都接受并实行这个原则，那么物理理论从研究开始到现在就不会有任何发展。事实上，自1927年索尔维大会以来，这种观念在物理界中变得根深蒂固。{3}但是，在我们看来，这种态度是在奖励愚蠢,导致天才们不再考虑一个超凡的能理性解释自然的理论。
+
+许多人可能根本理解不了这些想法，因为它们与我们从小就学到的东西截然不同。因此，让我们来看看同样的问题也曾在抛硬币的问题中出现,当时的古典物理学家和现在的量子物理学家使用了同样的逻辑标准。
+
+注2: 在这里，超心理学家Soal和Bateman（1954）的处境有惊人的相似之处,见第五章。他们认为寻求对超精神现象的物理解释是倒退回受谴责的古怪的赫胥黎的唯物主义。我们的印象是，到1954年，赫胥黎在生物学上的观点完全胜过生命主义，超自然主义或任何其他反唯物主义的教义;例如，终于理解了长期以来神秘的免疫机制是如何工作的，发现了DNA复制的机制。这两个现象都可以用简单明了的“机械”术语来描述 - 模板，三维配对等等 - 在实验中我们立刻就能理解这些术语。
+
+注3：当然，物理学家还在继续发现新的粒子和计算技术 - 就像天文学家能够发现一个新的行星和一个计算其轨道的新算法一样，即使对天体力学的本质的了解没有任何进展。
