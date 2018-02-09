@@ -1,6 +1,8 @@
 Probability Theory - The Logic of Science
 概率论 - 科学化的逻辑
 
+[[images/cover.png]]
+
 [[术语对照表][term.org]]
 [[preface.org][Preface]] 50%
 [[chapter01.org][第一章]] 10%
