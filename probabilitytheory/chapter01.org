@@ -212,7 +212,7 @@ C ≡ (A + !B)(!A + A !B) + !A B(A + B).     (1.15)
 因为在这个阶段，我们把注意力集中在亚里士多德命题上，所以任何逻辑函数C = f（A，B）（如（1.15））都只有两个可能的“值”，即真和假;同样，“自变量”A和B也只能取这两个值。
 
 在这一点上，一个逻辑学家可能反对我们的符号表示方法，说符号A已经被定义为一个固定的命题，其真值不能改变;所以如果我们想考虑逻辑函数，那么我们不应该写C = f（A，B），而应该引入新的符号，并写成z = f（x，y），其中x，y，z是'陈述变量',即可替换成任何具体的陈述A，B，C。但是，如果A代表一些固定但未明确指定的命题，那么它仍然可以是真或假。对于(1.15)这样的等式,我们仅仅将其理解为对所有指定的A和B可以为真,就可以达到上述的灵活性,即我们使用一个可变的语句而不是一个语句变量。
-* donehere
+*** 本节人译到此
 在C = f（A，B）形式的关系中，我们关注的是在离散的“空间”S上定义的逻辑函数，它由只有2 2 = 4个点组成;即A和B分别取“价值”{TT，TF，FT，FF}并且在每个点上，函数f（A，B）可以独立地取两个值{T，F}中的任一个。因此，正好有2 4 = 16个不同的逻辑函数f（A，B），而不再有。涉及n个命题的表达式B = f（A 1，...，A n）是M = 2 n个点的空间S上的逻辑函数;而且正好有2 M这样的功能。
 
 In the case n = 1, there are four logic functions { f 1 (A), . . . , f 4 (A)}, which we can define by enumeration, listing all their possible values in a truth table:
@@ -385,125 +385,77 @@ We turn now to our extension of logic, which is to follow from the conditions di
 
 现在我们转向我们对逻辑的扩展，这是从下面讨论的条件开始的。我们把他们称为“需要”而不是“公理”，因为他们并不断言任何事情都是“真实的”，而只是说明似乎是理想的目标。这些目标是否可以无矛盾地获得，以及它们是否确定了逻辑的任何独特的延伸，都是第二章给出的数学分析的问题。
 
-** 1.7 The basic desiderata
-To each proposition about which it reasons, our robot must assign some degree of plausibility, based on the evidence we have given it; and whenever it receives new evidence it must revise these assignments to take that new evidence into account. In order that these plausibility assignments can be stored and modified in the circuits of its brain, they must be associated with some definite physical quantity, such as voltage or pulse duration or a binary coded number, etc. – however our engineers want to design the details. For present purposes, this means that there will have to be some kind of association between degrees of plausibility and real numbers: 
+** 1.7 基本假定
 
-(I) Degrees of plausibility are represented by real numbers. (1.28)
+我们给机器人提供一组证据，我们的机器人就基于这些证据来推理命题,所以器人必须对这些命题来赋予一个可信程度.每当它收到新的证据时，都必须相应的修正这些赋予的可信程度。为了能够在机器人的脑电路中存储和修改这些可信程度，这些值必须对应于某种确定的物理量，例如电压大小或脉冲持续时间亦或二进制编码的数值等等,当然这些细节就看工程师想要如何设计了。对我们的目的而言，这意味着在可信程度和实数量之间必须存在某种关系：
 
-Desideratum (I) is practically forced on us by the requirement that the robot’s brain must operate by the carrying out of some definite physical process. However, it will appear (Appendix A) that it is also required theoretically; we do not see the possibility of any consistent theory without a property that is equivalent functionally to desideratum (I). 
+(I) 用实数来表示可信程度。 （1.28）
 
-We adopt a natural but nonessential convention: that a greater plausibility shall correspond to a greater number. It will also be convenient to assume a continuity property, which is hard to state precisely at this stage; to say it intuitively: an infinitesimally greater plausibility ought to correspond only to an infinitesimally greater number. 
+由于机器人的大脑必须运作在确定的物理过程之上,这就从实践上要求基本假定（I）成立。然后从理论上说(I)也是必要的（附录A）.同时我们也看不到有任何可能,存在一个与（I）功能等价的自洽理论。
 
-The plausibility that the robot assigns to some proposition A will, in general, depend on whether we told it that some other proposition B is true. Following the notation of Keynes (1921) and Cox (1961), we indicate this by the symbol 
-根据我们提供的证据，我们的机器人必须根据每个关于它的原因的命题来赋予某种程度的合理性;每当它收到新的证据时，都必须修改这些作业来考虑新的证据。为了使这些合理性分配能够在其大脑的电路中被存储和修改，它们必须与某个确定的物理量相关联，例如电压或脉冲持续时间或二进制编码数等等。但是，我们的工程师想要设计细节。就目前而言，这意味着在可信程度和实际数量之间必须有某种联系：
+我们接受如下自然但非本质的惯例：更大的可信度应该对应于更大的数字。我们还可以下方便的假定其具有连续性，虽然在现阶段很难精确地陈述这个性质,直觉地说即可信度的一个无限小的增加也应该对应一个无限小的数值增加。
 
-（I）真实度用实数表示。 （1.28）
-
-Desideratum（I）实际上是强迫我们的要求，机器人的大脑必须进行一定的物理过程。然而，它会出现（附录A），这在理论上也是必需的;如果没有一个与希望（I）功能相当的财产，我们就不会看到任何一致理论的可能性。
-
-我们采用一种自然但不重要的惯例：更大的合理性应该对应更多的合理性。假定一个连续性属性也很方便，这个属性在现阶段很难精确地陈述;直觉地说：一个无限大的可信度应该只对应一个无限小的数字。
-
-机器人指定给某个命题A的合理性一般取决于我们是否告诉它另一个命题B是真实的。在凯恩斯（1921）和考克斯（1961）的符号之后，我们用符号来表示这个符号
-
-A|B,
-(1.29)
-
-which we may call ‘the conditional plausibility that A is true, given that B is true’ or just ‘A given B’. It stands for some real number. Thus, for example,
-
-A|BC
-(1.30)
-
-(which we may read as ‘A given BC’) represents the plausibility that A is true, given that both B and C are true. Or, 
-
-A + B|C D
-(1.31)
-
-represents the plausibility that at least one of the propositions A and B is true, given that both C and D are true; and so on. We have decided to represent a greater plausibility by a greater number, so 
-
-(A|B) > (C|B)
-(1.32)
-
-says that, given B, A is more plausible than C. In this notation, while the symbol for plausibility is just of the form A|B without parentheses, we often add parentheses for clarity of expression. Thus, (1.32) says the same thing as 
-
+机器人赋给命题A的可信度,一般而言取决于我们是否告诉它另一个命题B为真。我们采用凯恩斯（1921）和考克斯（1961）的符号表示方法，如下表示为:
+#+BEGIN_SRC 
+A|B,     (1.29)
+#+END_SRC
+称为给定B为真时,A为真的条件概率,或给定B时A的条件概率,用实数表示. 因此例如:
+#+BEGIN_SRC 
+A|BC     (1.30)
+#+END_SRC
+(读成"A当给定BC")表示给定B和C都为真,A为真的概率.或者
+#+BEGIN_SRC 
+A + B|C D    (1.31)
+#+END_SRC
+表示给定C和D都为真时,命题A和B至少有一个为真的概率,如此等等.由于我们决定用大的数来表示可能性较大,所以有:
+#+BEGIN_SRC 
+(A|B) > (C|B)   (1.32)
+#+END_SRC
+即给定B时,A可信度比C大.此方式下,对A|B这样不带括号的表示方法,为了防止歧义,我们通常会加上括号增加清晰性.因此, (1.32) 和下面的是等价的:
+#+BEGIN_SRC 
 A|B > C|B,
 (1.33)
+#+END_SRC
+但看起来更明确.
 
-but its meaning is clearer to the eye. 
+为了避免处理那些不可能为真的问题，我们不会要求我们的机器人承受从不可能的或相互矛盾的前提出发进行推理的痛苦,那不可能得出“正确的”答案。 因此，当B和C相互矛盾时，我们不试图定义A|BC。 只要出现这样的符号，我们假定B和C是相容的命题。
 
-In the interest of avoiding impossible problems, we are not going to ask our robot to undergo the agony of reasoning from impossible or mutually contradictory premises; there could be no ‘correct’ answer. Thus, we make no attempt to define A|BC when B and C are mutually contradictory. Whenever such a symbol appears, it is understood that B and C are compatible propositions. 
+另外，我们不希望这个机器人以一种与你我的思考方式相反的方式思考。 因此，我们将其设计成至少在定性的意义上和人类推理的方式是相似的，正如上述弱三段论和其他机关规则一样。
 
-Also, we do not want this robot to think in a way that is directly opposed to the way you and I think. So we shall design it to reason in a way that is at least qualitatively like the way humans try to reason, as described by the above weak syllogisms and a number of other similar ones. 
-为了避免不可能的问题，我们不会要求我们的机器人经历从不可能的或相互矛盾的前提推理的痛苦; 可能没有“正确的”答案。 因此，当B和C相互矛盾时，我们不试图定义A | BC。 只要出现这样的符号，就可以理解B和C是相容的命题。
+所以,当旧信息C被更新为C'时,A的可信度增加:
+#+BEGIN_SRC 
+(A|C ) > (A|C);  (1.34)
+#+END_SRC
+但给定A时A的可信度没有变:
+#+BEGIN_SRC 
+(B|AC ) = (B|AC).  (1.35)
+#+END_SRC
+这导致,A和B同时为真的可信度只会增加,而不会减少:
+#+BEGIN_SRC 
+(AB|C ) ≥ (AB|C);  (1.36)
+#+END_SRC
+而且A为假的可信度必然减少:
+#+BEGIN_SRC 
+(A|C ) < (A|C).   (1.37)
+#+END_SRC
+这个定性的要求,简明的指出了机器人推理的前进"方向",没有指出可信度应该改变多少,但连续性假设(是为了在定性上和常识保持一致的条件)要求我们,当A|C仅仅有微小的变化时,也只导致AB|C和A|C的微小改变.如何应用定性要求的具体方法将在下一章给出,现在只是需要的时候才会提到它.到目前为止,总结如下:
 
-另外，我们不希望这个机器人以一种与你和我想象的方式直接相反的方式思考。 因此，我们将其设计成至少在性质上类似于人类试图推理的方式进行推理，正如上述弱三段论和其他一些类似推理所描述的那样。
+（II）与常识的定性对应。        （1.38）
 
-Thus, if it has old information C which gets updated to C in such a way that the plausibility for A is increased: 
+最后，我们想让我们的机器人拥有另外一个特质，而这一点是一个真诚的人想要保持住却难以保持的特质:即永远保证推理的一致性. 这里我们是指三种常见的口语意义上的"一致性"：
 
-(A|C ) > (A|C);
-(1.34)
+（IIIa）如果一个结论可以以不止一种方式被推断出来，那么一切可能的方式必须导致相同的结果。（1.39A）
 
-but the plausibility for B given A is not changed:
+（IIIb）机器人总是考虑到和问题有关的所有证据。 它不会随意忽略一些信息,而只是基于剩下信息来得出的结论。换句话说，机器人没有什么"意识形态"。（1.39b）
 
-(B|AC ) = (B|AC).
-(1.35)
+（IIIc）机器人总是对相同的知识状态赋予相同的可信度。 也就是说，在推理两个问题时,机器人的知识状态的是相同的（排除仅仅是命题的表示方式不同），那么在两个问题中它必须分配相同的可信度。（1.39c）
 
-This can, of course, produce only an increase, never a decrease, in the plausibility that both A and B are true: 
+基础原则（I），（II）和（IIIa）是我们机器人大脑内部工作的基本“结构”要求，而（IIIb）和（IIIc）是机器人的"接口"条件即其行为如何与外界关联。
 
-(AB|C ) ≥ (AB|C);
-(1.36)
+大多数学生惊讶地发现，我们定义的基本原则已经到此为止了。 事实证明，上述条件唯一地决定了机器人推理必须遵守的规则,即只存在唯一一组满足上述条件的计算可信度的数学运算。 这些规则在第2章中推导出来。
 
-and it must produce a decrease in the plausibility that A is false:
-
-(A|C ) < (A|C).
-(1.37)
-
-This qualitative requirement simply gives the ‘sense of direction’ in which the robot’s reasoning is to go; it says nothing about how much the plausibilities change, except that our continuity assumption (which is also a condition for qualitative correspondence with common sense) now requires that if A|C changes only infinitesimally, it can induce only an infinitesimal change in AB|C and A|C. The specific ways in which we use these qualitative requirements will be given in the next chapter, at the point where it is seen why we need them. For the present we summarize them simply as: 
-
-(II) Qualitative correspondence with common sense.
-(1.38)
-
-Finally, we want to give our robot another desirable property for which honest people strive without always attaining: that it always reasons consistently. By this we mean just the three common colloquial meanings of the word ‘consistent’: 
-
-(IIIa) If a conclusion can be reasoned out in more than one way, then
-every possible way must lead to the same result. (1.39a)
-
-(IIIb) The robot always takes into account all of the evidence it has
-relevant to a question. It does not arbitrarily ignore some of
-the information, basing its conclusions only on what remains.
-In other words, the robot is completely nonideological. (1.39b)
-
-(IIIc) The robot always represents equivalent states of knowledge by
-equivalent plausibility assignments. That is, if in two problems
-the robot’s state of knowledge is the same (except perhaps for
-the labeling of the propositions), then it must assign the same
-plausibilities in both. (1.39c)
-（二）与常识的定性对应。
-（1.38）
-
-最后，我们想给我们的机器人另外一个理想的人物，而不是总能获得理想的财产。 通过这个，我们指的是“一致”这个词的三种常见的口语意义：
-
-（IIIa）如果一个结论可以以不止一种方式被推断出来，那么
-一切可能的方式必须导致相同的结果。（1.39A）
-
-（IIIb）机器人总是考虑到所有的证据
-与一个问题有关。 它不会随意忽略一些
-这些信息只是基于剩下的结论。
-换句话说，机器人是完全没有意义的。（1.39b）
-
-（IIIc）机器人总是代表等同的知识状态
-等同似是而非的分配。 也就是说，如果有两个问题
-机器人的知识状态是相同的（也许除外）
-命题的标签），那么它必须分配相同的
-两者的合理性。（1.39c）
-
-Desiderata (I), (II), and (IIIa) are the basic ‘structural’ requirements on the inner workings of our robot’s brain, while (IIIb) and (IIIc) are ‘interface’ conditions which show how the robot’s behavior should relate to the outer world.
-
-At this point, most students are surprised to learn that our search for desiderata is at an end. The above conditions, it turns out, uniquely determine the rules by which our robot must reason; i.e. there is only one set of mathematical operations for manipulating plausibilities which has all these properties. These rules are deduced in Chapter 2. 
-(At the end of most chapters, we insert a section of informal Comments in which are collected various side remarks, background material, etc. The reader may skip them without losing the main thread of the argument.) 
-Desiderata（I），（II）和（IIIa）是我们机器人大脑内部工作的基本“结构”要求，而（IIIb）和（IIIc）是表示机器人行为应该如何关联的“接口” 到外面的世界。
-
-在这一点上，大多数学生惊讶地发现，我们对于寻求意愿的搜寻已经结束了。 事实证明，上述情况唯一地决定了我们的机器人必须推理的规则; 即只有一组用于操纵具有所有这些性质的合理性的数学运算。 这些规则在第2章中推导出来。
 （在大多数章节的最后，我们插入一段非正式的评论，其中收集了各种各样的旁白，背景材料等等。读者可以跳过它们，而不会失去论证的主线。）
+
 ** 1.8 Comments
 
 As politicians, advertisers, salesmen, and propagandists for various political, economic, moral, religious, psychic, environmental, dietary, and artistic doctrinaire positions know only too well, fallible human minds are easily tricked, by clever verbiage, into committing violations of the above desiderata. We shall try to ensure that they do not succeed with our robot. 

@@ -453,8 +453,8 @@ plausibilities in both. (1.39c)
 Desiderata (I), (II), and (IIIa) are the basic ‘structural’ requirements on the inner workings of our robot’s brain, while (IIIb) and (IIIc) are ‘interface’ conditions which show how the robot’s behavior should relate to the outer world.
 
 At this point, most students are surprised to learn that our search for desiderata is at an end. The above conditions, it turns out, uniquely determine the rules by which our robot must reason; i.e. there is only one set of mathematical operations for manipulating plausibilities which has all these properties. These rules are deduced in Chapter 2. 
+
 (At the end of most chapters, we insert a section of informal Comments in which are collected various side remarks, background material, etc. The reader may skip them without losing the main thread of the argument.) 
-Desiderata（I），（II）和（IIIa）是我们机器人大脑内部工作的基本“结构”要求，而（IIIb）和（IIIc）是表示机器人行为应该如何关联的“接口” 到外面的世界。
 
 ** 1.8 Comments
 
