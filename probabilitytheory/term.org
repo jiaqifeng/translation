@@ -1,32 +1,35 @@
 术语对照
 
 
-| major premise       | （三段论法的）大前提                                                                          |
-| plausible           | 合情 合理程度 可信度 似真 似乎有理 能言善辩 可信性 合理性                                     |
-| minor premise       | 三段论法的）小前题                                                                            |
-| argument            | 争论 争吵 论据 论点 辩解 理由 论据 讨论 辩论 异议 质疑 [数]幅角； 主题，情节                  |
-| deductive           | 推论的 演绎的                                                                                 |
-| Deductive inference | 演绎推理                                                                                      |
-| inference           | 推理 推断 推论 得出结论 推断结果                                                              |
-| inductive           | 诱导的 感应的 归纳法的 归纳的                                                                 |
-| trivial             | 琐碎的 无价值的 平常的 平凡的 不重要的 微不足道 [生]种的                                      |
-| prior information   | 初始信息 先验信息 事先通知                                                                    |
-| definite            | 明确的 一定的 肯定 有把握 确凿的 确切的 清楚的 明显的 无疑的 清晰的                           |
-| rule                | 规则 规定 统治 支配 章程 条例 行事准则 指导方针 科学中的规律/法则 普遍情况 常规 惯例          |
-| policy              | 政策 方针 策略 态度 保险单 策略性                                                             |
-| consult             | 商议 商量 [医]会诊 咨询 充当顾问 请教 翻阅 求教于 顾及 请教 请示                              |
-| work                | 工作成果 作品著作                                                                             |
-| exposition          | 博览会 展览会 阐述 说明 解释                                                                  |
-| principle           | 原则 原理 准则 道义 道德标准 本能 行为准则 操守 定律 大体上/基本上 从理论上说 按道理 根据信念 |
-| premise             | 前提 房屋/办公场所 上述各点 预述条件 提出..为前提 假设                                        |
-| theorem             | [数]定理 (能证明的)一般原理 公里 定律 法则                                                    |
-| corollary           | 必然的结果 ??的推论                                                                           |
-| analogy             | 类似 相似 比拟 类比 类推 比作                                                                 |
-| conjecture          | 推测 猜测 猜想 设想 揣度 想象 计划 估量                                                       |
-| proposition         | 命题 建议 主张 提议                                                                           |
-| reduce              | 减少 缩小 使还原 使变弱 节食 蒸发 (液体)浓缩变稠                                              |
-| extend              | 延伸 扩展                                                                                         |
-|                     |                                                                                               |
+| major premise           | （三段论法的）大前提                                                                          |
+| plausible               | 合情 合理程度 可信度 似真 似乎有理 能言善辩 可信性 合理性                                     |
+| minor premise           | 三段论法的）小前题                                                                            |
+| argument                | 争论 争吵 论据 论点 辩解 理由 论据 讨论 辩论 异议 质疑 [数]幅角； 主题，情节                  |
+| deductive               | 推论的 演绎的                                                                                 |
+| Deductive inference     | 演绎推理                                                                                      |
+| inference               | 推理 推断 推论 得出结论 推断结果                                                              |
+| inductive               | 诱导的 感应的 归纳法的 归纳的                                                                 |
+| trivial                 | 琐碎的 无价值的 平常的 平凡的 不重要的 微不足道 [生]种的                                      |
+| prior information       | 初始信息 先验信息 事先通知                                                                    |
+| definite                | 明确的 一定的 肯定 有把握 确凿的 确切的 清楚的 明显的 无疑的 清晰的                           |
+| rule                    | 规则 规定 统治 支配 章程 条例 行事准则 指导方针 科学中的规律/法则 普遍情况 常规 惯例          |
+| policy                  | 政策 方针 策略 态度 保险单 策略性                                                             |
+| consult                 | 商议 商量 [医]会诊 咨询 充当顾问 请教 翻阅 求教于 顾及 请教 请示                              |
+| work                    | 工作成果 作品著作                                                                             |
+| exposition              | 博览会 展览会 阐述 说明 解释                                                                  |
+| principle               | 原则 原理 准则 道义 道德标准 本能 行为准则 操守 定律 大体上/基本上 从理论上说 按道理 根据信念 |
+| premise                 | 前提 房屋/办公场所 上述各点 预述条件 提出..为前提 假设                                        |
+| theorem                 | [数]定理 (能证明的)一般原理 公里 定律 法则                                                    |
+| corollary               | 必然的结果 ??的推论                                                                           |
+| analogy                 | 类似 相似 比拟 类比 类推 比作                                                                 |
+| conjecture              | 推测 猜测 猜想 设想 揣度 想象 计划 估量                                                       |
+| proposition             | 命题 建议 主张 提议                                                                           |
+| reduce                  | 减少 缩小 使还原 使变弱 节食 蒸发 (液体)浓缩变稠                                              |
+| extend                  | 延伸 扩展                                                                                     |
+| implication             | 含义, 含蓄,言外之意, 暗示 [逻辑]蕴含 蕴涵                                                     |
+| implication of ...      | ...可能的后果                                                                                 |
+| state of knowledge      | 掌握的知识，对世界认知的发展状态,                                                             |
+| mind projection fallacy | 意思投射错误? 错误的意识映射?                                                                              |
 
 广义逻辑 extended logic
 基本假设 desiderata
@@ -56,3 +59,10 @@ inference: 可以有两种意思:reasoning的一系列步骤,是从前提到结�
 后验风险 决策函数 假设检验 陈述（statement）
 概率的三条公理 峰值 超参数（super？）
 估计的无偏性 可信区间 置信区间 可信下限 可信上限 可信水平 截尾样本
+
+休谟重新定义了因果关系，其中的核心要素是经常性联结(constant conjunction)，以此来取代必然关系(necessary connection)
+休谟式的自然法则解释(Humean Account of Laws of Nature)。根据这个理论，经验世界里只有许许多多的物体(physical objects)以及发生在它们身上许许多多的个别事件(particular events)，除此之外没有其他的（尤其是没有必然关系）。我们观察到的、已经发生了的物体的运动是有一定的规律性，科学定律/科学法则(scientific laws)是我们对世界上已经发生了的事最简洁、最有效的描述。
+
+chaotic（混乱的、混沌的），而我们所观察到的规律性其实只是一个巨大的巧合而已。没有人可以保证这些规律性会延续下去。而我们现在所有的科学定律只不过是人类对于这些规律的最简单(simplicity)、最有效(strength)的系统性概括和总结(generalizations)。
+必然论者(Necessitarians)
+

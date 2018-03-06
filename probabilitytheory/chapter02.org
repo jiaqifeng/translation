@@ -100,3 +100,89 @@ Now, it was just the function of our interface desiderata (IIIb), (IIIc) to make
 
 *** 2.6.2 Gödel’s theorem
 
+To answer another inevitable question, we recapitulate just what has and what has not been proved in this chapter. The main constructive requirement which determined our product and sum rules was the desideratum (IIIa) of ‘structural consistency’. Of course, this does not mean that our rules have been proved consistent; it means only that any other rules which represent degrees of plausibility by real numbers, but which differ in content from ours, will lead necessarily either to inconsistencies or violations of our other desiderata. 
+
+为了回答另一个无法回避的问题,我们总结一下在本章中已经证明了和还未证明的部分.按照"结构一致性的"基本公理(IIIa)的要求,我们构建了乘法和加法的规则.当然,这并没有证明这些规则是一致无矛盾的;只是说明其他任何一个同样将可能性用实数表示,但内容和我们不同的规则,都将与其他几条基本公理相矛盾或冲突.
+
+A famous theorem of Kurt Gödel (1931) states that no mathematical system can provide a proof of its own consistency. Does this prevent us from ever proving the consistency of probability theory as logic? We are not prepared to answer this fully, but perhaps we can clarify the situation a little.
+
+著名的哥德尔定理指出,没有一个数学系统能够证明自身是一致的.但这是否意味着我们无法证明用于逻辑的概率论的一致性?我们不会给出完整的回答,不过我们会让事情稍微变得更清楚一点.
+
+Firstly, let us be sure that ‘inconsistency’ means the same thing to us and to a logician. What we had in mind was that if our rules were inconsistent, then it would be possible to derive contradictory results from valid application of them; for example, by applying the rules in two equally valid ways, one might be able to derive both P(A|BC) = 1/3 and P(A|BC) = 2/3. Cox’s functional equations sought to guard against this. Now, when a logician says that a system of axioms {A 1 , A 2 , . . . , A n } is inconsistent, he means that a contradiction can be deduced from them; i.e. some proposition Q and its denial Q are both deducible. Indeed, this is not really different from our meaning.
+
+首先我们要弄清楚对于"不一致"这个词,我们和逻辑学家的理解是一样的.在我们的看法里,如果说我们的规则是不一致的,那么意味着应用这些规则可以得到矛盾的结论;举例来说,通过两种等价且合法的方式应用规则,可以同时得到结论P(A|BC) = 1/3和P(A|BC) = 2/3.Cox的函数等式就是为了防止这个问题的出现.现在如果一个逻辑学家说一个公理系统{A 1 , A 2 , . . . , A n }是不一致的,他的意思是从这些公理可以演绎推理出矛盾;例如,命题Q及其否命题!Q都能被演绎推理得出.这与我们的理解其实并无差异.
+
+To understand the above Gödel result, the essential point is the principle of elementary logic that a contradiction A A implies all propositions, true and false. (Given any two propositions A and B, we have A ⇒ (A + B), therefore A A ⇒ A(A + B) = A A + A B ⇒ B.) Then let A = {A 1 , A 2 , . . . , A n } be the system of axioms underlying a mathematical theory and T any proposition, or theorem, deducible from them: [1]
+
+为了理解哥德尔的结论,本质的一点是基本逻辑原理,即矛盾的A!A蕴涵了所有命题,无论真与假.(给定任何两个命题A和B,则有A ⇒ (A + B), 所以AA⇒A(A+B)=A A+AB⇒B).然后让A = {A 1 , A 2 , . . . , A n }是一个数学理论的公理系统,T是任何一个从公理演绎推理出的命题或定理,
+
+A ⇒ T. (2.102)
+
+Now, whatever T may assert, the fact that T can be deduced from the axioms cannot prove that there is no contradiction in them, since, if there were a contradiction, T could certainly be deduced from them! 
+
+现在,无论T表述了什么,T可以从公理演绎推理出来的事实并不能证明公理系统中不存在矛盾,因为如果有矛盾存在的话T肯定能被演绎推理得到!
+
+This is the essence of the Gödel theorem, as it pertains to our problems. As noted by Fisher (1956), it shows us the intuitive reason why Gödel’s result is true. We do not suppose that any logician would accept Fisher’s simple argument as a proof of the full Gödel theorem; yet for most of us it is more convincing than Gödel’s long and complicated proof. [2]
+
+这就是哥德尔定理的和我们问题有关的精髓.正如Fisher(1956)注意到的,这展示了哥德尔结论正确性的直觉原因.我们不是在建议逻辑学家们把Fisher的简单论证作为对哥德尔定理的完整证明;只是对我们的大多数来说,这比既长又复杂的证明更易于令人易于接受.
+
+Now suppose that the axioms contain an inconsistency. Then the opposite of T and therefore the contradiction T T can also be deduced from them:
+
+现在假设公理系统中有矛盾存在,那么T的否定和矛盾命题T!T都可演绎得到:
+A ⇒ !T .    (2.103)
+
+So, if there is an inconsistency, its existence can be proved by exhibiting any proposition T and its opposite T that are both deducible from the axioms. However, in practice it may not be easy to find a T for which one sees how to prove both T and T . 
+
+所以,如果存在矛盾,那么只要找到任何命题T及其否命题!T都能被演绎推理出来就能证明存在矛盾.然而,实际上想要找到并证明T和!T往往并不是一件容易的事.
+
+Evidently, we could prove the consistency of a set of axioms if we could find a feasible procedure which is guaranteed to locate an inconsistency if one exists; so Gödel’s theorem seems to imply that no such procedure exists. Actually, it says only that no such procedure derivable from the axioms of the system being tested exists. 
+
+显而易见,如果我们能找到一个切实可行的过程来保证找到矛盾如果真的存在矛盾的话,我们就能证明一个公理系统是否是一致的;因而哥德尔定义似乎暗示了这种过程并不存在.事实上哥德尔定理表述的是,此过程不能从公理系统本身所演绎推理得到.
+
+We shall find that probability theory comes close to this; it is a powerful analytical tool which can search out a set of propositions and detect a contradiction in them if one exists. The principle is that probabilities conditional on contradictory premises do not exist (the hypothesis space is reduced to the empty set). Therefore, put our robot to work; i.e. write a computer program to calculate probabilities p(B|E) conditional on a set of propositions E = (E 1 E 2 . . . E n ). Even though no contradiction is apparent from inspection, if there is a contradiction hidden in E, the computer program will crash.
+
+我们会发现概率论和这个过程很像,概率论是一个强有力的分析工具,它可以搜索出一组命题并检测其中是否存在矛盾.原理是,概率依赖于前提假设中不存在矛盾(假设空间演绎缩减为空集).因此,当我们的机器人工作的时候,例如一个从一组命题E = (E 1 E 2 . . . E n )来计算p(B|E)的概率的程序.即使我们没能检测出存在矛盾,但如果E中确实隐藏了矛盾的话,这个程序终将崩溃.
+
+We discovered this ‘empirically’, and, after some thought, realized that it is not a reason for dismay, but rather a valuable diagnostic tool that warns us of unforeseen special cases in which our formulation of a problem can break down.
+
+从"经验"上我们发现了这点,并经过一些思考后,认识到我们不应为此气馁,相反这是一个很有价值的诊断工具,它能够警告我们被公式化的问题可能在某些特殊情况下将会失败.
+
+If the computer program does not crash, but prints out valid numbers, then we know that the conditioning propositions E i are mutually consistent, and we have accomplished what one might have thought to be impossible in view of Gödel’s theorem. But of course our use of probability theory appeals to principles not derivable from the propositions being tested, so there is no difficulty; it is important to understand what Gödel’s theorem does and does not prove.
+
+如果程序没有崩溃,而是输出了合法数值,那么我们就能知道条件命题Ei是互相一致的,虽然从哥德尔定理角度看这似乎是不可能得到的结果.由于我们用到的概率论基于的原理并非源于被测命题,所以证明矛盾不存在看起来不是很困难;重要的是明白那些是哥德尔定理证明了的,而那些不是.
+
+When Gödel’s theorem first appeared, with its more general conclusion that a mathematical system may contain certain propositions that are undecidable within that system, it seems to have been a great psychological blow to logicians, who saw it at first as a devastating obstacle to what they were trying to achieve. Yet a moment’s thought shows us that many quite simple questions are undecidable by deductive logic. There are situations in which one can prove that a certain property must exist in a finite set, even though it is impossible to exhibit any member of the set that has that property. For example, two persons are the sole witnesses to an event; they give opposite testimony about it and then both die. Then we know that one of them was lying, but it is impossible to determine which one.
+
+当哥德尔定理刚出现的时候,它的普遍性的结论即一个数学系统可能包含一些不能在该系统内证伪的命题,这给逻辑学家一个巨大的心理上的打击,他们将其视作达到目标的路上的一个毁灭性的障碍.但略作思考后,我们意思到很多简单的问题都无法通过演绎逻辑来判定.例如在一个有限集合中,可以证明必然存在一种属性,却无法找到集合的任何一个元素具有该属性.举例来说,一个事件的目击人只有两个,他们给出了相反的证词然后都死了.那么我们知道必然有一个人说谎了,却没法知道是谁.
+
+In this example, the undecidability is not an inherent property of the proposition or the event; it signifies only the incompleteness of our own information. But this is equally true of abstract mathematical systems; when a proposition is undecidable in such a system, that means only that its axioms do not provide enough information to decide it. But new axioms, external to the original set, might supply the missing information and make the proposition decidable after all.
+
+在这个例子中,不可判定性既不属于命题,也不属于事件;只是说明了我们拥有的信息是不完全的.但我们的抽象数学系统同样如此,如果系统中有一个命题是不能判定的,只是意味着系统的所有公理未能提供足够的信息来做出判定.但是如果增加原始系统之外的新公理的话,即可以提供那些遗失掉信息的话,我们就可以对该命题做出判定了.
+
+In the future, as science becomes more and more oriented to thinking in terms of information content, Gödel’s result will be seen as more of a platitude than a paradox. Indeed, from our viewpoint ‘undecidability’ merely signifies that a problem is one that calls for inference rather than deduction. Probability theory as extended logic is designed specifically for such problems.
+
+在未来,随着科学更多的基于信息提供的内存来思考,哥德尔的这个结论看起来更像是一个陈词滥调而不是悖论.事实上,从我们的观点看,"不能判定"仅仅意味我们需对一个问题做出推断更甚于对其进行演绎.将概率论视为广义逻辑恰恰就是为这类问题而设计的.
+
+These considerations seem to open up the possibility that, by going into a wider field by invoking principles external to probability theory, one might be able to prove the consistency of our rules. At the moment, this appears to us to be an open question.
+
+如上的这些考虑看起来是开启了,通过借助概率论之外的原理来进入更广阔的领域的可能性,由此可以证明我们的规则的一致性.在这一刻,对我们而已只是一个开放性问题而已.
+
+Needless to say, no inconsistency has ever been found from correct application of our rules, although some of our calculations will put them to a severe test. Apparent inconsistencies have always proved, on closer examination, to be misapplications of the rules. On the other hand, guided by Cox’s theorems, which tell us where to look, we have never had the slightest difficulty in exhibiting the inconsistencies in the ad hoc rules which abound in the literature, which differ in content from ours and whose sole basis is the intuitive judgment of their inventors. Examples are found throughout this book, but particularly in Chapters 5, 15, and 17.
+
+不必说,在正确应用我们的规则的情况下从未出现过不一致的情况,虽然我们的一些计算需要对其进行严格的测试.显而易见的不一致经过仔细的检验,总是被证明为对规则的错误应用.另一方面,在告诉我们从哪里下手的Cox定理的指导下,我们很容易就能找到在某些文献中使用特殊规则而导致的不一致,这些特殊规则的内容往往与我们的不同,而且其唯一的依据是发明人的直觉判断.这种例子遍布本书,尤其是在第5,15,17章中.
+
+[1] In Chapter 1 we noted the tricky distinction between the weak property of formal implication and the strong one of logical deducibility; by ‘implications of a proposition C’ we really mean ‘propositions logically deducible from C and the totality of other background information’. Conventional expositions of Aristotelian logic are, in our view, flawed by their failure to make explicit mention of background information, which is usually essential to our reasoning, whether inductive or deductive. But, in the present argument, we can understand A as including all the propositions that constitute that background information; then ‘implication’ and ‘logical deducibility’ are the same thing.
+
+在第一章中,我们注意到逻辑演绎的蕴涵的强弱形式之间的微妙区别,说"命题C蕴涵了命题Q",我们其实想表达"命题Q可以从C以及其他所有背景信息中逻辑演绎得出".阿里士多德逻辑的传统解释是,在我们看来,其缺陷是没有显式的指出背景信息,而背景信息恰恰是推断亦或演绎的根本所在.但在我们的论证中,我们理解A包括了所有代表了背景信息的命题,所以"蕴涵"和"逻辑演绎"看起来是同一件事情.
+
+[2] The 1957 edition of Harold Jeffreys’ Scientific Inference (see Jeffreys, 1931) has a short summary of Gödel’s original reasoning which is far clearer and easier to read than any other ‘explanation’ we have seen. The full theorem refers to other matters of concern in 1931 but of no interest to us right now; the above discussion has abstracted the part of it that we need to understand for our present purposes.
+
+注2: 在Harold Jeffreys的1957年版的<科学的推理>(见Jeffresy, 1931)中给出了一个高德尔的精简的原始证明,这个证明比我们见到的任何其他的'解释'都更清晰易懂.定理的完整说明会涉及一些1931年的重要事件,但不在我们现在的关注范围之内;上面的讨论已经将其中与我们相关的部分概括进来了.
+
+*** 2.6.3 Venn diagrams 韦恩图
+
+译注: 大意是Venn图附带了更多的额外信息,但对于建立概率逻辑系统并不是必须的.
+
+*** 2.6.4 The ‘Kolmogorov axioms’ 柯尔莫哥洛夫公理
+
+译注: 柯尔莫哥洛夫基于集合论和测度论建立的概率体系,可描述的问题范围小于作者的体系.柯尔莫哥洛夫理论可参考附录1.
