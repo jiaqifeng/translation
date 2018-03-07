@@ -1,4 +1,4 @@
-* 5 Queer uses for probability theory
+# 5 Queer uses for probability theory
 
 I cannot conceal the fact here that in the specific application of these rules, I foresee many things happening which can cause one to be badly mistaken if he does not proceed cautiously.
 
@@ -12,7 +12,7 @@ I.J.Good (1950) has shown how we can use probability theory backwards to measure
 
 I.J.Good已经展示了如何用概率论来反向测量对命题的坚信度.举例来说,你有多相信存在超级第六感?
 
-** 5.1 Extrasensory perception 超级第六感
+## 5.1 Extrasensory perception 超级第六感
 
 What probability would you assign to the hypothesis that Mr Smith has perfect extrasensory perception? More specifically, that he can guess right every time which number you have written down. To say zero is too dogmatic. According to our theory, this means that we are never going to allow the robot’s mind to be changed by any amount of evidence, and we don’t really want that. But where is our strength of belief in a proposition like this?
 
@@ -34,4 +34,6 @@ After further thought, we see that, although this result is correct, it is far f
 
 到目前为止,我们看到,虽然我们的结论是正确的,但还是和整个事情相去甚远.实际上,即使他猜对了1000次,我还是不相信他有第六感,这和我们在第四章中看的复活一个没戏的假设的理由一样.无论多少数据,从-100分贝开始的假设A很难被相信,因为总是还有其他的假设(B1,B2,...)比A高,大概从-60分贝开始.所以,即使令人惊讶的数据可能修正了A,但其他假设也同时被修正了.让我们举两个著名的例子来说明一下,一个是有关心灵感应的,一个是海王星的发现.我们也发现了这两个例子的一些变种,一些可能是有潜在用处的,一些是有教育意义的历史上的概率论的错误发展的例子,就像伯努利对我们的警告一样.
 
-** 5.2 Mrs Stewart’s telepathic powers
+## 5.2 Mrs Stewart’s telepathic powers
+
+![formula-5-1](images/formula-5-1.png)

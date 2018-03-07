@@ -1,27 +1,27 @@
-* 3 Elementary sampling theory 基本采样理论
+# 3 Elementary sampling theory 基本采样理论
 
 At this point, the mathematical material we have available consists of the basic product and sum rules
 
 目前为止,我们得到的数学元素包括乘法和加法规则:
 
-[[images/formula-3.1.png]]
+![formula-3-1](images/formula-3-1.png)
 
 from which we derived the extended sum rule
 由此扩展出加规则
 
-[[images/formula-3.3.png]]
+![formula-3-3](images/formula-3-3.png)
 
 and with the desideratum (IIIc) of consistency, the principle of indifference: if on background information B the hypotheses (H 1 , H 2 , . . . , H N ) are mutually exclusive and exhaustive, and B does not favor any one of them over any other, then
 
 根据一致性公理(IIIc),即无差异原理:如果背景信息B,假设集(H1, ..., Hn)是互斥且穷尽的,而且B不偏好任何一个,则
 
-[[images/formula-3.4.png]]
+![formula-3-4](images/formula-3-4.png)
 
 From (3.3) and (3.4) we then derived the Bernoulli urn rule: if B specifies that A is true on some subset of M of the H i , and false on the remaining (N − M), then
 
 从(3.3)和(3.4)我们得出伯努利盒规则:如果B规定了对Hi的一个子集M有A为真,且对剩余的(N-M)为假,则
 
-[[images/formula-3.5.png]]
+![formula-3-5](images/formula-3-5.png)
 
 It is important to realize how much of probability theory can be derived from no more than this.
 
