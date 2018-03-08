@@ -29,7 +29,10 @@
 | implication             | 含义, 含蓄,言外之意, 暗示 [逻辑]蕴含 蕴涵                                                     |
 | implication of ...      | ...可能的后果                                                                                 |
 | state of knowledge      | 掌握的知识，对世界认知的发展状态,                                                             |
-| mind projection fallacy | 意思投射错误? 错误的意识映射?                                                                              |
+| mind projection fallacy | 意思投射错误? 错误的意识映射?                                                                 |
+| evidence                | 依据,证据                                                                                     |
+| pivotal quantity        | 枢轴量                                                                                        |
+|                         |                                                                                               |
 
 广义逻辑 extended logic
 基本假设 desiderata

@@ -1,4 +1,5 @@
-* 2 The quantitative rules 量化规则
+# 2 The quantitative rules 量化规则
+
 
 Probability theory is nothing but common sense reduced to calculation.
 
@@ -14,29 +15,213 @@ We have now formulated our problem, and it is a matter of straightforward mathem
 
 The present chapter is devoted entirely to deduction of the quantitative rules for inference which follow from these desiderata. The resulting rules have a long, complicated, and astonishing history, full of lessons for scientific methodology in general (see the Comments sections at the end of several chapters).
 
-概率论只不过是将常识还原为计算罢了。
+概率论只不过是将常识归结为计算罢了,除此之外什么都不是。
 
 --拉普拉斯，1819年
 
-现在我们已经将我们的问题形式化了，然后就是直接了当的从基本原则计算后果，基本原则可以宽泛地说明如下：
+现在我们已经明确的表达出我们的问题了，接下来的事就是通过计算得到基本公理的结果了，基本公理可以大致上陈述为：
 
-（I）用实数表示可信性程度;
+（I）用实数来表示可信度(合情度);
 
-（II）定性分析要和常识对应;
+（II）与常识的定性对应;
 
 （III）一致性。
 
-本章完全致力于从这几个基本人原则演绎出推理的量化规则。 由此产生的规则有一个漫长而复杂到令人惊讶的历史，充满了人类学到的广义上的科学方法论的各种教训（见几章末尾的评论部分）。
+本章致力于从这几个基本公理演绎出推理的量化规则。 这些规则有一个漫长而复杂到令人惊讶的历史，充满了人类学到的广义上的科学方法论的各种教训（见几章末尾的评论部分）。
 
-* 2.1 The product rule 积的规则
+## 2.1 The product rule 积的规则
 
-* 2.2 The sum rule 和的规则
+我们先试图到乘积的一致性规则,即确定分开的A和B的可信度,与积AB的可信度的之间的关系。特定的，我们要找到AB|C。由于推理过程有点微妙，我们将从几个不同的角度来审查它。
 
-* 2.3 Qualitative properteis 定性属性
+首先注意到,判定AB为真的过程可以分解成为分开判定A和B。机器人可以采取的步骤是:
 
-* 2.4 Numeraical values 数值
+(1) 判定B为真；                             （B|C）
 
-* 2.5 Notation and finite-sets policy 符号和有限集原则
+(2）已经接受B为真，判定A为真。            （A|BC）
+
+或者，等价的:
+
+(1') 判定A为真；                             （A|C）
+
+(2') 已经接受A为真，判定B为真。            （B|AC）
+
+在这两种情况下，上面的每一步都对应着的可信度。
+
+现在让我们详细描述第一种步骤。AB为真则要求B必须为真,因此需要知道B|C的可信度。接着如果B为真则进一步要求A为真,因此还需要知道A|BC的可信度。但如果B是假的，则AB必然为假，且与A的真假无关，用{% math %} A|\bar{B}C {% endmath %}来表示。如果机器人先判断B，那么只有命题B为真时，才有必要考虑命题A的合情度。因此，如果机器人知道B|C和A|BC，那么就不需要知道A|C,因为A|C没有告诉机器人任何关于AB的信息。
+
+因为逻辑积满足可交换律，即AB=BA，我们可将上面陈述中的A和B对换.即A|C和B|AC将同样有助于确定AB|C=BA|C。按从上面任一步骤,机器人都应对AB|C得出相同的值，即要符合基本公理(Ⅲa)的一致性条件要求。
+
+我们可以用更明确的形式来阐述。(AB|C）可以是B|C和BC的一个函数:
+
+(AB|C) = F[(B|C),(A|BC)].   (2.1)
+
+现在，如果上面的推理看起来不那么显而易见的话，让我们换种方式看看。例如，我们一种可行的方式:
+
+(AB|C) = F[(A|C),(B|C)]     (2.2)
+
+不过容易看出，这种方式的任何关系都不能满足基本公理(Ⅱ)的条件。当给定C时命题A的可信度可能很高，同时在给定C时命题B的可信度也可能很高，但命题AB的可信度既可能很高也可能很低。
+
+举例来说，你遇到了一个人,有可能他的眼睛是蓝色的,也可能他的头发是黑色的。如果二者都有的，也是合情合理的。另一方面，你遇到一个人,他左眼是蓝色的,然后你遇到的下一个人右眼是棕色，这都是相当合情理的。但如果你遇到的一个人,他的左眼是蓝色的而右眼是棕色的，这则是件令人难以置信的事情。如果我们试图使用公式(2.2)，我们将无法将这种事情包括进来。机器人不能用这种函数来像人类一样推理，即使是定性的也不行。
+
+But other possibilities occur to us. The method of trying out all possibilities – a kind of ‘proof by exhaustion’ – can be organized as follows. Introduce the real numbers
+
+但是我们还有其他的可能性。尝试所有的可能的方式--穷尽所有方式的证明—可以组织如下。引入实数:
+
+u=(AB|C), v=(A|C), w=(B|AC), x=(B|C), y=(A|BC).  (2.3)
+
+如果u可以表示为v,w,x,y中的两个或两个以上的函数，则一共有11种可能的方式。你可以列出每一种，就如棕色和蓝色眼睛的例子里一样(这是一个抽象语句︰A蕴含着B为假)，然后对比于各种极端情况。一些极端情况有A=B,A=C,{% math %}C\Rightarrow\bar{C} {% endmath %}等等。展开分析所有的方式是件琐碎的工作，Tribus (1969)发现除了两种方式外,其他的都会在一些极端情况和常识相违背。这两种分别是u=F(x,y)和u=F(w,v)，正好是我们前面推理得出的两个函数形式。
+
+现在应用第一章中所讨论的定性条件。给定先验信息的任意一个变化{% math %}C \to C' {% endmath %}，使得命题B的可信度增加而命题A的可信度不变，
+
+B|C' > B|C, (2.4)
+
+A|BC' = A|BC, (2.5)
+
+根据常识,AB的可信度应该增加，而不是减少：
+
+AB|C' ≥ AB|C,   (2.6)
+
+仅当且当A|BC不能发生时等号成立。类似的，给定先验信息C''有
+
+B|C'' = B|C,    (2.7)
+
+A|BC'' > A|BC,  (2.8)
+
+我们要求在
+
+AB|C'' ≥ AB|C, (2.9)
+
+中，仅当给定C时命题B不可能发生时等号成立（即使AB未被定义，给定C''的情况下A|BC依然不可能发生）。进一步的，函数F(x,y)应该是连续的，否则等式(2.1)右边任何一个可信度的任意小的增加，可能导致AB|C可信度的巨大的增加。
+
+总之，F(x,y)必须是x和y的连续单调递增函数。如果我们假设它是可导的（可导不是必须的，见（2.13）之后的讨论），那么我们有
+
+![2.10a](images/formula-2-10a.png)
+
+与当且仅当y表示不可能时取等号；并且
+
+![2.10b](images/formula-2-10b.png)
+
+当且仅当x表示不可能时取等号。注意在这种表示法中,为了以后的需要,{% math %}F_i{% endmath %}表示对第i个自变量进行求导，无论第i个自变量具体是什么。
+
+接下来，我们重点转向基本公理（Ⅲa）的“结构”一致性。假设我们尝试确定（ABC|D）的三个命题同时为真的可信度。事实上，因为布尔代数符合结合律：ABC=(AB)C=A(BC)，所有可以有两种顺序来计算。如果规则满足一致性，那么用两种顺序中的任何一种来运算，得到结果应该是一样的。我们就可以说，先将BC看成一个命题，然后应用(2.1)：
+
+(ABC|D) = F[(BC|D), (A|BC D)],   (2.11)
+
+然后对于BC|D，我们可以再次应用(2.1)得到
+
+(ABC|D) = F{F[(C|D), (B|CD)], (A|BCD)}.   (2.12a)
+
+但同样也可以先将AB看成一个命题。按此顺序可以推出另一个表达式︰
+
+(ABC|D) = F[(C|D), (AB|CD)] = F{(C|D), F[(B|CD), (A|BCD)]}.   (2.12b)
+
+如果积规则是一致的推理方式，那么表达式(2.12a)和(2.12b)必须始终是相同的。在这种情况下我们的机器人的推理满足一致性的必要条件是，函数的形式满足等式:
+
+F[F(x, y), z] = F[x, F(y, z)].    (2.13)
+
+这个方程在数学中有悠久的历史，从N.H.Abel (1826)的工作开始。Acz´el (1966)在他的巨著中对泛函方程，十分恰当地叫它‘结合律方程’，并列出98篇参考文献来讨论或使用它。Acz´el在不要求可微的前提下推导出了如下的通用解(2.27),不幸的是，他的证明用了11页(第256-267页)（同样可见于Acz´el，1987）。下面是R.T.Cox（1961）给出的简洁证明，前提是满足可微.更多的请参见在附录B中的讨论。
+
+显然(2.13)拥有平凡解，F(x,y)等于常数。但这违反了我们的单调性要求(2.10)，而且在任何情况下对我们的目标都是毫无用处。除非(2.13)有一个非平凡解，否则我们的企图会失败；因此我们要找到最通用的非平凡解。下面简写为:
+
+u≡F(x,y),  v≡F(y,z),   (2.14)
+
+但(x,y,z)仍作为独立变量，函数方程为
+
+F(x,v) = F(u,z).     (2.15)
+
+对x和y分别求微分，并使用用(2.10)的记法有:
+
+![2.16](images/formula-2-16.png)
+
+从这些方程中将{% math %}F_1(u,z){% endmath %}消掉得到
+
+![2.17](images/formula-2-17.png)
+
+这里记{% math %}G(x,y)\equiv F_2(x,y)/F_1(x,y){% endmath %}。显然，(2.17)的左边必须独立于z。此时，(2.17)可以被写成
+
+![2.18](images/formula-2-18.png)
+
+同时将(2.17)和(2.18)的左边分别用U,V来表示。我们可证{% math %}\partial V/ \partial y = \partial U/ \partial z {% endmath %}。则G(x,y)G(y,z)必然与y相互独立。最通用的函数G(x,y)具有的性质是:
+
+![2.19](images/formula-2-19.png)
+
+这里的r是一个常数，H(x)是任意函数的。在此时的情况下，因为F是单调的所以G>0，所以我们要让r>0，同时H(x)在值域上正负不变。用(2.19)、(2.17)和(2.18)得到
+
+![2.20](images/formula-2-20.png)
+
+则关系{% math %} dv=dF(y,z)=F_1 dy + F_2 dz {% endmath %}的形式为:
+
+![2.22](images/formula-2-22.png)
+
+或者，积分的形式
+
+![2.23](images/formula-2-23.png)
+
+其中
+
+![2.24](images/formula-2-24.png)
+
+积分没有下界表示w包含一个任意的乘法因子。但是在(2.15)的中应用函数W(.)和(2.23)，我们得到{% math %} w(x)w^r (v)=w(u)w^r (z) {% endmath %}；再次应用(2.23)，我们的函数等式变为:
+
+![2.25](images/formula-2-25.png)
+
+这意味着，在仅当r=1时我们得到了一个非平凡解，同时我们的最终结果可以表示为一下两个形式中的任意一个：
+
+![2.26](images/formula-2-26.png)
+
+或
+
+![2.27](images/formula-2-27.png)
+
+根据逻辑积的结合律和交换律,我们试图找到的关系可以表达为如下的函数形式:
+
+![2.28](images/formula-2-28.png)
+
+今后，我们应称之为积规则。由(2.24)的构造可知，w(x)必须是取值为正的单调连续函数，根据H(x)的正负而递增或递减.在目前为止，它的其他性质是任意的。
+
+结果(2.28)是根据基本公理（Ⅲa）的一致性得出的一个必要条件。反过来，显然(2.28)也足以确保任意个单命题组成的复合命题的一致性。例如，根据(2.12),我们可以用很多种方式来分解(ABCDEFG|H）,但只要要满足(2.28)，得到的结果就都是一样的。
+
+与常识保持定性的一致性给函数w(x)施加了进一步的限制。例如，在(2.28)的第一个形式中给定假设：给定C的条件下A是确定的。然后，在由知识C的所产生的逻辑环境中，在一个是真当且仅当另一个是真的意义上，命题AB和B是相同的。通过我们在第1章中讨论的基础公理，相同的真值的命题的可信度应该相等：
+
+AB|C = B|C, (2.29)
+
+同时还有
+
+A|BC = A|C (2.30)
+
+因为如果给定C下A已经确定（即C蕴含A），然后，在给定的任何其他信息中B与C互不矛盾，A仍然确定的。在这种情况下，(2.28)简化为
+
+w(B|C) = w(A|C)w(B|C),  (2.31)
+
+同时对于机器人来说不管B的可信度是多高多低，这必然成立。所以，我们的函数w(x)必须具有性质:
+
+确定性可以用w(A|C) = 1来表示.   (2.32)
+
+现在，假设给定C的条件下A是不可能发生的。则给定C的条件下，命题AB也是不可能发生的：
+
+AB|C = A|C,      (2.33)
+
+同时，如果给定C的条件下A已经是不可能发生的，（即C蕴含着{% math %}\bar{A} {% endmath %}）,然后,在进一步给出的任何信息B中且B与C互不违背时，A仍然是不可能发生的：
+
+A|BC = A|C.   (2.34)
+
+此处的(2.28)将被简化为
+
+w(A|C) = w(A|C)w(B|C),     (2.35)
+
+并且再次有，无论B合理度可能是什么，此方程必然成立。w(A│C)仅有两个值可以满足此条件:零或{% math %}+\infty{% endmath %}（可以排除{% math %}-\infty{% endmath %}，因为根据连续性的要求则W(B|C)可以取负值,从而和(2.35)矛盾)。
+
+总之，与常识的定性保持对应要求w(x)是正的单调连续函数。它可以单调增或单调减。如果是单调增，它的值域必须是从表示不可能的0递增到表示确定的1。如果它是单调减的，其值域必须从表示不可能的{% math %}\infty{% endmath %}递减到表示确定的1。到目前为止，我们的条件没有要求w到底在这些区间内又冷了如何变化。
+
+然而，这两种表示方式在实质上内容上是没有差别的。给定任一函数{% math %}w_1 (x){% endmath %}，满足上述要求并且用{% math %}\infty{% endmath %}表示不可能，我们可以定义一个新的函数{% math %}w_2 (x) \equiv 1/w_1 (x){% endmath %}，它同样满足上述要求且用0来表示不可能。因此，按惯例选择0≤w(x)≤1并不失一般性；也就是说，就内容而言，所有与基本公理相一致性的形式都已经包括在内了。（读者可以验证，我们可以选择相反的形式作为惯例；以此来发展整个理论及其应用，过程是相似的,内容是相同的,只是形式稍有陌生。）
+
+## 2.2 The sum rule 和的规则
+
+## 2.3 Qualitative properteis 定性属性
+
+## 2.4 Numeraical values 数值
+
+## 2.5 Notation and finite-sets policy 符号和有限集原则
 
 Now we can introduce the notation to be used in the remainder of this work (discussed more fully in Appendix B). Henceforth, our formal probability Symbols, will use the capital P: 
 
@@ -78,13 +263,13 @@ f(r|np),                      (2.101)
 
 本节是第15章中关于无限集悖论的简介.在第15章中,我们将看到忽略这个原则的人所得出的结果，他们试图直接在无限集上计算概率，而不是对有限集求极限。其结果在最好的情况下会是含混不清的，最坏的时候就谬论。
 
-** 2.6 Comments 评论
+## 2.6 Comments 评论
 
 It has taken us two chapters of close reasoning to get back to the point (2.99) from which Laplace started some 180 years ago. We shall try to understand the intervening period, as a weird episode of history, throughout the rest of the present work. The story is so complicated that we can unfold it only gradually, over the next ten chapters. To make a start on this, let us consider some of the questions often raised about the use of probability theory as an extension of logic.
 
 我们已经用了两章来讨论推理,从180年前拉普拉斯的观点(2.99)开始.在本书的余下部分,我们将试图了解在从此之后的,充满着不可思议之插曲的历史,我们将在接下来的十章中逐步展开这错综复杂的整个故事.作为开始，让我们先看看把概率论用于广义逻辑时常常被提出的问题。
 
-*** ‘Subjective’ vs. ‘objective’ “主观”与“客观”
+### ‘Subjective’ vs. ‘objective’ “主观”与“客观”
 
 These words are abused so much in probability theory that we try to clarify our use of them. In the theory we are developing, any probability assignment is necessarily ‘subjective’ in the sense that it describes only a state of knowledge, and not anything that could be measured in a physical experiment. Inevitably, someone will demand to know: ‘Whose state of knowledge?’ The answer is always: ‘That of the robot – or of anyone else who is given the same information and reasons according to the desiderata used in our derivations in this chapter.’
 
@@ -98,7 +283,7 @@ Now, it was just the function of our interface desiderata (IIIb), (IIIc) to make
 
 现在，正我们的基本假设的接口(IIIb)(IIIc)使得概率完全“客观”,即独立于使用者的个性。它是一种对问题陈述中所提供的信息进行的描述手段（或者可以说是一种编码），不管你或我对相关命题可能拥的个人感受（希望，恐惧，价值判断等）。从这个意义上讲，这是一个科学上可接受的推论理论所需要的“客观性”。
 
-*** 2.6.2 Gödel’s theorem
+### 2.6.2 Gödel’s theorem
 
 To answer another inevitable question, we recapitulate just what has and what has not been proved in this chapter. The main constructive requirement which determined our product and sum rules was the desideratum (IIIa) of ‘structural consistency’. Of course, this does not mean that our rules have been proved consistent; it means only that any other rules which represent degrees of plausibility by real numbers, but which differ in content from ours, will lead necessarily either to inconsistencies or violations of our other desiderata. 
 
@@ -179,10 +364,10 @@ Needless to say, no inconsistency has ever been found from correct application o
 
 注2: 在Harold Jeffreys的1957年版的<科学的推理>(见Jeffresy, 1931)中给出了一个高德尔的精简的原始证明,这个证明比我们见到的任何其他的'解释'都更清晰易懂.定理的完整说明会涉及一些1931年的重要事件,但不在我们现在的关注范围之内;上面的讨论已经将其中与我们相关的部分概括进来了.
 
-*** 2.6.3 Venn diagrams 韦恩图
+### 2.6.3 Venn diagrams 韦恩图
 
 译注: 大意是Venn图附带了更多的额外信息,但对于建立概率逻辑系统并不是必须的.
 
-*** 2.6.4 The ‘Kolmogorov axioms’ 柯尔莫哥洛夫公理
+### 2.6.4 The ‘Kolmogorov axioms’ 柯尔莫哥洛夫公理
 
 译注: 柯尔莫哥洛夫基于集合论和测度论建立的概率体系,可描述的问题范围小于作者的体系.柯尔莫哥洛夫理论可参考附录1.

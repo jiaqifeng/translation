@@ -191,7 +191,7 @@ A ⇒ B                         (1.14)
 On the other hand, if A is false, (1.14) says nothing about B: and if B is true, (1.14) says nothing about A. But these are just the cases in which our weak syllogisms (1.3), (1.4) do say something. In one respect, then, the term ‘weak syllogism’ is misleading. The theory of plausible reasoning based on weak syllogisms is not a ‘weakened’ form of logic; it is an extension of logic with new content not present at all in conventional deductive logic. It will become clear in the next chapter (see (2.69) and (2.70)) that our rules include deductive logic as a special case. 
 另一方面，如果A是假的(1.14)没有指出B该如何,如果B是真的(1.14)则没有指出A该如何。但弱三段论（1.3）和（1.4）却对此有所表述.从某个角度看,“弱三段论”这说法是有一定误导性的。 基于弱三段论的合理推理理论并不是一种“弱化”的逻辑形式,它是逻辑的一种扩展，增加了在传统的演绎逻辑中根本不存在的新内容。 在下一章（见（2.69）和（2.70））中将会更清楚，演绎逻辑是合情推理的一个特殊情况。
 
-*** 微妙的一点
+*** 微妙之处
 
 要注意，在日常语言中，“A蕴涵B”会被理解为在逻辑上可以从A演绎推理出B。但是正式逻辑中，“A蕴涵B”只意味着命题A和AB具有相同的真值。一般而言，B从逻辑上是否可以从A演绎推理得到，不仅仅取决于命题A和B,它取决于我们接受为真的并在演绎推理中可用的命题（A，A，A，...）。 Devinatz（1968，p。3）和Hamilton（1988，p。5）给出了蕴含作为二元运算的真值表，说明A⇒B只有在A为真且B为假时才为假;在所有其他情况下A⇒B都为真！
 
