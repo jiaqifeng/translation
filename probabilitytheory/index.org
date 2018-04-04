@@ -1,9 +1,12 @@
 Probability Theory - The Logic of Science
 概率论 - 科学的逻辑
 
+已经迁移到gitbook, 点击[[https://jiaqifeng.gitbooks.io/probability-theory-logic-of-science/content/][read]]
+原因是采用asciDoc格式,能更好的处理排版和数学公式.
+
 [[images/cover.png]]
 
-[[term.org][术语对照表]]
+[[term.org][术语对照表]
 
 [[preface.org][序言]] 50%
 
