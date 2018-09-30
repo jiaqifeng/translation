@@ -1,0 +1,377 @@
+* Part I: 基础部分
+
+* Chapter 2 线程安全
+
+也许令人惊讶的是，并发编程并不全是是关于线程或锁的，就像民用土木工程不仅仅只有铆钉和工字梁一样。当然，建造一座不会塌掉的大桥需要正确使用大量的铆钉和工字梁，就像构建并发程序需要正确使用线程和锁一样。但这些只是一些机制而已。编写线程安全的代码的核心是管理对状态的访问，特别是对共享的,可变的状态的访问。
+donehere
+非正式地，对象的状态是其数据，存储在状态变量（例如实例或静态字段）中。对象的状态可以包括来自其他依赖对象的字段; HashMap的状态部分存储在HashMap对象本身中，但也存储在许多Map.Entry对象中。对象的状态包含可能影响其外部可见行为的任何数据。
+
+通过共享，我们的意思是变量可以被多个线程访问;通过可变，我们的意思是它的价值可能在其生命周期中发生变化。我们可能会谈论线程安全，就好像它是关于代码的，但我们真正想要做的是保护数据免受不受控制的并发访问。
+
+对象是否需要是线程安全的取决于它是否将从多个线程访问。这是对象在程序中的使用方式的属性，而不是它的用途。使对象成为线程安全的，需要使用同步来协调对其可变状态的访问;如果不这样做可能会导致数据损坏和其他不良后果。
+
+每当多个线程访问给定的状态变量，并且其中一个可能写入它时，它们都必须使用同步协调它们对它的访问。 Java中同步的主要机制是synchronized关键字，它提供独占锁定，但术语“同步”还包括使用volatile变量，显式锁和原子变量。
+
+你应该避免让人觉得存在这种规则不适用的“特殊”情况。 省略所需同步的程序似乎可以工作，通过测试并且表现良好多年，但它仍然被打破并且可能随时失败。
+
+  如果多个线程在没有适当同步的情况下访问相同的可变状态变量，则程序将被破坏。 有三种方法可以解决它：
+
+  - 不要跨线程共享状态变量;
+  - 使状态变量不可变; 要么
+  - 访问状态变量时使用同步。
+
+如果你没有考虑类设计中的并发访问，那么这些方法中的一些可能需要进行重大的设计修改，因此修复问题可能并不像这个建议听起来那么简单。 /设计一个线程安全的类要比后来为了线程安全而改进它要容易得多./
+
+在大型程序中，识别多个线程是否可以访问给定变量可能很复杂。幸运的是，相同的面向对象技术可以帮助您编写组织良好，可维护的类（如封装和数据隐藏），这也可以帮助您创建线程安全的类。访问特定变量的代码越少，就越容易确保所有代码都使用正确的同步，并且更容易推断出可以访问给定变量的条件。 Java语言不会强制您封装状态 - 完全允许在公共字段（甚至公共静态字段）中存储状态或发布对其他内部对象的引用 - 但是更好地封装了您的程序状态，它就越容易使您的程序线程安全，并帮助维护者保持这种方式。
+
+ 在设计线程安全类时，良好的面向对象技术 - 封装，不变性和不变量的明确规范 - 是您最好的朋友。
+
+有时良好的面向对象设计技术与现实世界的要求不一致;在这些情况下，为了性能或为了与遗留代码的向后兼容性而牺牲良好设计规则可能是必要的。有时抽象和封装与性能不一致 - 虽然不像许多开发人员所认为的那样频繁 - 但是首先要使代码正确，然后快速完成总是一个好习惯。即便如此，只有当您的性能测量和要求告诉您必须进行优化时，才能进行优化，并且如果相同的测量结果告诉您，您的优化实际上在实际条件下会产生差异。[1]
+
+如果你认为你必须打破封装，一切都不会丢失。仍然可以使您的程序线程安全，这只是更难。此外，程序的线程安全性将更加脆弱，不仅会增加开发成本和风险，还会增加维护成本和风险。第4章描述了放松状态变量封装的安全条件。
+
+到目前为止，我们几乎可以互换地使用术语“线程安全类”和“线程安全程序”。是一个完全由线程安全类构建的线程安全程序吗？不一定 - 完全由线程安全类组成的程序可能不是线程安全的，并且线程安全程序可能包含非线程安全的类。围绕线程安全类的组成的问题也在第4章中讨论。在任何情况下，只有当类封装自己的状态时，线程安全类的概念才有意义。线程安全可以是应用于代码的术语，但它是关于状态的，并且它只能应用于封装其状态的整个代码体，可以是对象或整个程序。
+
+** 2.1. 什么是线程安全
+
+定义线程安全性是非常棘手的。更正式的尝试是如此复杂，以至于提供很少的实践指导或直观的理解，其余的是非正式的描述，看似简直循环。快速谷歌搜索会出现如下的众多“定义”：
+
+ ...可以从多个程序线程调用，而不会在线程之间进行不必要的交互。
+ ...可以一次调用多个线程，而不需要对呼叫者进行任何其他操作。
+
+鉴于这些定义，难怪我们发现线程安全令人困惑！他们听起来很可疑，如果它可以从多个线程中安全使用，那么“类是线程安全的”。你不能真的与这样的陈述争论，但它也没有提供太多实际的帮助。我们如何从不安全的类中告诉线程安全的类？ “安全”甚至意味着什么？
+
+线程安全的任何合理定义的核心是正确性的概念。如果我们对线程安全的定义是模糊的，那是因为我们缺乏对正确性的明确定义。
+
+正确性意味着一个类符合其规范。良好的规范定义了约束对象状态的不变量和描述其操作效果的后置条件。由于我们经常没有为我们的课程编写足够的规范，我们怎么可能知道它们是正确的？我们做不到，但是一旦我们确信“代码有效”，这并不能阻止我们使用它们。这种“代码置信度”与我们许多人的正确性差不多，所以让我们假设单线程正确性是“我们在看到它时就知道它”。乐观地将“正确性”定义为可以识别的东西，我们现在可以以一种不那么循环的方式定义线程安全性：当从多个线程访问时，类在继续正常运行时是线程安全的。
+
+ 如果一个类在从多个线程访问时行为正确，则它是线程安全的，无论运行时环境是否调度或交错执行这些线程，并且调用代码没有额外的同步或其他协调。
+
+由于任何单线程程序也是一个有效的多线程程序，如果它在单线程环境中甚至不正确，它就不能是线程安全的。[2]如果一个对象被正确实现，则没有操作序列 - 对公共方法的调用以及公共字段的读取或写入 - 应该能够违反其任何不变量或后置条件。在线程安全类的实例上顺序或并发执行的任何操作集都不会导致实例处于无效状态。
+
+ 线程安全类封装了任何所需的同步，以便客户端无需提供自己的同步。
+
+*** 2.1.1. 例子: 无状态的Servlet
+
+在第1章中，我们列出了许多框架，这些框架创建线程并从这些线程调用组件，让您负责使组件具有线程安全性。 通常，线程安全性要求不是来自决定直接使用线程，而是来自决定使用像Servlets框架这样的工具。 我们将开发一个简单的示例 - 基于servlet的分解服务 - 并慢慢扩展它以添加功能，同时保持其线程安全性。
+
+清单2.1显示了我们的简单分解servlet。 它将从servlet请求中解析出的数字解包，对其进行因子分析，并将结果打包到servlet响应中。
+
+Listing 2.1. A Stateless Servlet.
+#+BEGIN_SRC java
+@ThreadSafe
+public class StatelessFactorizer implements Servlet {
+       public void service(ServletRequest req, ServletResponse resp) {
+              BigInteger i = extractFromRequest(req);
+              BigInteger[] factors = factor(i);
+              encodeIntoResponse(resp, factors);
+       }
+}
+#+END_SRC 
+
+与大多数servlet一样，StatelessFactorizer是无状态的：它没有字段，并且没有引用其他类的字段。 特定计算的瞬态状态仅存在于存储在线程堆栈中的局部变量中，并且只能由执行线程访问。 访问StatelessFactorizer的一个线程不能影响访问同一StatelessFactorizer的另一个线程的结果; 因为两个线程不共享状态，就好像它们访问不同的实例一样。 由于访问无状态对象的线程的操作不会影响其他线程中的操作的正确性，因此无状态对象是线程安全的。
+
+  无状态对象始终是线程安全的。
+
+大多数servlet都可以在没有状态的情况下实现，这一事实大大减轻了使servlet成为线程安全的负担。 只有当servlet想要记住从一个请求到另一个请求的事情时，线程安全要求才成为问题。
+
+** 2.2. 原子性
+
+当我们将一个状态元素添加到无状态对象时会发生什么？ 假设我们想要添加一个“命中计数器”来衡量处理的请求数。 显而易见的方法是向servlet添加一个long字段并在每个请求中递增它，如清单2.2中的UnsafeCountingFactorizer所示。
+
+清单2.2。 在没有必要同步的情况下计算请求的Servlet。 不要这样做。
+
+[[bad.jpg]]
+#+BEGIN_SRC java
+
+@NotThreadSafe
+public class UnsafeCountingFactorizer implements Servlet {
+       private long count = 0;
+       public long getCount() { return count; }
+       public void service(ServletRequest req, ServletResponse resp) {
+              BigInteger i = extractFromRequest(req);
+              BigInteger[] factors = factor(i);
+              ++count;
+              encodeIntoResponse(resp, factors);
+       }
+}
+#+END_SRC 
+
+不幸的是，UnsafeCountingFactorizer不是线程安全的，即使它在单线程环境中可以正常工作。就像第6页上的UnsafeSequence一样，它很容易丢失更新。虽然增量操作++ count可能看起来像单个动作，因为它的语法紧凑，但它不是原子的，这意味着它不会作为单个不可分割的操作执行。相反，它是三个离散操作序列的简写：获取当前值，向其中添加一个值，然后将新值写回。这是读 - 修改 - 写操作的示例，其中结果状态是从先前状态导出的。
+
+第6页的图1.1显示了如果两个线程在没有同步的情况下尝试同时递增计数器会发生什么。如果计数器最初是9，有一些不幸的时间，每个线程都可以读取该值，看它是9，加一个，每个都将计数器设置为10.这显然不是应该发生的;一路上增量丢失了，点击计数器现在永久关闭了一个。
+
+您可能认为在基于Web的服务中点击次数略微不准确是可接受的准确性损失，有时也是如此。但是，如果计数器用于生成序列或唯一对象标识符，则从多个调用返回相同的值可能会导致严重的数据完整性问题。[3]存在不幸时序的错误结果的可能性在并发编程中非常重要，因为它具有名称：竞争条件。
+
+*** 2.2.1. 竞争条件
+
+UnsafeCountingFactorizer有几种竞争条件，使其结果不可靠。当计算的正确性取决于运行时的多个线程的相对定时或交错时，就会出现竞争条件;换句话说，当得到正确答案依赖于幸运时间。[4]最常见的竞争条件类型是check-then-act，其中使用可能陈旧的观察来决定下一步该做什么。
+
+我们经常在现实生活中遇到竞争条件。假设你计划在中午在大学街的星巴克与朋友见面。但是当你到达那里时，你会发现大学大道上有两个星巴克，而你不确定你同意见哪一个星巴克。在12:10，你没有在星巴克A看到你的朋友，所以你走到星巴克B看他是否在那里，但他也不在那里。有几种可能性：你的朋友迟到了，而不是星巴克;你的朋友在你离开后抵达星巴克A;或者你的朋友在星巴克B，但去寻找你，现在正在前往星巴克A.让我们假设最坏的情况并说这是最后一种可能性。现在是12点15分，你们两个都去过星巴克，你们都想知道自己是否已经站起来了。现在你在做什么？回到其他星巴克？你要来回多少次？除非你已经就协议达成一致，否则你可以花一天时间在大学大道上走来走去，沮丧和低于咖啡因。
+
+“我只是啃着街道，看看他是否在另一条街上”的方法是，当你走在街上时，你的朋友可能已经感动了。你看看星巴克A，观察“他不在这里”，然后去寻找他。你也可以为星巴克B做同样的事情，但不能同时做到这一点。走上街道需要几分钟，在这几分钟内，系统状态可能已经改变。
+
+星巴克的例子说明了竞争条件，因为达到预期的结果（与你的朋友见面）取决于事件的相对时间（当你们每个人到达一个星巴克或另一个时，你在切换前等待多长时间等）。当你走出前门时，他不在星巴克A的观察可能会失效;他本可以通过后门进来，你不会知道。正是这种观察失效表征了大多数种族条件 - 使用可能陈旧的观察来做出决定或进行计算。这种类型的竞争条件称为check-then-act：你观察到某些事情是真的（文件X不存在）然后根据该观察采取行动（创建X）;但实际上观察可能在您观察它的时间和您对其进行操作的时间之间变得无效（其他人在此期间创建了X），导致问题（意外异常，覆盖数据，文件损坏）。
+
+*** 2.2.2. Example: Race Conditions in Lazy Initialization
+
+使用check-then-act的常见习语是延迟初始化。 延迟初始化的目标是推迟初始化对象，直到实际需要它为止，同时确保它只被初始化一次。 清单2.3中的LazyInitRace说明了惰性初始化习惯用法。 getInstance方法首先检查ExpensiveObject是否已经初始化，在这种情况下它返回现有实例; 否则它会创建一个新实例并在保留对它的引用后返回它，以便将来的调用可以避免更昂贵的代码路径。
+
+Listing 2.3. Race Condition in Lazy Initialization. Don't do this.
+[[bad.jpg]]
+#+BEGIN_SRC java
+
+@NotThreadSafe
+public class LazyInitRace {
+       private ExpensiveObject instance = null;
+
+       public ExpensiveObject getInstance() {
+              if (instance == null)
+                  instance = new ExpensiveObject();
+              return instance;
+       }
+}
+#+END_SRC 
+
+LazyInitRace的竞争条件可能会破坏其正确性。假设线程A和B同时执行getInstance。 A看到该实例为null，并实例化一个新的ExpensiveObject。 B还检查实例是否为空。此时实例是否为null取决于时间的不可预测性，包括调度的变化以及A实例化ExpensiveObject和设置实例字段所花费的时间。如果B检查它时实例为空，则getInstance的两个调用者可能会收到两个不同的结果，即使getInstance总是应该返回相同的实例。
+
+UnsafeCountingFactorizer中的命中计数操作有另一种竞争条件。读取 - 修改 - 写入操作（如递增计数器）根据其先前的状态定义对象状态的转换。要增加计数器，您必须知道其先前的值，并确保在更新中期时没有其他人更改或使用该值。
+
+与大多数并发错误一样，竞争条件并不总是导致失败：还需要一些不幸的时机。但是竞争条件会导致严重的问题。如果LazyInitRace用于实例化应用程序范围的注册表，则让它从多个调用返回不同的实例可能导致注册丢失或多个活动导致注册对象集的视图不一致。如果使用UnsafeSequence在持久性框架中生成实体标识符，则两个不同的对象可能最终具有相同的ID，从而违反了身份完整性约束。
+
+*** 2.2.3. Compound Actions
+
+LazyInitRace和UnsafeCountingFactorizer都包含一系列操作，这些操作相对于同一状态的其他操作需要是原子的或不可分割的。为了避免竞争条件，必须有一种方法可以防止其他线程在我们修改它时使用变量，因此我们可以确保其他线程只能在开始之前或完成之后观察或修改状态，但不是在中间。
+
+ 如果从执行A的线程的角度来看，当另一个线程执行B时，或者B中的所有线程都已执行或者没有一个执行，则操作A和B相对于彼此是原子的。原子操作是关于在相同状态下操作的所有操作（包括其自身）的原子操作。
+
+如果UnsafeSequence中的增量操作是原子的，则第6页的图1.1中所示的竞争条件不会发生，并且每次执行增量操作都会产生将计数器递增一个所需的效果。为了确保线程安全，check-then-act操作（如延迟初始化）和读 - 修改 - 写操作（如增量）必须始终是原子的。我们统一将check-then-act和read-modify-write序列称为复合动作：必须以原子方式执行以保持线程安全的操作序列。在下一节中，我们将考虑锁定Java的内置机制以确保原子性。现在，我们将通过使用现有的线程安全类以另一种方式解决问题，如清单2.4中的CountingFactorizer所示。
+
+Listing 2.4. Servlet that Counts Requests Using AtomicLong.
+#+BEGIN_SRC java
+
+@ThreadSafe
+public class CountingFactorizer implements Servlet {
+       private final AtomicLong count = new AtomicLong(0);
+
+       public long getCount() { return count.get(); }
+
+       public void service(ServletRequest req, ServletResponse resp) {
+              BigInteger i = extractFromRequest(req);
+              BigInteger[] factors = factor(i);
+              count.incrementAndGet();
+              encodeIntoResponse(resp, factors);
+       }
+}
+#+END_SRC 
+
+java.util.concurrent.atomic包中包含用于实现数字和对象引用的原子状态转换的原子变量类。通过用AtomicLong替换长计数器，我们确保访问计数器状态的所有操作都是原子的。[5]因为servlet的状态是计数器的状态而计数器是线程安全的，所以我们的servlet再次是线程安全的。
+
+我们能够通过使用现有的线程安全类来管理计数器状态AtomicLong，为我们的因子servlet添加一个计数器并保持线程安全。当将单个state元素添加到无状态类时，如果状态完全由线程安全对象管理，则生成的类将是线程安全的。但是，正如我们将在下一节中看到的那样，从一个状态变量到多个状态变量并不一定像从零变为一样简单。
+
+ 在可行的情况下，使用现有的线程安全对象（如AtomicLong）来管理类的状态。现有线程安全对象的可能状态和状态转换比任意状态变量更简单，这使得维护和验证线程安全更容易。
+
+** 2.3. Locking
+
+我们能够通过使用线程安全对象来管理servlet的整个状态，同时为我们的servlet添加一个状态变量，同时保持线程安全。 但是如果我们想在servlet中添加更多状态，我们可以添加更多线程安全的状态变量吗？
+
+想象一下，我们希望通过缓存最近计算的结果来提高servlet的性能，以防两个连续的客户端请求对相同数字进行分解。 （这不太可能是一种有效的缓存策略;我们在5.6节中提供了更好的缓存策略。）为了实现这一策略，我们需要记住两件事：最后一个因素，以及它的因素。
+
+我们使用AtomicLong以线程安全的方式管理计数器状态; 我们可能会使用它的堂兄，AtomicReference，[6]来管理最后一个数字及其因素吗？ 清单2.5中的UnsafeCachingFactorizer显示了对此的尝试。
+
+Listing 2.5. Servlet that Attempts to Cache its Last Result without Adequate Atomicity. Don't do this.
+[[bad.jpg]]
+#+BEGIN_SRC java
+
+@NotThreadSafe
+public class UnsafeCachingFactorizer implements Servlet {
+       private final AtomicReference<BigInteger> lastNumber
+              = new AtomicReference<BigInteger>();
+       private final AtomicReference<BigInteger[]> lastFactors
+              = new AtomicReference<BigInteger[]>();
+
+       public void service(ServletRequest req, ServletResponse resp) {
+              BigInteger i = extractFromRequest(req);
+              if (i.equals(lastNumber.get()))
+                  encodeIntoResponse(resp, lastFactors.get() );
+              else {
+                     BigInteger[] factors = factor(i);
+                     lastNumber.set(i);
+                     lastFactors.set(factors);
+                     encodeIntoResponse(resp, factors);
+              }
+       }
+}
+#+END_SRC 
+
+不幸的是，这种方法不起作用。即使原子引用是单独的线程安全的，UnsafeCachingFactorizer也有竞争条件，可能会产生错误的答案。
+
+线程安全性的定义要求保留不变量，而不管多个线程中的操作的定时或交错。 UnsafeCachingFactorizer的一个不变量是lastFactors中缓存的因子的乘积等于lastNumber中缓存的值;只有当这个不变量始终存在时，我们的servlet才是正确的。当多个变量参与不变量时，它们不是独立的：一个值约束其他变量的允许值。因此，在更新一个时，必须在同一原子操作中更新其他的。
+
+由于一些不幸的时机，UnsafeCachingFactorizer可以违反这个不变量。使用原子引用，我们不能同时更新lastNumber和lastFactors，即使每次调用set都是原子的;当一个被修改而另一个没有被修改时，仍然存在一个漏洞窗口，并且在此期间其他线程可以看到不变量不成立。类似地，不能同时获取这两个值：在线程A获取这两个值的时间之间，线程B可以更改它们，并且A可能再次观察到不变量不成立。
+
+ 要保持状态一致性，请在单个原子操作中更新相关的状态变量。
+
+*** 2.3.1. Intrinsic Locks
+
+Java提供了一个内置的锁定机制来强制执行原子性：synchronized块。 （锁定和其他同步机制还有另一个关键方面 - 可见性 - 将在第3章中介绍。）同步块有两部分：对作为锁的对象的引用，以及要执行的代码块 被那把锁守卫着。 synchronized方法是跨越整个方法体的同步块的简写，其锁定是调用该方法的对象。 （静态同步方法使用Class对象进行锁定。）
+
+#+BEGIN_SRC java
+
+synchronized (lock) {
+       // Access or modify shared state guarded by lock
+}
+#+END_SRC 
+
+每个Java对象都可以隐式地充当用于同步目的的锁;这些内置锁称为内部锁或监视器锁。锁定在进入同步块之前由执行线程自动获取，并在控制退出同步块时自动释放，无论是通过正常控制路径还是通过向块中抛出异常。获取内部锁定的唯一方法是输入由该锁定保护的同步块或方法。
+
+Java中的内部锁充当互斥锁（或互斥锁），这意味着最多一个线程可能拥有锁。当线程A尝试获取线程B持有的锁时，A必须等待或阻塞，直到B释放它。如果B永远不会释放锁定，A会永远等待。
+
+由于一次只有一个线程可以执行由给定锁保护的代码块，因此由同一锁保护的同步块相对于彼此原子地执行。在并发的上下文中，原子性意味着与事务应用程序中的相同 - 一组语句似乎作为单个不可分割的单元执行。没有执行同步块的线程可以观察到另一个线程位于由同一个锁保护的同步块的中间。
+
+同步机制可以轻松地将线程安全性恢复到分解servlet。清单2.6使服务方法同步，因此一次只有一个线程可以进入服务。 SynchronizedFactorizer现在是线程安全的;然而，这种方法相当极端，因为它会阻止多个客户端同时使用保理servlet，从而导致响应性差得令人无法接受。这个问题 - 这是一个性能问题，而不是一个线程安全问题 - 在第2.5节中讨论。
+
+Listing 2.6. Servlet that Caches Last Result, But with Unnacceptably Poor Concurrency. Don't do this.
+[[bad.jpg]]
+#+BEGIN_SRC java
+
+@ThreadSafe
+public class SynchronizedFactorizer implements Servlet {
+       @GuardedBy("this") private BigInteger lastNumber;
+       @GuardedBy("this") private BigInteger[] lastFactors;
+
+       public synchronized void service(ServletRequest req,
+                                                           ServletResponse resp) {
+              BigInteger i = extractFromRequest(req);
+              if (i.equals(lastNumber))
+                  encodeIntoResponse(resp, lastFactors);
+              else {
+                    BigInteger[] factors = factor(i);
+                    lastNumber = i;
+                    lastFactors = factors;
+                    encodeIntoResponse(resp, factors);
+              }
+       }
+}
+#+END_SRC 
+
+*** 2.3.2. Reentrancy
+
+当一个线程请求另一个线程已经拥有的锁时，请求线程会阻塞。但是因为内部锁是可重入的，所以如果线程试图获取它已经拥有的锁，则请求成功。重入意味着在每个线程而不是每次调用的基础上获取锁。[7]通过将每个锁与获取计数和拥有线程相关联来实现重入。当计数为零时，锁定被视为未保留。当线程获取先前未保留的锁时，JVM会记录所有者并将获取计数设置为1。如果同一个线程再次获得锁定，则计数递增，并且当拥有线程退出同步块时，计数递减。当计数达到零时，锁定被释放。
+
+重入有助于锁定行为的封装，从而简化了面向对象的并发代码的开发。如果没有可重入锁，清单2.7中非常自然的代码（其中子类重写synchronized方法然后调用超类方法）将会死锁。因为Widget和LoggingWidget中的doSomething方法都是同步的，所以每个方法都会在继续之前尝试获取Widget上的锁。但是如果内部锁不是可重入的，那么对super.doSomething的调用将永远无法获取锁，因为它将被认为已经被保持，并且该线程将永久停止等待它永远无法获取的锁。在这种情况下，重入可以使我们免于死锁。
+
+Listing 2.7. Code that would Deadlock if Intrinsic Locks were Not Reentrant.
+#+BEGIN_SRC java
+
+public class Widget {
+       public synchronized void doSomething() {
+              ...
+       }
+}
+
+public class LoggingWidget extends Widget {
+       public synchronized void doSomething() {
+              System.out.println(toString() + ": calling doSomething");
+              super.doSomething();
+       }
+}
+#+END_SRC 
+
+** 2.4. Guarding State with Locks
+
+因为锁可以对它们保护的代码路径进行序列化[8]访问，所以我们可以使用它们来构建协议以保证对共享状态的独占访问。遵循这些协议始终可以确保状态一致性。
+
+对共享状态的复合操作（例如递增命中计数器（读取 - 修改 - 写入）或延迟初始化（check-then-act））必须是原子的，以避免竞争条件。在复合动作的整个持续时间内持有一个锁可以使该复合动作成为原子。但是，仅使用synchronized块包装复合动作是不够的;如果使用同步来协调对变量的访问，则在访问变量的任何地方都需要它。此外，当使用锁来协调对变量的访问时，必须在访问该变量的任何地方使用相同的锁。
+
+假设只有在写入共享变量时才需要使用同步，这是一个常见的错误。这是不正确的。 （其原因将在3.1节中更清楚。）
+
+ 对于可以由多个线程访问的每个可变状态变量，必须在保持相同锁的情况下执行对该变量的所有访问。在这种情况下，我们说该变量由该锁保护。
+
+在清单2.6中的SynchronizedFactorizer中，lastNumber和lastFactors由servlet对象的内部锁保护;这由@GuardedBy注释记录。
+
+对象的内在锁与其状态之间没有固有的关系;对象的字段不需要通过其内部锁来保护，尽管这是许多类使用的完全有效的锁定约定。获取与对象关联的锁不会阻止其他线程访问该对象 - 获取锁的唯一方法是阻止任何其他线程执行获取相同的锁。每个对象都有一个内置锁的事实只是一个方便，所以你不需要显式创建锁对象。[9]您可以构建锁定协议或同步策略，以便安全地访问共享状态，并在整个程序中一致地使用它们。
+
+ 每个共享的可变变量应该只用一个锁来保护。向维护者明确指出哪些是锁定的。
+
+常见的锁定约定是将所有可变状态封装在对象中，并通过使用对象的内部锁同步访问可变状态的任何代码路径来保护它免受并发访问。许多线程安全类使用此模式，例如Vector和其他同步集合类。在这种情况下，对象的状态中的所有变量都由对象的内部锁保护。但是，这种模式并没有什么特别之处，编译器和运行时都没有强制执行这种（或任何其他）锁定模式。[10]通过添加新方法或代码路径并忘记使用同步，也很容易意外破坏此锁定协议。
+
+并非所有数据都需要通过仅从多个线程访问的锁定可变数据来保护。在第1章中，我们描述了如何添加一个简单的异步事件（如TimerTask）可以创建贯穿整个程序的线程安全要求，尤其是在程序状态封装不良的情况下。考虑一个处理大量数据的单线程程序。单线程程序不需要同步，因为没有数据在线程之间共享。现在想象一下，您想要添加一个功能来创建其进度的定期快照，这样如果它崩溃或必须停止它就不必从头开始。您可以选择使用每十分钟关闭的TimerTask执行此操作，将程序状态保存到文件中。
+
+由于TimerTask将从另一个线程（由Timer管理的线程）调用，现在快照中涉及的任何数据都由两个线程访问：主程序线程和Timer线程。这意味着TimerTask代码不仅必须在访问程序状态时使用同步，而且程序其余部分中的任何代码路径也必须接触相同的数据。以前不需要同步的内容现在需要在整个程序中进行同步。
+
+当一个变量被一个锁保护时 - 意味着每次访问该变量都是在保持锁的情况下执行的 - 你确保一次只有一个线程可以访问该变量。当一个类具有涉及多个状态变量的不变量时，还有一个额外的要求：参与该不变量的每个变量必须由同一个锁保护。这允许您在单个原子操作中访问或更新它们，从而保留不变量。 SynchronizedFactorizer演示了这条规则：缓存的数字和缓存的因子都由servlet对象的内部锁保护。
+
+ 对于涉及多个变量的每个不变量，该不变量中涉及的所有变量必须由同一个锁保护。
+
+如果同步是解决竞争条件的问题，为什么不宣布每个方法同步？事实证明，同步的这种不加选择的应用可能是同步太多或太少。仅像Vector一样同步每个方法，不足以在Vector原子上渲染复合动作：
+
+#+BEGIN_SRC java
+
+if (!vector.contains(element))
+    vector.add(element);
+#+END_SRC
+
+即使不包含和添加都是原子的，这种在put-if-absent操作中的尝试都有竞争条件。 虽然同步方法可以使单个操作成为原子，但是当多个操作组合成复合操作时，需要额外的锁定。 （有关为线程安全对象安全地添加其他原子操作的一些技术，请参见第4.4节。）同时，同步每个方法都会导致活跃或性能问题，正如我们在SynchronizedFactorizer中看到的那样。
+
+** 2.5. Liveness and Performance
+
+在UnsafeCachingFactorizer中，我们在分解servlet中引入了一些缓存，以期提高性能。 缓存需要一些共享状态，这又需要同步来维护该状态的完整性。 但是我们在SynchronizedFactorizer中使用同步的方式使它表现不佳。 SynchronizedFactorizer的同步策略是使用servlet对象的内部锁来保护每个状态变量，并且该策略是通过同步整个服务方法来实现的。 这种简单，粗粒度的方法恢复了安全性，但价格昂贵。
+
+Figure 2.1. Poor Concurrency of SynchronizedFactorizer.
+[[figure-2-1.jpg]]
+
+由于服务是同步的，因此只有一个线程可以同时执行它。这颠覆了servlet框架的预期用途 - servlet能够同时处理多个请求 - 如果负载足够高，可能会导致受挫的用户。如果servlet占用大量数据，则其他客户端必须等到当前请求完成后才能在新数字上启动servlet。如果系统有多个CPU，即使负载很高，处理器也可能保持空闲状态。在任何情况下，即使是短时间运行的请求（例如缓存值的请求）也可能需要很长时间，因为它们必须等待以前长时间运行的请求才能完成。
+
+图2.1显示了多个请求到达同步分解servlet时会发生什么：它们排队并按顺序处理。我们将此Web应用程序描述为表现出较差的并发性：同时调用的数量不仅取决于处理资源的可用性，还取决于应用程序本身的结构。幸运的是，通过缩小同步块的范围，可以很容易地提高servlet的并发性，同时保持线程安全。你应该注意不要使同步块的范围太小;您不希望将应该是原子的操作划分为多个同步块。但是尝试从同步块中排除不影响共享状态的长时间运行操作是合理的，这样在长时间运行的操作正在进行时，不会阻止其他线程访问共享状态。
+
+清单2.8中的CachedFactorizer重新构造servlet以使用两个独立的同步块，每个块仅限于一小段代码。一个保护check-then-act序列，测试我们是否可以返回缓存的结果，另一个守卫更新缓存的数字和缓存的因子。作为奖励，我们重新引入了点击计数器，并添加了一个“缓存命中”计数器，在初始同步块中更新它们。因为这些计数器也构成共享可变状态，所以我们必须在访问它们的任何地方使用同步。在同步块之外的代码部分仅在本地（基于堆栈的）变量上操作，这些变量不在线程之间共享，因此不需要同步。
+
+Listing 2.8. Servlet that Caches its Last Request and Result.
+#+BEGIN_SRC java
+
+@ThreadSafe
+public class CachedFactorizer implements Servlet {
+       @GuardedBy("this") private BigInteger lastNumber;
+       @GuardedBy("this") private BigInteger[] lastFactors;
+       @GuardedBy("this") private long hits;
+       @GuardedBy("this") private long cacheHits;
+
+       public synchronized long getHits() { return hits; }
+       public synchronized double getCacheHitRatio() {
+              return (double) cacheHits / (double) hits;
+       }
+
+       public void service(ServletRequest req, ServletResponse resp) {
+              BigInteger i = extractFromRequest(req);
+              BigInteger[] factors = null;
+              synchronized (this) {
+                     ++hits;
+                     if (i.equals(lastNumber)) {
+                         ++cacheHits;
+                         factors = lastFactors.clone();
+                  }
+              }
+              if (factors == null) {
+                  factors = factor(i);
+                  synchronized (this) {
+                         lastNumber = i;
+                         lastFactors = factors.clone();
+         .         }
+              }
+              encodeIntoResponse(resp, factors);
+       }
+}
+#+END_SRC 
+
+CachedFactorizer不再使用AtomicLong作为命中计数器，而是恢复使用长字段。在这里使用AtomicLong是安全的，但是比CountingFactorizer的好处少。原子变量对于在单个变量上实现原子操作很有用，但由于我们已经使用同步块来构造原子操作，因此使用两种不同的同步机制会令人困惑，并且不会提供性能或安全性好处。
+
+CachedFactorizer的重构在简单性（同步整个方法）和并发性（同步最短的代码路径）之间提供了平衡。获取和释放锁有一些开销，因此不希望将同步块分解太远（例如将因子分解成自己的同步块），即使这不会损害原子性。 CachedFactorizer在访问状态变量时以及复合操作的持续时间内保持锁定，但在执行可能长时间运行的分解操作之前释放它。这样可以在不过度影响并发性的情况下保持线程安全;每个同步块中的代码路径“足够短”。
+
+决定同步块的大小可能需要在竞争设计力量之间进行权衡，包括安全性（不得泄露），简单性和性能。有时简单性和性能彼此不一致，尽管CachedFactorizer说明，通常可以找到合理的平衡。
+
+ 简单性和性能之间经常存在紧张关系。在实施同步策略时，为了性能，抵制过早牺牲简单性（可能危及安全性）的诱惑。
+
+每当你使用锁定时，你应该知道块中的代码正在做什么以及花费很长时间执行的可能性。持有锁很长一段时间，或者是因为你正在做一些计算密集型的事情，或者因为你执行了一个潜在的阻塞操作，所以会带来生机或性能问题的风险。
+
+ 在长时间计算或操作过程中避免持有锁，否则可能无法快速完成，例如网络或控制台I / O.
